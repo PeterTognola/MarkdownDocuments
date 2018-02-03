@@ -11,7 +11,7 @@ namespace MarkdownDocuments.DAL
             {
                 // move out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer(
-                    @"Server=.\SQLEXPRESS;Integrated Security=True;Initial Catalog=PrivyyDocumentStore;");
+                    @"Server=.\SQLEXPRESS;Integrated Security=True;Initial Catalog=MarkdownDocuments;");
             }
         }
 
