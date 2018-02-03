@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownDocuments.WebApp", "MarkdownDocuments.WebApp\MarkdownDocuments.WebApp.csproj", "{0A222549-0E75-4E36-9B5F-EAC76DD89AC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownDocuments.WebApi", "MarkdownDocuments.WebApi\MarkdownDocuments.WebApi.csproj", "{2351BE95-03E6-4419-B4F2-190F5185FE6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A222549-0E75-4E36-9B5F-EAC76DD89AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A222549-0E75-4E36-9B5F-EAC76DD89AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A222549-0E75-4E36-9B5F-EAC76DD89AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2351BE95-03E6-4419-B4F2-190F5185FE6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2351BE95-03E6-4419-B4F2-190F5185FE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2351BE95-03E6-4419-B4F2-190F5185FE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2351BE95-03E6-4419-B4F2-190F5185FE6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
