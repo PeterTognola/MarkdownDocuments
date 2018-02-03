@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MarkdownDocuments.Models.Mappers;
+﻿using MarkdownDocuments.Models.Mappers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace MarkdownDocuments.WebApi
 {
@@ -21,7 +16,10 @@ namespace MarkdownDocuments.WebApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// Called on runtime.
+        /// Will setup Mappers for when requested.
+        /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
             // Mapper Instantiation
@@ -29,8 +27,7 @@ namespace MarkdownDocuments.WebApi
             
             services.AddMvc();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
