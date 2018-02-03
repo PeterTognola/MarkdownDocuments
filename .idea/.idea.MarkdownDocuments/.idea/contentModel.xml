@@ -21,7 +21,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Mappers" t="Include">
           <e p="DocumentMapper.cs" t="Include" />
-          <e p="IDocumentMapper.cs" t="Include" />
+          <e p="IMapper.cs" t="Include" />
         </e>
         <e p="MarkdownDocuments.Models.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
@@ -44,7 +44,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="ValuesController.cs" t="Include" />
+          <e p="DocumentsController.cs" t="Include" />
         </e>
         <e p="MarkdownDocuments.WebApi.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
