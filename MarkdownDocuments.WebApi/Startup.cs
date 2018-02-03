@@ -1,4 +1,5 @@
-﻿using MarkdownDocuments.DAL.Repositories;
+﻿using MarkdownDocuments.DAL;
+using MarkdownDocuments.DAL.Repositories;
 using MarkdownDocuments.Models.Mappers;
 using MarkdownDocuments.Models.Models;
 using MarkdownDocuments.Models.ViewModels;
@@ -25,8 +26,7 @@ namespace MarkdownDocuments.WebApi
         /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
-            // Repository Instantiation
-            services.AddSingleton<IRepository<DocumentModel>, DocumentRepository>();
+            services.AddDbContext<DbContext>();
             
             // Mapper Instantiation
             services.AddTransient<IMapper<DocumentModel, DocumentViewModel>, DocumentMapper>();

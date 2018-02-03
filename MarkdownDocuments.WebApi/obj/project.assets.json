@@ -4751,7 +4751,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "MarkdownDocuments.Models": "1.0.0"
+          "MarkdownDocuments.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "2.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0"
         },
         "compile": {
           "bin/placeholder/MarkdownDocuments.DAL.dll": {}

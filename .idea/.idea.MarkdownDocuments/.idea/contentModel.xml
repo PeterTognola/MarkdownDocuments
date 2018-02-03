@@ -4,6 +4,7 @@
     <e p="C:\Development\MarkdownDocuments" t="IncludeFlat">
       <e p="MarkdownDocuments.DAL" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DbContext.cs" t="Include" />
         <e p="MarkdownDocuments.DAL.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
