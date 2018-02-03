@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownDocuments.WebApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownDocuments.DAL", "MarkdownDocuments.DAL\MarkdownDocuments.DAL.csproj", "{586CA494-72F6-4FDF-898D-6920428610B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownDocuments.Models", "MarkdownDocuments.Models\MarkdownDocuments.Models.csproj", "{8484FFD6-92A1-4BB9-9BD4-D18B1217CBBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{586CA494-72F6-4FDF-898D-6920428610B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{586CA494-72F6-4FDF-898D-6920428610B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{586CA494-72F6-4FDF-898D-6920428610B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8484FFD6-92A1-4BB9-9BD4-D18B1217CBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8484FFD6-92A1-4BB9-9BD4-D18B1217CBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8484FFD6-92A1-4BB9-9BD4-D18B1217CBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8484FFD6-92A1-4BB9-9BD4-D18B1217CBBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
