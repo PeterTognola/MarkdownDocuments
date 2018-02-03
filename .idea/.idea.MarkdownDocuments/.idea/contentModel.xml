@@ -13,10 +13,13 @@
             </e>
           </e>
         </e>
+        <e p="Repositories" t="Include">
+          <e p="DocumentRepository.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
+        </e>
       </e>
       <e p="MarkdownDocuments.Models" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="Mappers" t="Include">
           <e p="DocumentMapper.cs" t="Include" />
           <e p="IDocumentMapper.cs" t="Include" />

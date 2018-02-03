@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "MarkdownDocuments.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MarkdownDocuments.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MarkdownDocuments.Models.dll": {}
+        }
       }
     }
   },
@@ -169,10 +179,16 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "MarkdownDocuments.Models/1.0.0": {
+      "type": "project",
+      "path": "../MarkdownDocuments.Models/MarkdownDocuments.Models.csproj",
+      "msbuildProject": "../MarkdownDocuments.Models/MarkdownDocuments.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "MarkdownDocuments.Models >= 1.0.0",
       "NETStandard.Library >= 2.0.0"
     ]
   },
@@ -201,7 +217,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
+              "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
+            }
+          }
         }
       }
     },
