@@ -7,10 +7,10 @@
     "outputPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.DAL\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
-      "netstandard2.0"
+      "netcoreapp2.0"
     ],
     "frameworks": {
-      "netstandard2.0": {
+      "netcoreapp2.0": {
         "projectReferences": {
           "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
             "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
@@ -20,9 +20,9 @@
     }
   },
   "frameworks": {
-    "netstandard2.0": {
+    "netcoreapp2.0": {
       "dependencies": {
-        "NETStandard.Library": {
+        "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
           "version": "2.0.0"

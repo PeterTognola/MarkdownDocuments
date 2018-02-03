@@ -1,0 +1,10 @@
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netstandard2.0\MarkdownDocuments.DAL.deps.json
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netstandard2.0\MarkdownDocuments.DAL.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netstandard2.0\MarkdownDocuments.DAL.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netstandard2.0\MarkdownDocuments.Models.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netstandard2.0\MarkdownDocuments.Models.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netstandard2.0\MarkdownDocuments.DAL.csproj.CoreCompileInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netstandard2.0\MarkdownDocuments.DAL.AssemblyInfoInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netstandard2.0\MarkdownDocuments.DAL.AssemblyInfo.cs
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netstandard2.0\MarkdownDocuments.DAL.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netstandard2.0\MarkdownDocuments.DAL.pdb

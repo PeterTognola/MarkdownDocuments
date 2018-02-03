@@ -1,0 +1,8 @@
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\bin\Debug\netstandard2.0\MarkdownDocuments.Models.deps.json
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\bin\Debug\netstandard2.0\MarkdownDocuments.Models.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\bin\Debug\netstandard2.0\MarkdownDocuments.Models.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\obj\Debug\netstandard2.0\MarkdownDocuments.Models.csproj.CoreCompileInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\obj\Debug\netstandard2.0\MarkdownDocuments.Models.AssemblyInfoInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\obj\Debug\netstandard2.0\MarkdownDocuments.Models.AssemblyInfo.cs
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\obj\Debug\netstandard2.0\MarkdownDocuments.Models.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.Models\obj\Debug\netstandard2.0\MarkdownDocuments.Models.pdb
