@@ -1,4 +1,7 @@
-﻿using MarkdownDocuments.Models.Mappers;
+﻿using MarkdownDocuments.DAL.Repositories;
+using MarkdownDocuments.Models.Mappers;
+using MarkdownDocuments.Models.Models;
+using MarkdownDocuments.Models.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,12 +21,15 @@ namespace MarkdownDocuments.WebApi
 
         /// <summary>
         /// Called on runtime.
-        /// Will setup Mappers for when requested.
+        /// Will setup Mappers and Repositories when requested.
         /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
+            // Repository Instantiation
+            services.AddSingleton<IRepository<DocumentModel>, DocumentRepository>();
+            
             // Mapper Instantiation
-            services.AddTransient<IDocumentMapper, DocumentMapper>();
+            services.AddTransient<IMapper<DocumentModel, DocumentViewModel>, DocumentMapper>();
             
             services.AddMvc();
         }

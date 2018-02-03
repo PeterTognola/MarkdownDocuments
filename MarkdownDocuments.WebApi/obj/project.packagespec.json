@@ -12,6 +12,9 @@
     "frameworks": {
       "netcoreapp2.0": {
         "projectReferences": {
+          "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.DAL\\MarkdownDocuments.DAL.csproj": {
+            "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.DAL\\MarkdownDocuments.DAL.csproj"
+          },
           "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
             "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
           }

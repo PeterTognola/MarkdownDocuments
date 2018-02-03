@@ -12,6 +12,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MarkdownDocuments.DAL\MarkdownDocuments.DAL.csproj" />
     <ProjectReference Include="..\MarkdownDocuments.Models\MarkdownDocuments.Models.csproj" />
   </ItemGroup>
 </Project>

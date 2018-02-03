@@ -3,7 +3,7 @@ using MarkdownDocuments.Models.ViewModels;
 
 namespace MarkdownDocuments.Models.Mappers
 {
-    public class DocumentMapper : IDocumentMapper
+    public class DocumentMapper : IMapper<DocumentModel, DocumentViewModel>
     {
         public DocumentViewModel MapToView(DocumentModel model)
         {

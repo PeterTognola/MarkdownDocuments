@@ -4747,6 +4747,19 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
+      "MarkdownDocuments.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MarkdownDocuments.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MarkdownDocuments.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MarkdownDocuments.DAL.dll": {}
+        }
+      },
       "MarkdownDocuments.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -12535,6 +12548,11 @@
         "windowsazure.storage.nuspec"
       ]
     },
+    "MarkdownDocuments.DAL/1.0.0": {
+      "type": "project",
+      "path": "../MarkdownDocuments.DAL/MarkdownDocuments.DAL.csproj",
+      "msbuildProject": "../MarkdownDocuments.DAL/MarkdownDocuments.DAL.csproj"
+    },
     "MarkdownDocuments.Models/1.0.0": {
       "type": "project",
       "path": "../MarkdownDocuments.Models/MarkdownDocuments.Models.csproj",
@@ -12543,6 +12561,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "MarkdownDocuments.DAL >= 1.0.0",
       "MarkdownDocuments.Models >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
@@ -12574,6 +12593,9 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.DAL\\MarkdownDocuments.DAL.csproj": {
+              "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.DAL\\MarkdownDocuments.DAL.csproj"
+            },
             "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
               "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
             }
