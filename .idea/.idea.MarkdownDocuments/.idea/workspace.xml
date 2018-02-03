@@ -11,122 +11,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ValuesController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/ValuesController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding>
-                <marker date="1517694203817" expanded="false" signature="6:128" ph="..." />
-                <marker date="1517694203817" expanded="true" signature="176:932" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="257:930" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="348:422" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="511:559" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="656:676" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="788:808" ph="{...}" />
-                <marker date="1517694203817" expanded="true" signature="904:924" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class1.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.DAL/Class1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding>
-                <marker date="1517694254800" expanded="true" signature="46:86" ph="{...}" />
-                <marker date="1517694254800" expanded="true" signature="72:84" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class1.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Class1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding>
-                <marker date="1517694286272" expanded="true" signature="49:89" ph="{...}" />
-                <marker date="1517694286272" expanded="true" signature="75:87" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding>
-                <marker date="1517694437096" expanded="false" signature="6:330" ph="..." />
-                <marker date="1517694437096" expanded="true" signature="366:1314" ph="{...}" />
-                <marker date="1517694437096" expanded="true" signature="393:1312" ph="{...}" />
-                <marker date="1517694437096" expanded="true" signature="452:515" ph="{...}" />
-                <marker date="1517694437096" expanded="true" signature="738:789" ph="{...}" />
-                <marker date="1517694437096" expanded="true" signature="1007:1306" ph="{...}" />
-                <marker date="1517694437096" expanded="true" signature="1054:1269" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentModel.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Models/DocumentModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-              <folding>
-                <marker date="1517694580728" expanded="true" signature="56:301" ph="{...}" />
-                <marker date="1517694580728" expanded="true" signature="89:299" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentViewModel.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-              <folding>
-                <marker date="1517694612860" expanded="true" signature="60:309" ph="{...}" />
-                <marker date="1517694612860" expanded="true" signature="97:307" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDocumentMapper.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/IDocumentMapper.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-              <folding>
-                <marker date="1517694833633" expanded="true" signature="6:81" ph="..." />
-                <marker date="1517694833633" expanded="true" signature="125:294" ph="{...}" />
-                <marker date="1517694833633" expanded="true" signature="164:292" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentMapper.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/DocumentMapper.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-              <folding>
-                <marker date="1517694908026" expanded="true" signature="6:81" ph="..." />
-                <marker date="1517694908026" expanded="true" signature="125:798" ph="{...}" />
-                <marker date="1517694908026" expanded="true" signature="177:796" ph="{...}" />
-                <marker date="1517694908026" expanded="true" signature="247:490" ph="{...}" />
-                <marker date="1517694908026" expanded="true" signature="311:479" ph="{...}" />
-                <marker date="1517694908026" expanded="true" signature="555:790" ph="{...}" />
-                <marker date="1517694908026" expanded="true" signature="615:779" ph="{...}" />
+                <marker date="1517695029942" expanded="false" signature="6:370" ph="..." />
+                <marker date="1517695029942" expanded="true" signature="406:1473" ph="{...}" />
+                <marker date="1517695029942" expanded="true" signature="433:1471" ph="{...}" />
+                <marker date="1517695029942" expanded="true" signature="492:555" ph="{...}" />
+                <marker date="1517695029942" expanded="true" signature="778:948" ph="{...}" />
+                <marker date="1517695029942" expanded="true" signature="1166:1465" ph="{...}" />
+                <marker date="1517695029942" expanded="true" signature="1213:1428" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -153,11 +50,11 @@
         <option value="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/ValuesController.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.DAL/Class1.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.Models/Class1.cs" />
-        <option value="$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.Models/Models/DocumentModel.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/IDocumentMapper.cs" />
         <option value="$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/DocumentMapper.cs" />
+        <option value="$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs" />
       </list>
     </option>
   </component>
@@ -298,7 +195,7 @@
       <updated>1517692292178</updated>
       <workItem from="1517692294741" duration="822000" />
       <workItem from="1517693149939" duration="324000" />
-      <workItem from="1517694125460" duration="776000" />
+      <workItem from="1517694125460" duration="900000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -311,7 +208,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1922000" />
+    <option name="totallyTimeSpent" value="2046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,6 +264,78 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/DocumentMapper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <marker date="1517694908026" expanded="true" signature="6:81" ph="..." />
+            <marker date="1517694908026" expanded="true" signature="125:798" ph="{...}" />
+            <marker date="1517694908026" expanded="true" signature="177:796" ph="{...}" />
+            <marker date="1517694908026" expanded="true" signature="247:490" ph="{...}" />
+            <marker date="1517694908026" expanded="true" signature="311:479" ph="{...}" />
+            <marker date="1517694908026" expanded="true" signature="555:790" ph="{...}" />
+            <marker date="1517694908026" expanded="true" signature="615:779" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/IDocumentMapper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+          <folding>
+            <marker date="1517694833633" expanded="true" signature="6:81" ph="..." />
+            <marker date="1517694833633" expanded="true" signature="125:294" ph="{...}" />
+            <marker date="1517694833633" expanded="true" signature="164:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <marker date="1517694612860" expanded="true" signature="60:309" ph="{...}" />
+            <marker date="1517694612860" expanded="true" signature="97:307" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Models/DocumentModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <marker date="1517694580728" expanded="true" signature="56:301" ph="{...}" />
+            <marker date="1517694580728" expanded="true" signature="89:299" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <marker date="1517694286272" expanded="true" signature="49:89" ph="{...}" />
+            <marker date="1517694286272" expanded="true" signature="75:87" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.DAL/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <marker date="1517694254800" expanded="true" signature="46:86" ph="{...}" />
+            <marker date="1517694254800" expanded="true" signature="72:84" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/ValuesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -384,90 +353,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.DAL/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1517694254800" expanded="true" signature="46:86" ph="{...}" />
-            <marker date="1517694254800" expanded="true" signature="72:84" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1517694286272" expanded="true" signature="49:89" ph="{...}" />
-            <marker date="1517694286272" expanded="true" signature="75:87" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding>
-            <marker date="1517694437096" expanded="false" signature="6:330" ph="..." />
-            <marker date="1517694437096" expanded="true" signature="366:1314" ph="{...}" />
-            <marker date="1517694437096" expanded="true" signature="393:1312" ph="{...}" />
-            <marker date="1517694437096" expanded="true" signature="452:515" ph="{...}" />
-            <marker date="1517694437096" expanded="true" signature="738:789" ph="{...}" />
-            <marker date="1517694437096" expanded="true" signature="1007:1306" ph="{...}" />
-            <marker date="1517694437096" expanded="true" signature="1054:1269" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Models/DocumentModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <marker date="1517694580728" expanded="true" signature="56:301" ph="{...}" />
-            <marker date="1517694580728" expanded="true" signature="89:299" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <marker date="1517694612860" expanded="true" signature="60:309" ph="{...}" />
-            <marker date="1517694612860" expanded="true" signature="97:307" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/IDocumentMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding>
-            <marker date="1517694833633" expanded="true" signature="6:81" ph="..." />
-            <marker date="1517694833633" expanded="true" signature="125:294" ph="{...}" />
-            <marker date="1517694833633" expanded="true" signature="164:292" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/DocumentMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <marker date="1517694908026" expanded="true" signature="6:81" ph="..." />
-            <marker date="1517694908026" expanded="true" signature="125:798" ph="{...}" />
-            <marker date="1517694908026" expanded="true" signature="177:796" ph="{...}" />
-            <marker date="1517694908026" expanded="true" signature="247:490" ph="{...}" />
-            <marker date="1517694908026" expanded="true" signature="311:479" ph="{...}" />
-            <marker date="1517694908026" expanded="true" signature="555:790" ph="{...}" />
-            <marker date="1517694908026" expanded="true" signature="615:779" ph="{...}" />
+            <marker date="1517695029942" expanded="false" signature="6:370" ph="..." />
+            <marker date="1517695029942" expanded="true" signature="406:1473" ph="{...}" />
+            <marker date="1517695029942" expanded="true" signature="433:1471" ph="{...}" />
+            <marker date="1517695029942" expanded="true" signature="492:555" ph="{...}" />
+            <marker date="1517695029942" expanded="true" signature="778:948" ph="{...}" />
+            <marker date="1517695029942" expanded="true" signature="1166:1465" ph="{...}" />
+            <marker date="1517695029942" expanded="true" signature="1213:1428" ph="{...}" />
           </folding>
         </state>
       </provider>

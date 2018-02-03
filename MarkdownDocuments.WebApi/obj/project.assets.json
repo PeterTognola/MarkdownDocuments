@@ -4746,6 +4746,16 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "MarkdownDocuments.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/MarkdownDocuments.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MarkdownDocuments.Models.dll": {}
+        }
       }
     }
   },
@@ -12524,10 +12534,16 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "MarkdownDocuments.Models/1.0.0": {
+      "type": "project",
+      "path": "../MarkdownDocuments.Models/MarkdownDocuments.Models.csproj",
+      "msbuildProject": "../MarkdownDocuments.Models/MarkdownDocuments.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "MarkdownDocuments.Models >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -12557,7 +12573,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
+              "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
+            }
+          }
         }
       }
     },
