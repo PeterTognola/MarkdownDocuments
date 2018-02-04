@@ -183,7 +183,7 @@ namespace MarkdownDocuments.WebApi.Controllers
             return links;
         }
         
-        private IEnumerable<LinkView> GetLinks(Guid id)
+        private IEnumerable<LinkView> GetLinks(Guid id) // todo temp method. Need better solution.
         {
             var links = new List<LinkView>();
 
