@@ -47,5 +47,10 @@ namespace MarkdownDocuments.DAL.Repositories
         {
             throw new NotImplementedException();
         }
+        
+        public int Count()
+        {
+            return _context.Documents.Count();
+        }
     }
 }

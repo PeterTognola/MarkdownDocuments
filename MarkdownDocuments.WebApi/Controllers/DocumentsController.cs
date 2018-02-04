@@ -14,23 +14,43 @@ namespace MarkdownDocuments.WebApi.Controllers
     [Route("api/[controller]")]
     public class DocumentsController : Controller
     {
+        private readonly IUrlHelper _urlHelper;
         private readonly IMapper<DocumentModel, DocumentViewModel> _documentMapper;
         private readonly IRepository<DocumentModel> _documentRepository;
-
-        public DocumentsController(IRepository<DocumentModel> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
+        
+        public DocumentsController(IUrlHelper urlHelper, IRepository<DocumentModel> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
         {
             _documentRepository = documentRepository;
             _documentMapper = documentMapper;
+            _urlHelper = urlHelper;
         }
 
         // GET api/documents
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet(Name = nameof(Get))]
+        public IActionResult Get([FromQuery] QueryParameters query)
         {
             try
             {
-                var documents = _documentRepository.Get(new QueryParameters()).Select(x => _documentMapper.MapToView(x));
-                return Ok(documents);
+                var allItemCount = _documentRepository.Count();
+
+                var paginationMetadata = new
+                {
+                    totalCount = allItemCount,
+                    pageSize = query.PageCount,
+                    currentPage = query.Page,
+                    totalPages = query.GetTotalPages(allItemCount)
+                }; // todo refactor out.
+
+                Response.Headers.Add("X-Pagination", Newtonsoft.Json.JsonConvert.SerializeObject(paginationMetadata)); // todo refactor out.
+
+                var links = CreateLinksForCollection(query, allItemCount);
+                var value = _documentRepository.Get(query).Select(x => _documentMapper.MapToView(x));
+
+                return Ok(new
+                {
+                    value = value,
+                    links = links
+                });
             }
             catch (Exception e) // todo log exception
             {
@@ -39,11 +59,11 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // GET api/documents/{id}
-        [HttpGet("{id}")]
-        public string Get(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+//        [HttpGet("{id}")]
+//        public string Get(Guid id)
+//        {
+//            throw new NotImplementedException();
+//        }
 
         // POST api/documents
         [HttpPost]
@@ -78,6 +98,56 @@ namespace MarkdownDocuments.WebApi.Controllers
         public void Delete(Guid id)
         {
             throw new NotImplementedException();
+        }
+        
+        private List<LinkView> CreateLinksForCollection(QueryParameters queryParameters, int totalCount) // todo temp method. Need better solution.
+        {
+            var links = new List<LinkView>();
+
+            // self 
+            links.Add(
+                new LinkView(_urlHelper.Link(nameof(Get), new
+                {
+                    pagecount = queryParameters.PageCount,
+                    page = queryParameters.Page,
+                    orderby = queryParameters.OrderBy
+                }), "self", "GET"));
+
+            links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+            {
+                pagecount = queryParameters.PageCount,
+                page = 1,
+                orderby = queryParameters.OrderBy
+            }), "first", "GET"));
+
+            links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+            {
+                pagecount = queryParameters.PageCount,
+                page = queryParameters.GetTotalPages(totalCount),
+                orderby = queryParameters.OrderBy
+            }), "last", "GET"));
+
+            if (queryParameters.HasNext(totalCount))
+            {
+                links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+                {
+                    pagecount = queryParameters.PageCount,
+                    page = queryParameters.Page + 1,
+                    orderby = queryParameters.OrderBy
+                }), "next", "GET"));
+            }
+
+            if (queryParameters.HasPrevious())
+            {
+                links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+                {
+                    pagecount = queryParameters.PageCount,
+                    page = queryParameters.Page - 1,
+                    orderby = queryParameters.OrderBy
+                }), "previous", "GET"));
+            }
+
+            return links;
         }
     }
 }
