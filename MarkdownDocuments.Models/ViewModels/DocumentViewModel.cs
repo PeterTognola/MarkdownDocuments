@@ -10,6 +10,6 @@ namespace MarkdownDocuments.Models.ViewModels
         
         public string Body { get; set; }
         
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; } = DateTime.UtcNow;
     }
 }

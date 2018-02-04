@@ -25,6 +25,7 @@
       </e>
       <e p="MarkdownDocuments.Models" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="LinkView.cs" t="Include" />
         <e p="Mappers" t="Include">
           <e p="DocumentMapper.cs" t="Include" />
           <e p="IMapper.cs" t="Include" />

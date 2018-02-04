@@ -1,0 +1,14 @@
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.deps.json
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.runtimeconfig.json
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.runtimeconfig.dev.json
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.DAL.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.Models.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.DAL.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\bin\Debug\netcoreapp2.0\MarkdownDocuments.Models.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\obj\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.csproj.CoreCompileInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\obj\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.AssemblyInfoInputs.cache
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\obj\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.AssemblyInfo.cs
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\obj\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.WebApi\obj\Debug\netcoreapp2.0\MarkdownDocuments.WebApi.pdb
