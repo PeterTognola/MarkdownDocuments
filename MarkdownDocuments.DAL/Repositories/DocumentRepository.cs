@@ -12,16 +12,16 @@ namespace MarkdownDocuments.DAL.Repositories
         
         public IEnumerable<DocumentModel> Get(QueryParameters query)
         {
-            IQueryable<DocumentModel> _allItems = _context.Documents.AsQueryable().OrderBy(x => x.Title); //.OrderBy(query.OrderBy, query.IsDescending())
+            IQueryable<DocumentModel> allItems = _context.Documents.AsQueryable().OrderBy(x => x.Title); //.OrderBy(query.OrderBy, query.IsDescending())
 
             if (query.HasQuery())
             {
-                _allItems = _allItems
+                allItems = allItems
                     .Where(x => x.Title.ToString().Contains(query.Query.ToLowerInvariant())
                                 || x.Body.ToLowerInvariant().Contains(query.Query.ToLowerInvariant()));
             }
 
-            return _allItems
+            return allItems
                 .Skip(query.PageCount * (query.Page - 1))
                 .Take(query.PageCount);
         }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using MarkdownDocuments.DAL.Repositories;
+using MarkdownDocuments.Models;
 using MarkdownDocuments.Models.Mappers;
 using MarkdownDocuments.Models.Models;
 using MarkdownDocuments.Models.ViewModels;
@@ -12,9 +15,9 @@ namespace MarkdownDocuments.WebApi.Controllers
     public class DocumentsController : Controller
     {
         private readonly IMapper<DocumentModel, DocumentViewModel> _documentMapper;
-        private readonly IRepository<DocumentRepository> _documentRepository;
+        private readonly IRepository<DocumentModel> _documentRepository;
 
-        public DocumentsController(IRepository<DocumentRepository> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
+        public DocumentsController(IRepository<DocumentModel> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
         {
             _documentRepository = documentRepository;
             _documentMapper = documentMapper;
@@ -22,9 +25,17 @@ namespace MarkdownDocuments.WebApi.Controllers
 
         // GET api/documents
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var documents = _documentRepository.Get(new QueryParameters()).Select(x => _documentMapper.MapToView(x));
+                return Ok(documents);
+            }
+            catch (Exception e) // todo log exception
+            {
+                return StatusCode((int) HttpStatusCode.InternalServerError);
+            }
         }
 
         // GET api/documents/{id}

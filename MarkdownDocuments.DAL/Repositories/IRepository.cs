@@ -8,7 +8,7 @@ namespace MarkdownDocuments.DAL.Repositories
     {
         IEnumerable<TModel> Get(QueryParameters query);
         TModel Get(Guid id);
-        TModel Add(TModel modal);
+        TModel Add(TModel model);
         TModel Update(TModel model);
         void Delete(Guid id);
     }
