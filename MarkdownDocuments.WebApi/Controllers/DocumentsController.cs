@@ -120,9 +120,17 @@ namespace MarkdownDocuments.WebApi.Controllers
 
         // DELETE api/documents/{id}
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public IActionResult Delete(Guid id)
         {
-            throw new NotImplementedException();
+            if (id == Guid.Empty) return BadRequest();
+
+            if (_documentRepository.Get(id) == null) return NotFound();
+
+            _documentRepository.Delete(id);
+
+            if (!_documentRepository.Save()) throw new Exception("Unable to save changes");
+
+            return NoContent();
         }
         
         private List<LinkView> CreateLinksForCollection(QueryParameters queryParameters, int totalCount) // todo temp method. Need better solution.
