@@ -77,8 +77,10 @@ namespace MarkdownDocuments.WebApi.Controllers
             try
             {
                 _documentRepository.Add(_documentMapper.MapToModel(view));
+
+                if (!_documentRepository.Save()) throw new Exception("Unable to save changes");
                 
-                return CreatedAtRoute("Get", new { id = view.Id }, view);
+                return CreatedAtRoute(nameof(Post), new { id = view.Id }, view);
             }
             catch (Exception e) // todo log exception
             {

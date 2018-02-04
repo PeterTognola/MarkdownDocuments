@@ -12,5 +12,6 @@ namespace MarkdownDocuments.DAL.Repositories
         TModel Update(TModel model);
         void Delete(Guid id);
         int Count();
+        bool Save();
     }
 }

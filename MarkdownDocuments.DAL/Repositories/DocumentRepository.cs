@@ -34,7 +34,6 @@ namespace MarkdownDocuments.DAL.Repositories
         public DocumentModel Add(DocumentModel model)
         {
             _context.Add(model);
-            _context.SaveChanges();
             return model;
         }
 
@@ -51,6 +50,20 @@ namespace MarkdownDocuments.DAL.Repositories
         public int Count()
         {
             return _context.Documents.Count();
+        }
+
+        public bool Save()
+        {
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
