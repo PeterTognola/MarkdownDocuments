@@ -26,8 +26,8 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // GET api/documents
-        [HttpGet(Name = nameof(Get))]
-        public IActionResult Get([FromQuery] QueryParameters query)
+        [HttpGet(Name = nameof(GetAll), Order = 1)]
+        public IActionResult GetAll([FromQuery] QueryParameters query)
         {
             try
             {
@@ -59,11 +59,22 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // GET api/documents/{id}
-//        [HttpGet("{id}")]
-//        public string Get(Guid id)
-//        {
-//            throw new NotImplementedException();
-//        }
+        [HttpGet("{id}", Name = nameof(Get), Order = 2)]
+        public IActionResult Get(Guid id)
+        {
+            if (id == Guid.Empty) return BadRequest();
+            
+            var document = _documentRepository.Get(id);
+            
+            var links = GetLinks(id);
+            var value = _documentMapper.MapToView(document);
+
+            return Ok(new
+            {
+                value = value,
+                links = links
+            });
+        }
 
         // POST api/documents
         [HttpPost]
@@ -80,7 +91,7 @@ namespace MarkdownDocuments.WebApi.Controllers
 
                 if (!_documentRepository.Save()) throw new Exception("Unable to save changes");
                 
-                return CreatedAtRoute(nameof(Post), new { id = view.Id }, view);
+                return CreatedAtRoute(nameof(Get), new { id = view.Id });
             }
             catch (Exception e) // todo log exception
             {
@@ -108,21 +119,21 @@ namespace MarkdownDocuments.WebApi.Controllers
 
             // self 
             links.Add(
-                new LinkView(_urlHelper.Link(nameof(Get), new
+                new LinkView(_urlHelper.Link(nameof(GetAll), new
                 {
                     pagecount = queryParameters.PageCount,
                     page = queryParameters.Page,
                     orderby = queryParameters.OrderBy
                 }), "self", "GET"));
 
-            links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+            links.Add(new LinkView(_urlHelper.Link(nameof(GetAll), new
             {
                 pagecount = queryParameters.PageCount,
                 page = 1,
                 orderby = queryParameters.OrderBy
             }), "first", "GET"));
 
-            links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+            links.Add(new LinkView(_urlHelper.Link(nameof(GetAll), new
             {
                 pagecount = queryParameters.PageCount,
                 page = queryParameters.GetTotalPages(totalCount),
@@ -131,7 +142,7 @@ namespace MarkdownDocuments.WebApi.Controllers
 
             if (queryParameters.HasNext(totalCount))
             {
-                links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+                links.Add(new LinkView(_urlHelper.Link(nameof(GetAll), new
                 {
                     pagecount = queryParameters.PageCount,
                     page = queryParameters.Page + 1,
@@ -141,13 +152,40 @@ namespace MarkdownDocuments.WebApi.Controllers
 
             if (queryParameters.HasPrevious())
             {
-                links.Add(new LinkView(_urlHelper.Link(nameof(Get), new
+                links.Add(new LinkView(_urlHelper.Link(nameof(GetAll), new
                 {
                     pagecount = queryParameters.PageCount,
                     page = queryParameters.Page - 1,
                     orderby = queryParameters.OrderBy
                 }), "previous", "GET"));
             }
+
+            return links;
+        }
+        
+        private IEnumerable<LinkView> GetLinks(Guid id)
+        {
+            var links = new List<LinkView>();
+
+            links.Add(
+                new LinkView(_urlHelper.Link(nameof(Get), new { id = id }),
+                    "self",
+                    "GET"));
+
+            links.Add(
+                new LinkView(_urlHelper.Link(nameof(Delete), new { id = id }),
+                    "delete_food",
+                    "DELETE"));
+
+            links.Add(
+                new LinkView(_urlHelper.Link(nameof(Post), null),
+                    "create_food",
+                    "POST"));
+
+            links.Add(
+                new LinkView(_urlHelper.Link(nameof(Put), new { id = id }),
+                    "update_food",
+                    "PUT"));
 
             return links;
         }

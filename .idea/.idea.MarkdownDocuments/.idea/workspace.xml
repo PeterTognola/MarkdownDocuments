@@ -66,32 +66,34 @@
       <file leaf-file-name="DocumentsController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="82" column="80" lean-forward="true" selection-start-line="82" selection-start-column="80" selection-end-line="82" selection-end-column="80" />
+            <state relative-caret-position="150">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
-                <marker date="1517752084316" expanded="false" signature="6:312" ph="..." />
-                <marker date="1517752084316" expanded="true" signature="360:5370" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="444:5368" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="826:982" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="1118:2176" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="1144:2007" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="1285:1512" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="1903:1991" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="2061:2166" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="2186:2382" ph="/* GET api/documents/{id} ... */" />
-                <marker date="1517752084316" expanded="true" signature="2470:3145" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="2679:2977" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="3031:3135" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="3264:3333" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="3436:3505" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="3662:5362" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="3842:4023" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="4124:4270" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="4372:4558" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="4631:4952" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="4734:4919" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="5000:5325" ph="{...}" />
-                <marker date="1517752084316" expanded="true" signature="5103:5288" ph="{...}" />
+                <marker date="1517755577185" expanded="false" signature="6:312" ph="..." />
+                <marker date="1517755577185" expanded="true" signature="360:6532" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="444:6530" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="826:982" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="1135:2193" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="1161:2024" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="1302:1529" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="1920:2008" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="2078:2183" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="2327:2701" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="2613:2689" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="2820:3488" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="3029:3320" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="3374:3478" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="3607:3676" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="3779:3848" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="4005:5720" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="4188:4369" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="4473:4619" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="4724:4910" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="4983:5307" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="5089:5274" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="5355:5683" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="5461:5646" ph="{...}" />
+                <marker date="1517755577185" expanded="true" signature="5785:6524" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,7 +102,7 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="322">
               <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <marker date="1517751080924" expanded="false" signature="6:509" ph="..." />
@@ -133,6 +135,7 @@
     <setting file="file://$PROJECT_DIR$/MarkdownDocuments.Models/QueryParameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MarkdownDocuments.Models/LinkView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7469EA46-1AEA-47E2-BA3B-AAD4E0506E84/77/5f706645/HttpMethodAttribute.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -305,7 +308,7 @@
       <updated>1517692292178</updated>
       <workItem from="1517692294741" duration="822000" />
       <workItem from="1517693149939" duration="324000" />
-      <workItem from="1517694125460" duration="11570000" />
+      <workItem from="1517694125460" duration="13051000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -318,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12716000" />
+    <option name="totallyTimeSpent" value="14197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,18 +338,18 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.51458335" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997879" sideWeight="0.5104167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.48541668" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.48541668" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.49166667" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997879" sideWeight="0.48958334" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -374,15 +377,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs</url>
-          <line>71</line>
+          <line>82</line>
           <properties documentPath="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs">
             <startOffsets>
-              <startOffset value="2493" />
-              <startOffset value="2511" />
+              <startOffset value="2843" />
+              <startOffset value="2861" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="2531" />
-              <endOffset value="2531" />
+              <endOffset value="2881" />
+              <endOffset value="2881" />
             </endOffsets>
           </properties>
         </line-breakpoint>
@@ -391,10 +394,10 @@
           <line>31</line>
           <properties documentPath="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs">
             <startOffsets>
-              <startOffset value="1141" />
+              <startOffset value="1158" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="2166" />
+              <endOffset value="2183" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -425,8 +428,21 @@
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs">
+            <startOffsets>
+              <startOffset value="2350" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="2350" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -537,24 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <marker date="1517751080924" expanded="false" signature="6:509" ph="..." />
-            <marker date="1517751080924" expanded="true" signature="545:2171" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="572:2169" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="631:694" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="758:889" ph="/// Called on runtime. ... " />
-            <marker date="1517751080924" expanded="true" signature="956:1745" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="1498:1689" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="1864:2163" ph="{...}" />
-            <marker date="1517751080924" expanded="true" signature="1911:2126" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.DAL/Repositories/DocumentRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -601,34 +599,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7469EA46-1AEA-47E2-BA3B-AAD4E0506E84/77/5f706645/HttpMethodAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <marker date="1517751080924" expanded="false" signature="6:509" ph="..." />
+            <marker date="1517751080924" expanded="true" signature="545:2171" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="572:2169" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="631:694" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="758:889" ph="/// Called on runtime. ... " />
+            <marker date="1517751080924" expanded="true" signature="956:1745" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="1498:1689" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="1864:2163" ph="{...}" />
+            <marker date="1517751080924" expanded="true" signature="1911:2126" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="82" column="80" lean-forward="true" selection-start-line="82" selection-start-column="80" selection-end-line="82" selection-end-column="80" />
+        <state relative-caret-position="150">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <marker date="1517752084316" expanded="false" signature="6:312" ph="..." />
-            <marker date="1517752084316" expanded="true" signature="360:5370" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="444:5368" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="826:982" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="1118:2176" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="1144:2007" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="1285:1512" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="1903:1991" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="2061:2166" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="2186:2382" ph="/* GET api/documents/{id} ... */" />
-            <marker date="1517752084316" expanded="true" signature="2470:3145" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="2679:2977" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="3031:3135" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="3264:3333" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="3436:3505" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="3662:5362" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="3842:4023" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="4124:4270" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="4372:4558" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="4631:4952" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="4734:4919" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="5000:5325" ph="{...}" />
-            <marker date="1517752084316" expanded="true" signature="5103:5288" ph="{...}" />
+            <marker date="1517755577185" expanded="false" signature="6:312" ph="..." />
+            <marker date="1517755577185" expanded="true" signature="360:6532" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="444:6530" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="826:982" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="1135:2193" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="1161:2024" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="1302:1529" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="1920:2008" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="2078:2183" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="2327:2701" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="2613:2689" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="2820:3488" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="3029:3320" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="3374:3478" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="3607:3676" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="3779:3848" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="4005:5720" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="4188:4369" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="4473:4619" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="4724:4910" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="4983:5307" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="5089:5274" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="5355:5683" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="5461:5646" ph="{...}" />
+            <marker date="1517755577185" expanded="true" signature="5785:6524" ph="{...}" />
           </folding>
         </state>
       </provider>
