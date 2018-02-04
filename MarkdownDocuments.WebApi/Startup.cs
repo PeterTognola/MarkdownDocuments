@@ -5,6 +5,9 @@ using MarkdownDocuments.Models.Models;
 using MarkdownDocuments.Models.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -33,6 +36,14 @@ namespace MarkdownDocuments.WebApi
             
             // Mapper Instantiation
             services.AddTransient<IMapper<DocumentModel, DocumentViewModel>, DocumentMapper>();
+            
+            // UrlHelper Instantiation
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddScoped<IUrlHelper>(implementationFactory =>
+            {
+                var actionContext = implementationFactory.GetService<IActionContextAccessor>().ActionContext;
+                return new UrlHelper(actionContext);
+            });
             
             services.AddMvc();
         }
