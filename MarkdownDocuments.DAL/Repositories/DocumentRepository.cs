@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MarkdownDocuments.Models;
 using MarkdownDocuments.Models.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MarkdownDocuments.DAL.Repositories
 {
@@ -39,6 +40,13 @@ namespace MarkdownDocuments.DAL.Repositories
 
         public DocumentModel Update(DocumentModel model)
         {
+            // Check if entity, model, is being tracked. If so, detach and attach (for changes).
+            var attachedEntity = _context.ChangeTracker.Entries<DocumentModel>().FirstOrDefault(e => e.Entity.Id == model.Id);
+            if (attachedEntity != null)
+            {
+                _context.Entry(attachedEntity.Entity).State = EntityState.Detached;
+            }
+            
             _context.Update(model);
             return model;
         }
