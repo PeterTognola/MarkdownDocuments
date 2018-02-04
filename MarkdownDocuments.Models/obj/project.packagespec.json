@@ -6,6 +6,9 @@
     "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj",
     "outputPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netstandard2.0"
     ],
@@ -13,6 +16,11 @@
       "netstandard2.0": {
         "projectReferences": {}
       }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
     }
   },
   "frameworks": {
@@ -21,7 +29,8 @@
         "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "2.0.0"
+          "version": "[2.0.0, )",
+          "autoReferenced": true
         }
       },
       "imports": [
