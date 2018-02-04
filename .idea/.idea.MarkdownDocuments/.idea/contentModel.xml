@@ -6,9 +6,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DbContext.cs" t="Include" />
         <e p="MarkdownDocuments.DAL.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20180203224936_InitialDocumentMigration.cs" t="Include" />
+          <e p="20180203224936_InitialDocumentMigration.Designer.cs" t="Include" />
+          <e p="DbContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
+            <e p="netcoreapp2.0" t="Include">
               <e p="MarkdownDocuments.DAL.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -35,6 +40,7 @@
             </e>
           </e>
         </e>
+        <e p="QueryParameters.cs" t="Include" />
         <e p="ViewModels" t="Include">
           <e p="DocumentViewModel.cs" t="Include" />
         </e>

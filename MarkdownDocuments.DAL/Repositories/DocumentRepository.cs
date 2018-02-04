@@ -1,14 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using MarkdownDocuments.Models;
 using MarkdownDocuments.Models.Models;
 
 namespace MarkdownDocuments.DAL.Repositories
 {
     public class DocumentRepository : IRepository<DocumentModel>
     {
-        public IEnumerable<DocumentModel> Get()
+        private DbContext _context = new DbContext();
+        
+        public IEnumerable<DocumentModel> Get(QueryParameters query)
         {
-            throw new NotImplementedException();
+            IQueryable<DocumentModel> _allItems = _context.Documents.AsQueryable().OrderBy(x => x.Title); //.OrderBy(query.OrderBy, query.IsDescending())
+
+            if (query.HasQuery())
+            {
+                _allItems = _allItems
+                    .Where(x => x.Title.ToString().Contains(query.Query.ToLowerInvariant())
+                                || x.Body.ToLowerInvariant().Contains(query.Query.ToLowerInvariant()));
+            }
+
+            return _allItems
+                .Skip(query.PageCount * (query.Page - 1))
+                .Take(query.PageCount);
         }
 
         public DocumentModel Get(Guid id)
@@ -16,9 +31,11 @@ namespace MarkdownDocuments.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public DocumentModel Add(DocumentModel modal)
+        public DocumentModel Add(DocumentModel model)
         {
-            throw new NotImplementedException();
+            _context.Add(model);
+            _context.SaveChanges();
+            return model;
         }
 
         public DocumentModel Update(DocumentModel model)

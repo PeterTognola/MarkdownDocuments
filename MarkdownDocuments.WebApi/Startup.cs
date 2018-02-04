@@ -28,6 +28,9 @@ namespace MarkdownDocuments.WebApi
         {
             services.AddDbContext<DbContext>();
             
+            // Repository Instantiation
+            services.AddScoped<IRepository<DocumentModel>, DocumentRepository>();
+            
             // Mapper Instantiation
             services.AddTransient<IMapper<DocumentModel, DocumentViewModel>, DocumentMapper>();
             
