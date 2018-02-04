@@ -47,9 +47,23 @@ namespace MarkdownDocuments.WebApi.Controllers
 
         // POST api/documents
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] DocumentViewModel view)
         {
-            throw new NotImplementedException();
+            if (view == null) return BadRequest();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            
+            view.Id = Guid.NewGuid();
+            
+            try
+            {
+                _documentRepository.Add(_documentMapper.MapToModel(view));
+                
+                return CreatedAtRoute("Get", new { id = view.Id }, view);
+            }
+            catch (Exception e) // todo log exception
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError);
+            }
         }
 
         // PUT api/documents/{id}
