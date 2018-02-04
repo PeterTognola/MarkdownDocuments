@@ -28,7 +28,7 @@ namespace MarkdownDocuments.DAL.Repositories
 
         public DocumentModel Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _context.Documents.Find(id);
         }
 
         public DocumentModel Add(DocumentModel model)

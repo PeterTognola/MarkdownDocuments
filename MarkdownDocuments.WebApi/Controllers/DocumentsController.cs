@@ -100,10 +100,22 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // PUT api/documents/{id}
-        [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] string value)
+        [HttpPut("{id}", Name = nameof(Put))]
+        public IActionResult Put(Guid id, [FromBody] DocumentViewModel view)
         {
-            throw new NotImplementedException();
+            if (view == null) return BadRequest();
+
+            var model = _documentRepository.Get(id);
+
+            if (model == null) return NotFound();
+
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            _documentRepository.Update(_documentMapper.MapToModel(view));
+
+            if (!_documentRepository.Save()) throw new Exception("Unable to save changes");
+
+            return Ok(view);
         }
 
         // DELETE api/documents/{id}
