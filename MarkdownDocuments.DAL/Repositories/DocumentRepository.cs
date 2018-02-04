@@ -44,7 +44,14 @@ namespace MarkdownDocuments.DAL.Repositories
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Documents.Remove(_context.Documents.Find(id));
+            }
+            catch
+            {
+                throw new Exception("Unable to delete things..."); // todo error message.
+            }
         }
         
         public int Count()
