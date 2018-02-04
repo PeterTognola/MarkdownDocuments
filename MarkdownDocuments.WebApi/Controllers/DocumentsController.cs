@@ -77,7 +77,7 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // POST api/documents
-        [HttpPost]
+        [HttpPost(Name = nameof(Post))]
         public IActionResult Post([FromBody] DocumentViewModel view)
         {
             if (view == null) return BadRequest();
@@ -119,7 +119,7 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         // DELETE api/documents/{id}
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}", Name = nameof(Delete))]
         public IActionResult Delete(Guid id)
         {
             if (id == Guid.Empty) return BadRequest();
