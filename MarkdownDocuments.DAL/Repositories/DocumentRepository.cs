@@ -16,9 +16,9 @@ namespace MarkdownDocuments.DAL.Repositories
 
             if (query.HasQuery())
             {
-                allItems = allItems
-                    .Where(x => x.Title.ToString().Contains(query.Query.ToLowerInvariant())
-                                || x.Body.ToLowerInvariant().Contains(query.Query.ToLowerInvariant()));
+                allItems = allItems.Where(x =>
+                    x.Title.ToString().Contains(query.Query.ToLowerInvariant()) ||
+                    x.Body.ToLowerInvariant().Contains(query.Query.ToLowerInvariant()));
             }
 
             return allItems
@@ -39,7 +39,8 @@ namespace MarkdownDocuments.DAL.Repositories
 
         public DocumentModel Update(DocumentModel model)
         {
-            throw new NotImplementedException();
+            _context.Update(model);
+            return model;
         }
 
         public void Delete(Guid id)

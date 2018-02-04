@@ -111,11 +111,11 @@ namespace MarkdownDocuments.WebApi.Controllers
 
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            _documentRepository.Update(_documentMapper.MapToModel(view));
+            var updatedItem = _documentRepository.Update(_documentMapper.MapToModel(view));
 
             if (!_documentRepository.Save()) throw new Exception("Unable to save changes");
 
-            return Ok(view);
+            return Ok(_documentMapper.MapToView(updatedItem));
         }
 
         // DELETE api/documents/{id}
