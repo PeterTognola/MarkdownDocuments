@@ -20,7 +20,7 @@ namespace MarkdownDocuments.WebApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5001")
+                .UseUrls("http://localhost:5000")
                 .Build();
     }
 }
