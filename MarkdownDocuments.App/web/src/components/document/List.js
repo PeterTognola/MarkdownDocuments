@@ -43,34 +43,24 @@ class List extends Component {
           <thead>
             <tr>
               <th>Id</th>
-              <th>id</th>
-              <th>isbn</th>
-              <th>description</th>
-              <th>author</th>
-              <th>title</th>
-              <th>publicationDate</th>
-              <th></th>
-              <th></th>
+              <th>Title</th>
+              <th>CreationDate</th>
             </tr>
           </thead>
           <tbody>
-          {this.props.data['hydra:member'] && this.props.data['hydra:member'].map(item =>
-            <tr className={item['@id']} key={item['@id']}>
-              <td><Link to={`show/${encodeURIComponent(item['@id'])}`}>{item['@id']}</Link></td>
-              <td>{item['id'] ? itemToLinks(item['id']) : ''}</td>
-              <td>{item['isbn'] ? itemToLinks(item['isbn']) : ''}</td>
-              <td>{item['description'] ? itemToLinks(item['description']) : ''}</td>
-              <td>{item['author'] ? itemToLinks(item['author']) : ''}</td>
+          {this.props.data.value && this.props.data.value.map(item =>
+            <tr className={item['id']} key={item['id']}>
+              <td><Link to={`/document/show/${encodeURIComponent(item['id'])}`}>{item['id']}</Link></td>
               <td>{item['title'] ? itemToLinks(item['title']) : ''}</td>
-              <td>{item['publicationDate'] ? itemToLinks(item['publicationDate']) : ''}</td>
+              <td>{item['creationDate'] ? itemToLinks(item['creationDate']) : ''}</td>
               <td>
-                <Link to={`show/${encodeURIComponent(item['@id'])}`}>
+                <Link to={`/document/show/${encodeURIComponent(item['id'])}`}>
                   <span className="glyphicon glyphicon-search" aria-hidden="true"/>
                   <span className="sr-only">Show</span>
                 </Link>
               </td>
               <td>
-                <Link to={`edit/${encodeURIComponent(item['@id'])}`}>
+                <Link to={`/document/edit/${encodeURIComponent(item['id'])}`}>
                   <span className="glyphicon glyphicon-pencil" aria-hidden="true"/>
                   <span className="sr-only">Edit</span>
                 </Link>
@@ -102,10 +92,10 @@ class List extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: state.document.list.data,
-    error: state.document.list.error,
-    loading: state.document.list.loading,
-    deletedItem: state.document.del.deleted,
+    data: state.documentReducers.list.data,
+    error: state.documentReducers.list.error,
+    loading: state.documentReducers.list.loading,
+    deletedItem: state.documentReducers.del.deleted,
   };
 };
 

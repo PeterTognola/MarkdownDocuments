@@ -12,13 +12,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace MarkdownDocuments.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class DocumentsController : Controller
+    public class DocumentController : Controller
     {
         private readonly IUrlHelper _urlHelper;
         private readonly IMapper<DocumentModel, DocumentViewModel> _documentMapper;
         private readonly IRepository<DocumentModel> _documentRepository;
         
-        public DocumentsController(IUrlHelper urlHelper, IRepository<DocumentModel> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
+        public DocumentController(IUrlHelper urlHelper, IRepository<DocumentModel> documentRepository, IMapper<DocumentModel, DocumentViewModel> documentMapper)
         {
             _documentRepository = documentRepository;
             _documentMapper = documentMapper;

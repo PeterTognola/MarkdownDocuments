@@ -45,6 +45,18 @@ namespace MarkdownDocuments.WebApi
                 return new UrlHelper(actionContext);
             });
             
+            // Add CORS for development (todo remove for production).
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllHeaders",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+            
             services.AddMvc();
         }
         
@@ -56,6 +68,9 @@ namespace MarkdownDocuments.WebApi
                 loggerFactory.AddDebug();
                 
                 app.UseDeveloperExceptionPage();
+                
+                // Shows UseCors with named policy.
+                app.UseCors("AllowAllHeaders");
             }
 
             app.UseMvc();

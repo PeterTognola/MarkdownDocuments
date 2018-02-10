@@ -35,6 +35,8 @@ class Show extends Component {
 
     const item = this.props.retrieved;
 
+    console.log(this.props);
+
     return (<div>
       <h1>Show {item && item['@id']}</h1>
 
@@ -91,12 +93,12 @@ class Show extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    error: state.document.show.error,
-    loading: state.document.show.loading,
-    retrieved:state.document.show.retrieved,
-    deleteError: state.document.del.error,
-    deleteLoading: state.document.del.loading,
-    deleted: state.document.del.deleted,
+    error: state.documentReducers.show.error,
+    loading: state.documentReducers.show.loading,
+    retrieved:state.documentReducers.show.retrieved,
+    deleteError: state.documentReducers.del.error,
+    deleteLoading: state.documentReducers.del.loading,
+    deleted: state.documentReducers.del.deleted,
   };
 };
 

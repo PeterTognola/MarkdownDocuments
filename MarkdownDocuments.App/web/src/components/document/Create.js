@@ -35,9 +35,9 @@ class Create extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    created: state.document.create.created,
-    error: state.document.create.error,
-    loading: state.document.create.loading,
+    created: state.documentReducers.create.created,
+    error: state.documentReducers.create.error,
+    loading: state.documentReducers.create.loading,
   };
 };
 
