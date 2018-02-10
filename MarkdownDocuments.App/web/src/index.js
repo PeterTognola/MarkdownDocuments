@@ -1,10 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -15,6 +8,7 @@ import { reducer as form } from 'redux-form';
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
+import './index.css';
 
 // import reducers
 import documentReducers from './reducers/document/';
@@ -32,13 +26,16 @@ const history = syncHistoryWithStore(createBrowserHistory(), store);
 ReactDOM.render(
         <Provider store={store}>
             <Router history={history}>
-                <div>
-                <Route render={() => <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/document">document</Link></li>
-                </ul>}/>
+                <div class="container">
+                    <Route render={() =>
+                        <ul className="menu">
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/document">Documents</Link></li>
+                            <li><Link to="/">Account</Link></li>
+                        </ul>
+                    }/>
 
-                {documentRoutes}
+                    {documentRoutes}
                 </div>
             </Router>
         </Provider>, document.getElementById('root')

@@ -30,7 +30,12 @@ class List extends Component {
 
   render() {
     return <div>
-      <h1>document List</h1>
+        <header>
+            <h1>My Documents</h1>
+            <span className="author">
+                {this.props.data.value && this.props.data.value.length} Documents <strong>|</strong> Last Edited 2 hours ago
+            </span>
+        </header>
 
       {this.props.loading && <div className="alert alert-info">Loading...</div>}
       {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
