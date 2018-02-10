@@ -97,7 +97,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     retrieve: id => dispatch(retrieve(id)),
-    del: item => dispatch(del(item)),
+    del: item => dispatch(del(item.value)),
     reset: () => {
       dispatch(reset());
       dispatch(error(null));

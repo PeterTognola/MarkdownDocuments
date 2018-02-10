@@ -33,10 +33,10 @@ class List extends Component {
       <h1>document List</h1>
 
       {this.props.loading && <div className="alert alert-info">Loading...</div>}
-      {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['@id']} deleted.</div>}
+      {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
       {this.props.error && <div className="alert alert-danger">{this.props.error}</div>}
 
-      <p><Link to="create" className="btn btn-default">Create</Link></p>
+      <p><Link to="/document/create" className="btn btn-default">Create</Link></p>
 
       <div className="table-responsive">
           <table className="table table-striped table-hover">

@@ -16,7 +16,7 @@ export function del(item) {
   return (dispatch) => {
     dispatch(loading(true));
 
-    return fetch(item['@id'], {method: 'DELETE'})
+    return fetch("/document/" + item['id'], {method: 'DELETE'})
       .then(() => {
         dispatch(loading(false));
         dispatch(success(item))
