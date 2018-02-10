@@ -53,7 +53,8 @@ namespace MarkdownDocuments.WebApi
                     {
                         builder.AllowAnyOrigin()
                             .AllowAnyHeader()
-                            .AllowAnyMethod();
+                            .AllowAnyMethod()
+                            .AllowAnyOrigin();
                     });
             });
             
