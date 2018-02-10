@@ -1,3 +1,10 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+// import App from './App';
+// import registerServiceWorker from './registerServiceWorker';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -23,18 +30,18 @@ const store = createStore(
 const history = syncHistoryWithStore(createBrowserHistory(), store);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Router history={history}>
-            <Switch>
-                {documentRoutes}
+        <Provider store={store}>
+            <Router history={history}>
+                <div>
                 <Route render={() => <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/document">document</Link></li>
                 </ul>}/>
-            </Switch>
-        </Router>
-    </Provider>,
-    document.getElementById('root')
+
+                {documentRoutes}
+                </div>
+            </Router>
+        </Provider>, document.getElementById('root')
 );
 
 registerServiceWorker();
