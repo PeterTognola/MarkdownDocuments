@@ -18,7 +18,7 @@ export function retrieve(id) {
   return (dispatch) => {
     dispatch(retrieveLoading(true));
 
-    return fetch(id)
+    return fetch("/document/" + id)
       .then(response => response.json())
       .then(data => {
         dispatch(retrieveLoading(false));
@@ -49,9 +49,9 @@ export function update(item, values) {
     dispatch(createSuccess(null));
     dispatch(updateLoading(true));
 
-    return fetch(item['@id'], {
+    return fetch("/document/" + item['id'], {
         method: 'PUT',
-        headers: new Headers({'Content-Type': 'application/ld+json'}),
+        headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(values),
       }
     )

@@ -33,12 +33,12 @@ class Show extends Component {
   render() {
     if (this.props.deleted) return <Redirect to=".."/>;
 
-    const item = this.props.retrieved;
+    let item = this.props.retrieved;
 
-    console.log(this.props);
+    if (item !== null) item = this.props.retrieved.value;
 
     return (<div>
-      <h1>Show {item && item['@id']}</h1>
+      <h1>Show {item && item['id']}</h1>
 
       {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
       {this.props.error && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.error}</div>}
@@ -58,31 +58,23 @@ class Show extends Component {
               <td>{item['id']}</td>
             </tr>
             <tr>
-              <td>isbn</td>
-              <td>{item['isbn']}</td>
-            </tr>
-            <tr>
-              <td>description</td>
-              <td>{item['description']}</td>
-            </tr>
-            <tr>
-              <td>author</td>
-              <td>{item['author']}</td>
-            </tr>
-            <tr>
               <td>title</td>
               <td>{item['title']}</td>
             </tr>
             <tr>
-              <td>publicationDate</td>
-              <td>{item['publicationDate']}</td>
+              <td>body</td>
+              <td>{item['body']}</td>
+            </tr>
+            <tr>
+              <td>creationDate</td>
+              <td>{item['creationDate']}</td>
             </tr>
           </tbody>
         </table>
       </div>
       }
       <Link to=".." className="btn btn-default">Back to list</Link>
-      {item && <Link to={`/document/edit/${encodeURIComponent(item['@id'])}`}>
+      {item && <Link to={`/document/edit/${encodeURIComponent(item['id'])}`}>
         <button className="btn btn-warning">Edit</button>
         </Link>
       }

@@ -16,7 +16,7 @@ export function retrieve(id) {
   return (dispatch) => {
     dispatch(loading(true));
 
-    return fetch(id)
+    return fetch("/document/" + id)
       .then(response => response.json())
       .then(data => {
         dispatch(loading(false));

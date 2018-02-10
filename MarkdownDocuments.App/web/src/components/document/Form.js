@@ -20,12 +20,8 @@ class Form extends Component {
     const { handleSubmit } = this.props;
 
     return <form onSubmit={handleSubmit}>
-      <Field component={this.renderField} name="id" type="number" placeholder="" />
-      <Field component={this.renderField} name="isbn" type="text" placeholder="The ISBN of the document" />
-      <Field component={this.renderField} name="description" type="text" placeholder="A description of the item" required={true}/>
-      <Field component={this.renderField} name="author" type="text" placeholder="The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably" required={true}/>
-      <Field component={this.renderField} name="title" type="text" placeholder="The title of the document" required={true}/>
-      <Field component={this.renderField} name="publicationDate" type="text" placeholder="The date on which the CreativeWork was created or the item was added to a DataFeed" required={true}/>
+      <Field component={this.renderField} name="title" type="text" placeholder="The title..." required={true} />
+      <Field component={this.renderField} name="body" type="text" placeholder="The body..." required={true}/>
 
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>;

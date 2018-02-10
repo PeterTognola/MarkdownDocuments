@@ -39,13 +39,15 @@ class Update extends Component {
   render() {
     if (this.props.deleted) return <Redirect to=".."/>;
 
-    const item = this.props.updated ? this.props.updated : this.props.retrieved;
+    let item = this.props.updated ? this.props.updated : this.props.retrieved;
+
+    if (item != null) item = item.value;
 
     return <div>
-      <h1>Edit {item && item['@id']}</h1>
+      <h1>Edit {item && item['id']}</h1>
 
-      {this.props.created && <div className="alert alert-success" role="status">{this.props.created['@id']} created.</div>}
-      {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['@id']} updated.</div>}
+      {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
+      {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
       {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && <div className="alert alert-info" role="status">Loading...</div>}
       {this.props.retrieveError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.retrieveError}</div>}
       {this.props.updateError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.updateError}</div>}
@@ -60,16 +62,16 @@ class Update extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    retrieveError: state.document.update.retrieveError,
-    retrieveLoading: state.document.update.retrieveLoading,
-    updateError: state.document.update.updateError,
-    updateLoading: state.document.update.updateLoading,
-    deleteError: state.document.del.error,
-    deleteLoading: state.document.del.loading,
-    created: state.document.create.created,
-    deleted: state.document.del.deleted,
-    retrieved: state.document.update.retrieved,
-    updated: state.document.update.updated,
+    retrieveError: state.documentReducers.update.retrieveError,
+    retrieveLoading: state.documentReducers.update.retrieveLoading,
+    updateError: state.documentReducers.update.updateError,
+    updateLoading: state.documentReducers.update.updateLoading,
+    deleteError: state.documentReducers.del.error,
+    deleteLoading: state.documentReducers.del.loading,
+    created: state.documentReducers.create.created,
+    deleted: state.documentReducers.del.deleted,
+    retrieved: state.documentReducers.update.retrieved,
+    updated: state.documentReducers.update.updated,
   };
 };
 
