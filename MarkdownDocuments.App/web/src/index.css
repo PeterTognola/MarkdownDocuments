@@ -117,6 +117,13 @@ span.author:before {
     opacity: 0;
 }
 
+.page {
+    font-family: 'Lora', serif;
+    max-width: 960px;
+    width: 100%;
+    margin:0 auto;
+}
+
 .pages {
     width:calc(100% - 100px);
     height:50%;
@@ -139,7 +146,9 @@ span.author:before {
     box-shadow: 0 0 17px -4px #333;
     font-family: 'Lora', serif;
     text-decoration: none;
-    padding:30px;
+    padding:30px;.
+    max-width:none;
+    width:auto;
 }
 
 .pages .page + .page {
@@ -163,6 +172,13 @@ span.author:before {
     text-align: center;
 }
 
+.page h1 {
+    color:#333;
+    font-weight: 700;
+    font-size:22px;
+    margin:0;
+}
+
 .pages .page h1 {
     color:#333;
     font-weight: 700;
@@ -170,16 +186,20 @@ span.author:before {
     margin:0;
 }
 
-.pages .page p {
-    font-size:12px;
+.page p {
+    font-size:14px;
     color:#757575;
     margin:0;
     padding:30px 0 0;
+}
+
+.pages .page p {
     position: absolute;
     left:30px;
     right:30px;
     max-height:calc(100% - 120px);
     overflow: hidden;
+    font-size:12px;
 }
 
 .center {
