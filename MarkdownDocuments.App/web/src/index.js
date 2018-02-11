@@ -26,7 +26,7 @@ const history = syncHistoryWithStore(createBrowserHistory(), store);
 ReactDOM.render(
         <Provider store={store}>
             <Router history={history}>
-                <div class="container">
+                <div className="container">
                     <Route render={() =>
                         <ul className="menu">
                             <li><Link to="/">Home</Link></li>
