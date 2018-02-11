@@ -85,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="101" column="33" lean-forward="true" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+              <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
               <folding>
                 <marker date="1518267927618" expanded="false" signature="6:312" ph="..." />
                 <marker date="1518267927618" expanded="true" signature="360:7341" ph="{...}" />
@@ -206,7 +206,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -398,7 +398,7 @@
       <workItem from="1517776607203" duration="1535000" />
       <workItem from="1517778183021" duration="1292000" />
       <workItem from="1517779528382" duration="1333000" />
-      <workItem from="1518200879734" duration="6555000" />
+      <workItem from="1518200879734" duration="7153000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -411,7 +411,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35143000" />
+    <option name="totallyTimeSpent" value="35741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +423,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -642,7 +642,7 @@
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="101" column="33" lean-forward="true" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <caret line="101" column="33" lean-forward="false" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
           <folding>
             <marker date="1518267927618" expanded="false" signature="6:312" ph="..." />
             <marker date="1518267927618" expanded="true" signature="360:7341" ph="{...}" />

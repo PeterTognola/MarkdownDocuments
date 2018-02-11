@@ -41,7 +41,7 @@ class List extends Component {
       {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
       {this.props.error && <div className="alert alert-danger">{this.props.error}</div>}
 
-      <p><Link to="/document/create" className="btn btn-default">Create</Link></p>
+        <div className="padded center"><Link to="/document/create" className="button"><span class="icon new"></span></Link></div>
 
       <div className="pages">
           {this.props.data.value && this.props.data.value.map(item =>
