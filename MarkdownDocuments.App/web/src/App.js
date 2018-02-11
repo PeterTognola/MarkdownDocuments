@@ -18,8 +18,6 @@ const store = createStore(
     applyMiddleware(thunk)
 );
 
-const history = syncHistoryWithStore(createBrowserHistory(), store);
-
 export default class App {
     constructor() {}
 
@@ -44,6 +42,6 @@ export default class App {
     }
 
     static getHistory() {
-        return history;
+        return syncHistoryWithStore(createBrowserHistory(), store);
     }
 }
