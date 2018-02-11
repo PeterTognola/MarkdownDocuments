@@ -43,12 +43,13 @@ span.author:before {
     transform:translateY(0) translateX(-50%);
 }
 
-header {
-    margin:40px;
+.container {
+    width: 100%;
+    height: 100%;
 }
 
-.container {
-
+.container header {
+    margin:40px;
 }
 
 .container .menu {
@@ -75,4 +76,11 @@ header {
     text-decoration: none;
     display: block;
     vertical-align: middle;
+}
+
+.container > div {
+    width:100%;
+    height:calc(100% - 50px);
+    position: absolute;
+    top:50px;
 }
