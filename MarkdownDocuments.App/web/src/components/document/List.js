@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
-import { itemToLinks } from '../../utils/helpers';
 import {templates} from "../../utils/templates";
 
 class List extends Component {

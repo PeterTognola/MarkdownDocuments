@@ -173,3 +173,22 @@ span.author:before {
 }
 
 .icon.new { background-image:url('sprite.svg#document-new') }
+
+.icon.loading { background-image:url('sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
+
+@keyframes iconLoading {
+    0% {
+        transform: scale(0.2, 0.2);
+        opacity: 0.1;
+    }
+
+    80% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.2, 0.2);
+        opacity: 0.1;
+    }
+}

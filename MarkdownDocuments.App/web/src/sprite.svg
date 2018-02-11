@@ -3,4 +3,5 @@
     <g id="menu-close"><path fill="none" stroke="#bec9d3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M38 10L10 38m28 0L10 10"/></g>
     <g id="document-new"><path fill="#E6E6E6" d="M41 47H7a2 2 0 0 1-2-2V3c0-1.1.9-2 2-2h24l12 12v32a2 2 0 0 1-2 2z"/><path fill="#B3B3B3" d="M31 1v10c0 1.1.9 2 2 2h10L31 1z"/><circle cx="24" cy="24" r="10" fill="#72C472"/><path fill="#FFF" d="M28 23h-3v-3a1 1 0 0 0-2 0v3h-3a1 1 0 0 0 0 2h3v3a1 1 0 0 0 2 0v-3h3a1 1 0 0 0 0-2z"/></g>
     <g id="menu-save"><path fill="#3c81f0" d="M24 1a23 23 0 1 0 0 46 23 23 0 0 0 0-46zm12.7 15.7l-16 16c-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-8-8c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l7.3 7.3 15.3-15.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></g>
+    <g id="loading"><circle cx="24" cy="24" r="24" fill="#444" class="nc-icon-wrapper" opacity=".9" transform="translate(5.8 5.8) scale(.7597)"/></g>
 </svg>

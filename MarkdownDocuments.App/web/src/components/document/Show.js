@@ -4,6 +4,7 @@ import {Link, Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {retrieve, reset} from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
+import {templates} from "../../utils/templates";
 
 class Show extends Component {
   static propTypes = {
@@ -40,7 +41,7 @@ class Show extends Component {
     return (<div>
       <h1>Show {item && item['id']}</h1>
 
-      {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
+      {this.props.loading && templates.loading()}
       {this.props.error && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.error}</div>}
       {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
 
