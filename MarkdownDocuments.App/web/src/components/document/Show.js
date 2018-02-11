@@ -51,9 +51,11 @@ class Show extends Component {
                     </div>
                 }
                 <Link to="..">Back to list</Link>
-                {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}>
-                <button className="btn btn-warning">Edit</button>
-                </Link>
+
+                {item &&
+                    <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}>
+                        <button className="btn btn-warning">Edit</button>
+                    </Link>
                 }
                 <button onClick={this.del}>Delete</button>
             </div>

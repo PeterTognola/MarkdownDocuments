@@ -30,8 +30,14 @@ class List extends Component {
 
     render() {
         return <div>
+            <div className="navigation">
+                <Link to="/document/create" className="button"><span className="icon create"></span></Link> {/* create icon */}
+                <Link to="/document/create" className="button"><span className="icon close"></span></Link> {/* search icon */}
+            </div>
+
             <header>
                 <h1>My Documents</h1>
+                <hr />
                 <span className="author">
                     {this.props.data.value && this.props.data.value.length} Documents
                 </span>
@@ -40,8 +46,6 @@ class List extends Component {
             {this.props.loading && templates.loading()}
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
             {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
-
-            <div style={{marginBottom:"20px"}} className="padded center"><Link to="/document/create" className="button"><span class="icon new"></span></Link></div>
 
             <div className="pages">
                 <h2>Recent Documents</h2>

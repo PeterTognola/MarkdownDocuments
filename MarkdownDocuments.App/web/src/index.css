@@ -24,7 +24,7 @@ hr {
 
 h1 {
     text-align: center;
-    margin:40px 0;
+    margin:0;
     font-size:22px;
     font-weight: 600;
     color:#252525;
@@ -44,20 +44,9 @@ span.author {
     text-align: center;
     width:100%;
     display: block;
-    margin:40px 0;
+    margin:0;
     position: relative;
     font-size:15px;
-}
-
-span.author:before {
-    width:20px;
-    height:1px;
-    background-color: #cacaca;
-    content:'';
-    position: absolute;
-    top:-20px;
-    left:50%;
-    transform:translateY(0) translateX(-50%);
 }
 
 .container {
@@ -68,7 +57,12 @@ span.author:before {
 }
 
 .container header {
-    margin:40px;
+    margin:25px;
+}
+
+.container header hr {
+    width:20px;
+    margin:15px auto;
 }
 
 .container .menu {
@@ -103,18 +97,31 @@ span.author:before {
     position: absolute;
     top:50px;
     background-color: #EDEDED;
-    z-index: 0;
+    z-index: 1;
     overflow: auto;
     opacity: 1;
-    transform:translateY(0) scale(1,1);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
 
 .container > div + div {
     z-index:0;
-    transform:translateY(100%) scale(0,0);
     transition: all 0.5s 0.3s ease;
     opacity: 0;
+}
+
+.navigation {
+    width:calc(100% - 100px);
+    height:60px;
+    font-size:0;
+    padding: 20px 50px;
+}
+
+.navigation .button:first-child {
+    float:left;
+}
+
+.navigation .button:last-child {
+    float: right;
 }
 
 .page {
@@ -133,7 +140,7 @@ span.author:before {
 }
 
 .pages > h2 {
-    margin: 0 30px -10px;
+    margin: 30px 0 -10px;
     text-align: left;
 }
 
@@ -211,11 +218,10 @@ span.author:before {
 }
 
 .button {
-    border: 2px solid #909ead;
-    border-radius: 50%;
+    width:40px;
+    height:40px;
+    background-color: #757575;
     display: inline-block;
-    text-align: center;
-    padding:10px;
 }
 
 .icon {
