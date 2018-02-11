@@ -23,22 +23,25 @@ const store = createStore(
 
 const history = syncHistoryWithStore(createBrowserHistory(), store);
 
-ReactDOM.render(
-        <Provider store={store}>
-            <Router history={history}>
-                <div className="container">
-                    <Route render={() =>
-                        <ul className="menu">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/document">Documents</Link></li>
-                            <li><Link to="/">Account</Link></li>
-                        </ul>
-                    }/>
+const body =(
+    <Provider store={store}>
+        <Router history={history}>
+            <div className="container">
+                <Route render={() =>
+                    <ul className="menu">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/document">Documents</Link></li>
+                        <li><Link to="/">Account</Link></li>
+                    </ul>
+                }/>
 
-                    {documentRoutes}
-                </div>
-            </Router>
-        </Provider>, document.getElementById('root')
+                {documentRoutes}
+            </div>
+        </Router>
+    </Provider>
+);
+
+ReactDOM.render(body, document.getElementById('root')
 );
 
 registerServiceWorker();
