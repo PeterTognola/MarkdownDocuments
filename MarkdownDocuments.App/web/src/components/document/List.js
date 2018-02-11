@@ -33,7 +33,7 @@ class List extends Component {
             <header>
                 <h1>My Documents</h1>
                 <span className="author">
-                    {this.props.data.value && this.props.data.value.length} Documents <strong>|</strong> Last Edited 2 hours ago
+                    {this.props.data.value && this.props.data.value.length} Documents
                 </span>
             </header>
 
@@ -43,16 +43,29 @@ class List extends Component {
 
             <div style={{marginBottom:"20px"}} className="padded center"><Link to="/document/create" className="button"><span class="icon new"></span></Link></div>
 
-          <div className="pages">
-              {this.props.data.value && this.props.data.value.map(item =>
-                  <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
-                      <h1>{item["title"]}</h1>
-                      <p>{item["body"]}</p>
-                  </Link>
-              )}
-          </div>
+            <div className="pages">
+                <h2>Recent Documents</h2>
+                {this.props.data.value && this.props.data.value.map(item =>
+                    <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
+                        <h1>{item["title"]}</h1>
+                        <p>{item["body"]}</p>
+                    </Link>
+                )}
+            </div>
 
-          {this.pagination()}
+            <hr />
+
+            <div className="pages">
+                <h2>All Documents</h2>
+                {this.props.data.value && this.props.data.value.map(item =>
+                    <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
+                        <h1>{item["title"]}</h1>
+                        <p>{item["body"]}</p>
+                    </Link>
+                )}
+            </div>
+
+            {this.pagination()}
         </div>;
     }
 
