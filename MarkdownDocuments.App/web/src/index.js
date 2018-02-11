@@ -10,6 +10,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
 import './index.css';
 
+
 // import reducers
 import documentReducers from './reducers/document/';
 
