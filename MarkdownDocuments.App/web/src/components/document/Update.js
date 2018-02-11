@@ -6,6 +6,7 @@ import Form from './Form';
 import { success } from '../../actions/document/create';
 import { retrieve, update, reset } from '../../actions/document/update';
 import { del, loading, error } from '../../actions/document/delete';
+import {templates} from "../../utils/templates";
 
 class Update extends Component {
   static propTypes = {
@@ -48,7 +49,7 @@ class Update extends Component {
 
       {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
       {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
-      {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && <div className="alert alert-info" role="status">Loading...</div>}
+      {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && templates.loading()}
       {this.props.retrieveError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.retrieveError}</div>}
       {this.props.updateError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.updateError}</div>}
       {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
