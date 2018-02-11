@@ -196,9 +196,9 @@ span.author:before {
     display: block;
 }
 
-.icon.new { background-image:url('sprite.svg#document-new') }
+.icon.new { background-image:url('images/sprite.svg#document-new') }
 
-.icon.loading { background-image:url('sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
+.icon.loading { background-image:url('images/sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
 
 @keyframes iconLoading {
     0% {
