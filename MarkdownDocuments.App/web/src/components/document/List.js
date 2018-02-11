@@ -43,37 +43,23 @@ class List extends Component {
 
       <p><Link to="/document/create" className="btn btn-default">Create</Link></p>
 
-      <div className="table-responsive">
-          <table className="table table-striped table-hover">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Title</th>
-              <th>CreationDate</th>
-            </tr>
-          </thead>
-          <tbody>
+      <div className="pages">
           {this.props.data.value && this.props.data.value.map(item =>
-            <tr className={item['id']} key={item['id']}>
-              <td><Link to={`/document/show/${encodeURIComponent(item['id'])}`}>{item['id']}</Link></td>
-              <td>{item['title'] ? itemToLinks(item['title']) : ''}</td>
-              <td>{item['creationDate'] ? itemToLinks(item['creationDate']) : ''}</td>
-              <td>
-                <Link to={`/document/show/${encodeURIComponent(item['id'])}`}>
-                  <span className="glyphicon glyphicon-search" aria-hidden="true"/>
-                  <span className="sr-only">Show</span>
-                </Link>
-              </td>
-              <td>
-                <Link to={`/document/edit/${encodeURIComponent(item['id'])}`}>
-                  <span className="glyphicon glyphicon-pencil" aria-hidden="true"/>
-                  <span className="sr-only">Edit</span>
-                </Link>
-              </td>
-            </tr>
+              <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
+                  {/*<Link to={`/document/edit/${encodeURIComponent(item['id'])}`}>*/}
+                  {/*<span className="glyphicon glyphicon-pencil" aria-hidden="true"/>*/}
+                  {/*<span className="sr-only">Edit</span>{item['title'] ? itemToLinks(item['title']) : ''}
+                      {item['creationDate'] ? itemToLinks(item['creationDate']) : ''}*/}
+                  {/*</Link>*/}
+                  <h1>
+                      {item["title"]}
+                  </h1>
+
+                  <p>
+                      {item["body"]}
+                  </p>
+              </Link>
           )}
-          </tbody>
-        </table>
       </div>
 
       {this.pagination()}
