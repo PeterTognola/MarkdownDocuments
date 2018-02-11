@@ -41,21 +41,21 @@ class Show extends Component {
         return (
             <div>
                 {this.props.loading && templates.loading()}
-                {this.props.error && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.error}</div>}
-                {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
+                {this.props.error && <div>{this.props.error}</div>}
+                {this.props.deleteError && <div>{this.props.deleteError}</div>}
 
                 {item &&
                     <div className="page">
-                        <h1>{item['title']}</h1>
-                        <p>{item['body']}</p>
+                        <h1>{item["title"]}</h1>
+                        <p>{item["body"]}</p>
                     </div>
                 }
-                <Link to=".." className="btn btn-default">Back to list</Link>
-                {item && <Link to={`/document/edit/${encodeURIComponent(item['id'])}`}>
+                <Link to="..">Back to list</Link>
+                {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}>
                 <button className="btn btn-warning">Edit</button>
                 </Link>
                 }
-                <button onClick={this.del} className="btn btn-danger">Delete</button>
+                <button onClick={this.del}>Delete</button>
             </div>
         );
     }
