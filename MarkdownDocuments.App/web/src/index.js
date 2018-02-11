@@ -18,7 +18,7 @@ import documentRoutes from './routes/document';
 
 const store = createStore(
     combineReducers({routing, form, documentReducers}), // Reducers go here.
-    applyMiddleware(thunk),
+    applyMiddleware(thunk)
 );
 
 const history = syncHistoryWithStore(createBrowserHistory(), store);
