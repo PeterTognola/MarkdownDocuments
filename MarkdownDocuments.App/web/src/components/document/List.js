@@ -39,7 +39,7 @@ class List extends Component {
 
             {this.props.loading && templates.loading()}
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
-            {this.props.error && <div className="alert alert-danger">{this.props.error}</div>}
+            {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
 
             <div style={{marginBottom:"20px"}} className="padded center"><Link to="/document/create" className="button"><span class="icon new"></span></Link></div>
 
