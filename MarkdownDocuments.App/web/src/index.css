@@ -127,7 +127,10 @@ span.author {
     font-family: 'Lora', serif;
     max-width: 960px;
     width: 100%;
-    margin:0 auto;
+    margin:60px auto;
+    padding:40px;
+    box-shadow: 0 0 17px -4px #333;
+    background: #fff;
 }
 
 .pages {
@@ -147,9 +150,7 @@ span.author {
     position: relative;
     margin:30px;
     float:left;
-    background: #fff;
     height: calc(100% - 120px);
-    box-shadow: 0 0 17px -4px #333;
     font-family: 'Lora', serif;
     text-decoration: none;
     padding:30px;.
