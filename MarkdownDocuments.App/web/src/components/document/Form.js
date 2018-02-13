@@ -209,13 +209,13 @@ class Form extends Component {
         const { handleSubmit } = this.props;
 
         return (
-            <form onSubmit={handleSubmit}>
-                <Field component={this.renderField} name="title" type="text" placeholder="The title..." required={true} />
-                <BodyEditor />
-                <Field component={this.renderField} name="body" type="text" placeholder="The body..." required={true}/>
-
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+            <div className="page">
+                <form onSubmit={handleSubmit} id="formEditor">
+                    <Field component={this.renderField} name="title" type="text" placeholder="The title..." required={true} />
+                    <BodyEditor />
+                    <Field component={this.renderField} name="body" type="text" placeholder="The body..." required={true}/>
+                </form>
+            </div>
         );
     }
 }
