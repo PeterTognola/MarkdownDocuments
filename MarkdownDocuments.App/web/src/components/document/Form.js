@@ -15,10 +15,12 @@ class BodyEditor extends React.Component {
     }
     _handleKeyCommand(command, editorState) {
         const newState = RichUtils.handleKeyCommand(editorState, command);
+
         if (newState) {
             this.onChange(newState);
             return true;
         }
+
         return false;
     }
     _mapKeyToEditorCommand(e) {
@@ -205,6 +207,9 @@ class Form extends Component {
         );
     }
 
+    // This form requires a bit of a hack.
+    // The form needs to be submitted externally, using id "formEditor"
+    // todo try not to use a ol'hack...
     render() {
         const { handleSubmit } = this.props;
 
