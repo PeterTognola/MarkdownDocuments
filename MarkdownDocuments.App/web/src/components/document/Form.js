@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {Editor, EditorState} from 'draft-js';
 
+class BodyEditor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {editorState: EditorState.createEmpty()};
+        this.onChange = (editorState) => this.setState({editorState});
+    }
+    render() {
+        return (
+            <Editor editorState={this.state.editorState} onChange={this.onChange} />
+        );
+    }
+}
+
 class Form extends Component {
     renderField(data) {
         const hasError = data.meta.touched && !!data.meta.error;
@@ -25,6 +38,7 @@ class Form extends Component {
         return (
             <form onSubmit={handleSubmit}>
                 <Field component={this.renderField} name="title" type="text" placeholder="The title..." required={true} />
+                <BodyEditor />
                 <Field component={this.renderField} name="body" type="text" placeholder="The body..." required={true}/>
 
                 <button type="submit" className="btn btn-primary">Submit</button>
