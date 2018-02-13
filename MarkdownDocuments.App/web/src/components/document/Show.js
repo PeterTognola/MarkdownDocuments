@@ -40,6 +40,12 @@ class Show extends Component {
 
         return (
             <div>
+                <div className="navigation">
+                    <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
+                    {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`} className="button"><span className="icon edit"></span></Link>}
+                    {/* todo <button onClick={this.del}>Delete</button> */}
+                </div>
+
                 {this.props.loading && templates.loading()}
                 {this.props.error && <div>{this.props.error}</div>}
                 {this.props.deleteError && <div>{this.props.deleteError}</div>}
@@ -50,14 +56,6 @@ class Show extends Component {
                         <p>{item["body"]}</p>
                     </div>
                 }
-                <Link to="..">Back to list</Link>
-
-                {item &&
-                    <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}>
-                        <button className="btn btn-warning">Edit</button>
-                    </Link>
-                }
-                <button onClick={this.del}>Delete</button>
             </div>
         );
     }

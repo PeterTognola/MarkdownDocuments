@@ -31,9 +31,11 @@ class List extends Component {
     render() {
         return <div>
             <div className="navigation">
-                <Link to="/document/create" className="button"><span className="icon create"></span></Link> {/* create icon */}
-                <Link to="/document/create" className="button"><span className="icon close"></span></Link> {/* search icon */}
+                <Link to="/document/create" className="button"><span className="icon arrow arrow-left"></span></Link> {/* create icon */}
+                <Link to="/document/create" className="button"><span className="icon search"></span></Link> {/* search icon */}
             </div>
+
+            <hr style={{opacity:0}} />
 
             <header>
                 <h1>My Documents</h1>

@@ -112,11 +112,18 @@ span.author {
     width:calc(100% - 100px);
     height:60px;
     font-size:0;
-    padding: 20px 50px;
+    margin: 20px 50px;
+    border-bottom: 1px solid #bdbdbd;
 }
 
 .navigation .button:first-child {
     float:left;
+}
+
+.navigation .button .icon {
+    margin: 10px;
+    width:25px;
+    height:25px;
 }
 
 .navigation .button:last-child {
@@ -220,7 +227,6 @@ span.author {
 .button {
     width:40px;
     height:40px;
-    background-color: #757575;
     display: inline-block;
 }
 
@@ -232,7 +238,15 @@ span.author {
 
 .icon.new { background-image:url('images/sprite.svg#document-new') }
 
+.icon.edit { background-image:url('images/sprite.svg#edit') }
+
+.icon.search { background-image:url('images/sprite.svg#search') }
+
 .icon.loading { background-image:url('images/sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
+
+.icon.arrow { background-image:url('images/sprite.svg#arrow') }
+
+.icon.arrow.arrow-left { transform: rotateZ(-180deg) }
 
 @keyframes iconLoading {
     0% {

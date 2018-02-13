@@ -9,4 +9,3 @@ Enzyme.configure({ adapter: new Adapter() });
 it('renders without crashing', () => {
     Enzyme.shallow(App.body());
 });
-
