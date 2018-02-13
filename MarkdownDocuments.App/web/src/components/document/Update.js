@@ -45,8 +45,10 @@ class Update extends Component {
     if (item != null) item = item.value;
 
     return <div>
-      <h1>Edit {item && item['id']}</h1>
-
+        <div className="navigation">
+            <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
+            {item && <Link to="#delete" onClick={this.del} className="button"><span className="icon delete"></span></Link>} {/* todo delete button */}
+        </div>
       {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
       {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
       {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && templates.loading()}
@@ -55,8 +57,6 @@ class Update extends Component {
       {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
 
       {item && <Form onSubmit={values => this.props.update(item, values)} initialValues={item}/>}
-      <Link to=".." className="btn btn-default">Back to list</Link>
-      <button onClick={this.del} className="btn btn-danger">Delete</button>
     </div>;
   }
 }
