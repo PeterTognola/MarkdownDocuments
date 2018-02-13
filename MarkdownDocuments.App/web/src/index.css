@@ -140,6 +140,16 @@ span.author {
     background: #fff;
 }
 
+.page textarea {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:0;
+    height:500px;
+}
+
 .pages {
     width:calc(100% - 100px);
     height:50%;
