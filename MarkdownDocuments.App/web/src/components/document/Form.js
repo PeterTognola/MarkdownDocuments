@@ -20,7 +20,6 @@ class Editor extends Component {
     }
 }
 
-
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
     if (hasError) {
