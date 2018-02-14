@@ -142,12 +142,33 @@ span.author {
 
 .page textarea {
     width:100%;
+    max-width:100%;
+    min-width:100%;
     height:100%;
     padding:0;
     margin:0;
-    border:0;
+    border:1px dashed #bdbdbd;
     outline:0;
     height:500px;
+    font-family: 'Lora', serif;
+    color:#757575;
+    font-size:14px;
+}
+
+.page input.pretend-title {
+    width:80%;
+    height:40px;
+    border:0;
+    margin:0 auto 30px;
+    padding:5px 0;
+    text-align: center;
+    border-bottom: 1px solid #bdbdbd;
+    outline: 0;
+    color: #333;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Lora', serif;
+    display: block;
 }
 
 .pages {

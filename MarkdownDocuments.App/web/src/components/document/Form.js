@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Markdown from 'react-markdown';
 
+const DEFAULT_HEIGHT = 200;
+
 class Editor extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
-        this.onChange = (e) => this.setState({ source: e.target.value })
+        this.state = {
+            height: DEFAULT_HEIGHT
+        };
+
+        this.onChange = (e) => {
+            this.setState({ source: e.target.value, height: e.target.scrollHeight });
+            console.log(e.target.scrollHeight + " & " + e.target.style.height);
+        };
     }
 
     render() {
         return (
             <div className="app">
-                <Field component={renderField} defaultValue="test" name="body" type="textarea" placeholder="The title..." required={true} onChange={this.onChange} />
-                <Markdown className="preview" source={this.state ? this.state.source : "test"} escapeHtml />
+                <Field component={renderField} defaultValue="test" name="body" type="textarea" placeholder="The title..." required={true} style={{height:this.state.height}} onChange={this.onChange} />
+
+                <Markdown className="preview" source={this.state && this.state.source} escapeHtml />
             </div>
         );
     }
@@ -29,11 +38,10 @@ const renderField = (data) => {
 
     return (
         <div className={`form-group${hasError ? ' has-error' : ''}`}>
-            <label htmlFor={`document_${data.input.name}`} className="control-label">{data.input.name}</label>
             {
                 data.type === "textarea"
                     ? <textarea {...data.input} id={`document_${data.input.name}`} required={data.required} placeholder={data.placeholder} step={data.step} />
-                    : <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />
+                    : <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} className={data.className} id={`document_${data.input.name}`} />
             }
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
@@ -51,7 +59,7 @@ class Form extends Component {
         return (
             <div className="page">
                 <form onSubmit={handleSubmit} id="formEditor">
-                    <Field component={renderField} name="title" type="text" placeholder="The title..." required={true} />
+                    <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
                     <Editor />
                 </form>
             </div>
