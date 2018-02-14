@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import Markdown from 'react-markdown';
-
-const DEFAULT_HEIGHT = 200;
+import SimpleMDE from 'react-simplemde-editor';
 
 class Editor extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            height: DEFAULT_HEIGHT
+            source: ""
         };
 
         this.onChange = (e) => {
-            this.setState({ source: e.target.value, height: e.target.scrollHeight });
-            console.log(e.target.scrollHeight + " & " + e.target.style.height);
+            this.setState({ source: e });
+            console.log(e);
         };
     }
 
     render() {
         return (
-            <div className="app">
-                <Field component={renderField} defaultValue="test" name="body" type="textarea" placeholder="The title..." required={true} style={{height:this.state.height}} onChange={this.onChange} />
+            <div>
+                <SimpleMDE
+                    onChange={this.onChange}
+                    value={this.state.textValue}
+                    options={{
+                        autofocus: true,
+                        spellChecker: false
+                    }}
+                />
 
-                <Markdown className="preview" source={this.state && this.state.source} escapeHtml />
+                {/*{<Field component={renderField} defaultValue="test" name="body" type="textarea" required={false} value={} style={{display:"none"}} />}*/}
+                {<textarea component={} id={`document_body`} />}
             </div>
         );
     }
@@ -40,7 +46,7 @@ const renderField = (data) => {
         <div className={`form-group${hasError ? ' has-error' : ''}`}>
             {
                 data.type === "textarea"
-                    ? <textarea {...data.input} id={`document_${data.input.name}`} required={data.required} placeholder={data.placeholder} step={data.step} />
+                    ? <textarea {...data.input} id={`document_${data.input.name}`} required={data.required} value={data.value} placeholder={data.placeholder} step={data.step} />
                     : <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} className={data.className} id={`document_${data.input.name}`} />
             }
 
