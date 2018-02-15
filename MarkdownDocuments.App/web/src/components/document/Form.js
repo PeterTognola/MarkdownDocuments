@@ -44,11 +44,7 @@ const renderField = (data) => {
 
     return (
         <div className={`form-group${hasError ? ' has-error' : ''}`}>
-            {
-                data.type === "textarea"
-                    ? <textarea {...data.input} id={`document_${data.input.name}`} required={data.required} value={data.value} placeholder={data.placeholder} step={data.step} />
-                    : <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} className={data.className} id={`document_${data.input.name}`} />
-            }
+            <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} className={data.className} id={`document_${data.input.name}`} />
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
         </div>
