@@ -10,26 +10,25 @@ class Editor extends Component {
             source: ""
         };
 
-        this.onChange = (e) => {
-            this.setState({ source: e });
-            console.log(e);
+        this.onChange = (data) => {
+            this.setState({source: data});
         };
     }
 
+    // todo stateless document_body...
     render() {
         return (
             <div>
                 <SimpleMDE
                     onChange={this.onChange}
-                    value={this.state.textValue}
+                    value={this.state.source}
                     options={{
                         autofocus: true,
                         spellChecker: false
                     }}
                 />
 
-                {/*{<Field component={renderField} defaultValue="test" name="body" type="textarea" required={false} value={} style={{display:"none"}} />}*/}
-                {<textarea component={} id={`document_body`} />}
+                <Field component={(data) => { this.state.source === "" ? this.setState({source:data.input.value}) : this.state.source; return renderField(data); }} style={{display:"none"}} name="body" />
             </div>
         );
     }
@@ -37,14 +36,14 @@ class Editor extends Component {
 
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
-    if (hasError) {
-        data.input['aria-describedby'] = `document_${data.input.name}_helpBlock`;
-        data.input['aria-invalid'] = true;
-    }
+    // if (hasError) {
+    //     data.input['aria-describedby'] = `document_${data.input.name}_helpBlock`;
+    //     data.input['aria-invalid'] = true;
+    // }
 
     return (
         <div className={`form-group${hasError ? ' has-error' : ''}`}>
-            <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} className={data.className} id={`document_${data.input.name}`} />
+            <input {...data.input} type={data.type} step={data.step}required={data.required} placeholder={data.placeholder} className={data.className} style={data.style} id={`document_${data.input.name}`} />
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
         </div>
@@ -52,11 +51,13 @@ const renderField = (data) => {
 }
 
 class Form extends Component {
-    // This form requires a bit of a hack.
-    // The form needs to be submitted externally, using id "formEditor"
-    // todo try not to use a ol'hack...
     render() {
-        const { handleSubmit } = this.props;
+        const { handleSubmit } = (data) => {
+            console.log(data);
+            return this.props;
+        };
+
+        console.log(this.props);
 
         return (
             <div className="page">
