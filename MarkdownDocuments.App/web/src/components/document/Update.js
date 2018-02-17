@@ -47,7 +47,7 @@ class Update extends Component {
     return <div>
         <div className="navigation">
             <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
-            <Link to="#save" onClick={document.getElementById("editorForm").submit} className="button"><span className="icon save"></span></Link> {/* todo HACK */}
+            <Link to="#save" className="button"><span className="icon save"></span></Link> {/* todo HACK */}
             {/*{item && <Link to="#delete" onClick={this.del} className="button"><span className="icon delete"></span></Link>} /!* todo delete button *!/*/}
         </div>
       {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}

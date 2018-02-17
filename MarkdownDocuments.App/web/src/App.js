@@ -7,6 +7,11 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
 import './index.css';
 
+// Import theme
+import './assets/react-toolbox/theme.css';
+import Theme from './assets/react-toolbox/theme';
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+
 // import reducers
 import documentReducers from './reducers/document/';
 
@@ -23,17 +28,19 @@ export default class App {
 
     static body() {
         return (
-            <div className="container">
-                <Route render={() =>
-                    <ul className="menu">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/document">Documents</Link></li>
-                        <li><Link to="/">Account</Link></li>
-                    </ul>
-                }/>
+            <ThemeProvider theme={Theme}>
+                <div className="container">
+                    <Route render={() =>
+                        <ul className="menu">
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/document">Documents</Link></li>
+                            <li><Link to="/">Account</Link></li>
+                        </ul>
+                    }/>
 
-                {documentRoutes}
-            </div>
+                    {documentRoutes}
+                </div>
+            </ThemeProvider>
         );
     }
 
