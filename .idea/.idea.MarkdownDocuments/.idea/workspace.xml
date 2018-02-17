@@ -32,12 +32,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentViewModel.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentViewModel.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
+                <marker date="1517749177757" expanded="true" signature="60:328" ph="{...}" />
                 <marker date="1517749177757" expanded="true" signature="97:326" ph="{...}" />
               </folding>
             </state>
@@ -67,10 +68,11 @@
       <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <marker date="1518200947647" expanded="false" signature="6:255" ph="..." />
+                <marker date="1518200947647" expanded="true" signature="291:662" ph="{...}" />
                 <marker date="1518200947647" expanded="true" signature="318:660" ph="{...}" />
                 <marker date="1518200947647" expanded="true" signature="371:429" ph="{...}" />
               </folding>
@@ -78,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+            <state relative-caret-position="120">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
                 <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
@@ -371,7 +373,7 @@
       <workItem from="1518200879734" duration="9248000" />
       <workItem from="1518546959618" duration="2527000" />
       <workItem from="1518632346871" duration="2003000" />
-      <workItem from="1518865622782" duration="3258000" />
+      <workItem from="1518865622782" duration="5620000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -384,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45624000" />
+    <option name="totallyTimeSpent" value="47986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,28 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <marker date="1517749177757" expanded="true" signature="97:326" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <marker date="1518200947647" expanded="false" signature="6:255" ph="..." />
-            <marker date="1518200947647" expanded="true" signature="318:660" ph="{...}" />
-            <marker date="1518200947647" expanded="true" signature="371:429" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -626,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
             <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
@@ -654,6 +634,30 @@
             <marker date="1518365968369" expanded="true" signature="6145:6473" ph="{...}" />
             <marker date="1518365968369" expanded="true" signature="6251:6436" ph="{...}" />
             <marker date="1518365968369" expanded="true" signature="6618:7357" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1518200947647" expanded="false" signature="6:255" ph="..." />
+            <marker date="1518200947647" expanded="true" signature="291:662" ph="{...}" />
+            <marker date="1518200947647" expanded="true" signature="318:660" ph="{...}" />
+            <marker date="1518200947647" expanded="true" signature="371:429" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1517749177757" expanded="true" signature="60:328" ph="{...}" />
+            <marker date="1517749177757" expanded="true" signature="97:326" ph="{...}" />
           </folding>
         </state>
       </provider>
