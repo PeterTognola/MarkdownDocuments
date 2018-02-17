@@ -260,6 +260,8 @@ span.author {
 
 .icon.new { background-image:url('images/sprite.svg#document-new') }
 
+.icon.save { background-image:url('images/sprite.svg#save') }
+
 .icon.edit { background-image:url('images/sprite.svg#edit') }
 
 .icon.search { background-image:url('images/sprite.svg#search') }

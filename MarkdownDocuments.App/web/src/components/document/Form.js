@@ -1,38 +1,5 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import SimpleMDE from 'react-simplemde-editor';
-
-class Editor extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            source: ""
-        };
-
-        this.onChange = (data) => {
-            this.setState({source: data});
-        };
-    }
-
-    // todo stateless document_body...
-    render() {
-        return (
-            <div>
-                <SimpleMDE
-                    onChange={this.onChange}
-                    value={this.state.source}
-                    options={{
-                        autofocus: true,
-                        spellChecker: false
-                    }}
-                />
-
-                <Field component={(data) => { this.state.source === "" ? this.setState({source:data.input.value}) : this.state.source; return renderField(data); }} style={{display:"none"}} name="body" />
-            </div>
-        );
-    }
-}
 
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
@@ -63,7 +30,8 @@ class Form extends Component {
             <div className="page">
                 <form onSubmit={handleSubmit} id="formEditor">
                     <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
-                    <Editor />
+                    <Field component={renderField} name="body" type="text" placeholder="The body..." required={true} />
+                    <button>Submit</button>
                 </form>
             </div>
         );

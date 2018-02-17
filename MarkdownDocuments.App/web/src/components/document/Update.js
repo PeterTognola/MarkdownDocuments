@@ -47,7 +47,8 @@ class Update extends Component {
     return <div>
         <div className="navigation">
             <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
-            {item && <Link to="#delete" onClick={this.del} className="button"><span className="icon delete"></span></Link>} {/* todo delete button */}
+            <Link to="#save" onClick={document.getElementById("editorForm").submit} className="button"><span className="icon save"></span></Link> {/* todo HACK */}
+            {/*{item && <Link to="#delete" onClick={this.del} className="button"><span className="icon delete"></span></Link>} /!* todo delete button *!/*/}
         </div>
       {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
       {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
@@ -56,7 +57,7 @@ class Update extends Component {
       {this.props.updateError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.updateError}</div>}
       {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
 
-      {item && <Form onSubmit={values => this.props.update(item, values)} initialValues={item}/>}
+      {item && <Form id="editorForm" onSubmit={values => this.props.update(item, values)} initialValues={item}/>}
     </div>;
   }
 }
