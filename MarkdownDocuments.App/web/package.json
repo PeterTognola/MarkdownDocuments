@@ -6,6 +6,8 @@
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "postcss": "^6.0.18",
+    "postcss-cssnext": "^3.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -25,22 +27,10 @@
     "start": "react-scripts start",
     "update": "npm update",
     "build": "react-scripts build",
-    "toolbox": "react-toolbox-themr",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "reactToolbox": {
-    "include": [
-      "BUTTON",
-      "DATE_PICKER"
-    ],
-    "customProperties": {
-      "animation-duration": "0.3s",
-      "color-accent": "var(--palette-pink-a200)",
-      "color-accent-dark": "var(--palette-pink-700)",
-      "color-primary-contrast": "var(--color-dark-contrast)",
-      "color-accent-contrast": "var(--color-dark-contrast)"
-    },
-    "output": "src/assets/react-toolbox"
+  "devDependencies": {
+    "postcss-loader": "^2.1.0"
   }
 }
