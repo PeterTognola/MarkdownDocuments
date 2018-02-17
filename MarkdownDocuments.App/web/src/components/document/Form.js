@@ -3,13 +3,13 @@ import { Field, reduxForm } from 'redux-form';
 
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
-    // if (hasError) {
-    //     data.input['aria-describedby'] = `document_${data.input.name}_helpBlock`;
-    //     data.input['aria-invalid'] = true;
-    // }
+    if (hasError) {
+        data.input['aria-describedby'] = `document_${data.input.name}_helpBlock`;
+        data.input['aria-invalid'] = true;
+    }
 
     return (
-        <div className={`form-group${hasError ? ' has-error' : ''}`}>
+        <div className={`form-group ${hasError ? 'has-error' : ''}`}>
             <input {...data.input} type={data.type} step={data.step}required={data.required} placeholder={data.placeholder} className={data.className} style={data.style} id={`document_${data.input.name}`} />
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
