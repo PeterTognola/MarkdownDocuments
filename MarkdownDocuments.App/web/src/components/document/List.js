@@ -39,13 +39,15 @@ class List extends Component {
                     subtitle="Created on " />
                 <CardText>{item.body}</CardText>
                 <CardActions>
-                    <Button label="Open" />
+                    <Link key={item.id} to={`/document/show/${encodeURIComponent(item.id)}`}>
+                        <Button label="Open" />
+                    </Link>
                     <Button label="Share" />
                 </CardActions>
             </Card>
         );
 
-        {/*<Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>*/}
+        {/*<Link key={item["id"]} className="page" to={``}>*/}
             {/*<h1>{item["title"]}</h1>*/}
             {/*<p>{item["body"]}</p>*/}
         {/*</Link>*/}
