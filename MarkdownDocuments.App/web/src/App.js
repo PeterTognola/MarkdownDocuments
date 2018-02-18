@@ -8,9 +8,9 @@ import { syncHistoryWithStore, routerReducer as routing } from 'react-router-red
 import './index.css';
 
 // Import theme
-import './assets/react-toolbox/theme.css';
-import Theme from './assets/react-toolbox/theme';
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
+import { AppBar } from 'react-toolbox/lib/app_bar';
+import { Navigation } from 'react-toolbox/lib/navigation';
+import { Link } from 'react-toolbox/lib/link';
 
 // import reducers
 import documentReducers from './reducers/document/';
@@ -28,15 +28,20 @@ export default class App {
 
     static body() {
         return (
-            <ThemeProvider theme={Theme}>
-                <div className="container">
-                    <Route render={() =>
-                        <div></div>
-                    }/>
+            <div className="container">
+                <Route component={() =>
+                    <AppBar title="React Toolbox" leftIcon="menu">
+                        {/*<Navigation type="horizontal">*/}
+                            {/*<Link to="/" label="Home" />*/}
+                            {/*<Link to="/document" label="Documents" />*/}
+                        {/*</Navigation>*/}
+                    </AppBar>
+                }/>
 
-                    {documentRoutes}
-                </div>
-            </ThemeProvider>
+
+
+                {documentRoutes}
+            </div>
         );
     }
 

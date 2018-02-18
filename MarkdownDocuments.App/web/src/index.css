@@ -258,17 +258,17 @@ span.author {
     display: block;
 }
 
-.icon.new { background-image:url('images/sprite.svg#document-new') }
+.icon.new { background-image:url('/images/sprite.svg#document-new') }
 
-.icon.save { background-image:url('images/sprite.svg#save') }
+.icon.save { background-image:url('/images/sprite.svg#save') }
 
-.icon.edit { background-image:url('images/sprite.svg#edit') }
+.icon.edit { background-image:url('/images/sprite.svg#edit') }
 
-.icon.search { background-image:url('images/sprite.svg#search') }
+.icon.search { background-image:url('/images/sprite.svg#search') }
 
-.icon.loading { background-image:url('images/sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
+.icon.loading { background-image:url('/images/sprite.svg#loading');animation:iconLoading 1.4s cubic-bezier(0.29, 0, 0.07, 1.47) infinite }
 
-.icon.arrow { background-image:url('images/sprite.svg#arrow') }
+.icon.arrow { background-image:url('/images/sprite.svg#arrow') }
 
 .icon.arrow.arrow-left { transform: rotateZ(-180deg) }
 

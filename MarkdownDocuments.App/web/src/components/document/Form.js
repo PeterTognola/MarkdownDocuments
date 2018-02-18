@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import Button from 'react-toolbox/lib/button/Button';
 
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
@@ -30,7 +29,6 @@ class Form extends Component {
                 <form onSubmit={handleSubmit} id="formEditor">
                     <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
                     <Field component={renderField} name="body" type="text" placeholder="The body..." required={true} />
-                    <Button label="Submit" primary />
                 </form>
             </div>
         );
