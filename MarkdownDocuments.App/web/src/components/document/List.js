@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
-import {templates} from "../../utils/templates";
+import { templates } from "../../utils/templates";
+import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
+import { Button } from 'react-toolbox/lib/button';
 
 class List extends Component {
     static propTypes = {
@@ -28,6 +30,27 @@ class List extends Component {
         this.props.reset();
     }
 
+    createCard(item) {
+        return (
+            <Card>
+                <CardTitle
+                    avatar="https://placeimg.com/80/80/animals"
+                    title={item.title}
+                    subtitle="Created on " />
+                <CardText>{item.body}</CardText>
+                <CardActions>
+                    <Button label="Open" />
+                    <Button label="Share" />
+                </CardActions>
+            </Card>
+        );
+
+        {/*<Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>*/}
+            {/*<h1>{item["title"]}</h1>*/}
+            {/*<p>{item["body"]}</p>*/}
+        {/*</Link>*/}
+    }
+
     render() {
         return <div>
             <div className="navigation">
@@ -35,40 +58,13 @@ class List extends Component {
                 <Link to="/document/create" className="button"><span className="icon search"></span></Link> {/* search icon */}
             </div>
 
-            <hr style={{opacity:0}} />
-
-            <header>
-                <h1>My Documents</h1>
-                <hr />
-                <span className="author">
-                    {this.props.data.value && this.props.data.value.length} Documents
-                </span>
-            </header>
-
             {this.props.loading && templates.loading()}
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
             {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
 
             <div className="pages">
-                <h2>Recent Documents</h2>
-                {this.props.data.value && this.props.data.value.map(item =>
-                    <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
-                        <h1>{item["title"]}</h1>
-                        <p>{item["body"]}</p>
-                    </Link>
-                )}
-            </div>
-
-            <hr />
-
-            <div className="pages">
                 <h2>All Documents</h2>
-                {this.props.data.value && this.props.data.value.map(item =>
-                    <Link key={item["id"]} className="page" to={`/document/show/${encodeURIComponent(item['id'])}`}>
-                        <h1>{item["title"]}</h1>
-                        <p>{item["body"]}</p>
-                    </Link>
-                )}
+                {this.props.data.value && this.props.data.value.map(this.createCard)}
             </div>
 
             {this.pagination()}
