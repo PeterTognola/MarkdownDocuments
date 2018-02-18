@@ -20,3 +20,11 @@ body > div > div header[data-react-toolbox="app-bar"] {
 section {
     outline:0;
 }
+
+header nav a {
+    text-decoration: none;
+}
+
+header nav a + a {
+    padding-left:25px;
+}
