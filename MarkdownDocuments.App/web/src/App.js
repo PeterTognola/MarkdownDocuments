@@ -5,7 +5,6 @@ import { reducer as form } from 'redux-form';
 import { Link, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux'
-import './index.css';
 
 // Import theme
 import { AppBar } from 'react-toolbox/lib/app_bar';
@@ -28,17 +27,16 @@ export default class App {
 
     static body() {
         return (
-            <div className="container">
-                <Route component={() =>
-                    <AppBar title="React Toolbox">
-                        <Navigation type="horizontal">
-                            <Link to="/">Home</Link>
-                            <Link to="/document">Documents</Link>
-                        </Navigation>
-                    </AppBar>
-                }/>
-
-                {documentRoutes}
+            <div>
+            <Route component={() =>
+                <AppBar title="React Toolbox">
+                    <Navigation type="horizontal">
+                        <Link to="/">Home</Link>
+                        <Link to="/document">Documents</Link>
+                    </Navigation>
+                </AppBar>
+            }/>
+            {documentRoutes}
             </div>
         );
     }
