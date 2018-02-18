@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d93e7a82-5d3c-405e-8a5c-12448a014607" name="Default" comment="Initial project commit (documents endpoint in client).">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,11 +21,9 @@
       <file leaf-file-name="Show.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/document/Show.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -41,11 +41,11 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#407#458#0" expanded="true" />
+                <element signature="e#413#464#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,8 +205,8 @@
         <option value="$PROJECT_DIR$/src/components/document/Form.js" />
         <option value="$PROJECT_DIR$/config/postcss.config.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
       </list>
     </option>
@@ -290,7 +290,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
-    <property name="SearchEverywhereHistoryKey" value="package&#9;FILE&#9;file://C:/Development/MarkdownDocuments/MarkdownDocuments.App/web/package.json&#10;index.html&#9;FILE&#9;file://C:/Development/MarkdownDocuments/MarkdownDocuments.App/web/public/index.html" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://C:/Development/MarkdownDocuments/MarkdownDocuments.App/web/src/index.css&#10;package&#9;FILE&#9;file://C:/Development/MarkdownDocuments/MarkdownDocuments.App/web/package.json&#10;index.html&#9;FILE&#9;file://C:/Development/MarkdownDocuments/MarkdownDocuments.App/web/public/index.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -426,7 +426,7 @@
       <workItem from="1517854909446" duration="47921000" />
       <workItem from="1518546397344" duration="8601000" />
       <workItem from="1518632340782" duration="15539000" />
-      <workItem from="1518865608239" duration="17984000" />
+      <workItem from="1518865608239" duration="18349000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project commit (documents endpoint in client).">
       <created>1518210594368</created>
@@ -471,7 +471,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90045000" />
+    <option name="totallyTimeSpent" value="90410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -830,16 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/document/Show.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/document/update.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -872,21 +862,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/document/Show.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#407#458#0" expanded="true" />
+            <element signature="e#413#464#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
