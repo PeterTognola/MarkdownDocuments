@@ -7,11 +7,10 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux';
 import Switch from "react-router-dom/es/Switch";
 
-import './index.css';
-
 // Import theme
 import { AppBar } from 'react-toolbox/lib/app_bar';
 import { Navigation } from 'react-toolbox/lib/navigation';
+import {Button, IconButton} from 'react-toolbox/lib/button';
 
 // Import Reducers
 import documentReducers from './reducers/document/';
@@ -34,6 +33,7 @@ export default class App {
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>
+                        <Link to="/account"><IconButton icon="account_circle" primary /></Link>
                     </Navigation>
                 </AppBar>
 

@@ -7,7 +7,7 @@ body {
 }
 
 body > div {
-    width:100%;
+    width:calc(100% - 30px);
     max-width: 990px;
     margin:0 auto;
     padding:15px;

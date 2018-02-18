@@ -11,7 +11,7 @@ import {Tab, Tabs} from 'react-toolbox/lib/tabs';
 
 class List extends Component {
     state = {
-        documentIndex:1
+        documentIndex: 1
     };
 
     static propTypes = {
