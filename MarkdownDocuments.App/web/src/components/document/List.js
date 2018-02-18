@@ -7,8 +7,13 @@ import { success } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
+import {Tab, Tabs} from 'react-toolbox/lib/tabs';
 
 class List extends Component {
+    state = {
+        documentIndex:1
+    };
+
     static propTypes = {
         error: PropTypes.string,
         loading: PropTypes.bool.isRequired,
@@ -30,27 +35,26 @@ class List extends Component {
         this.props.reset();
     }
 
+    handleDocumentTabChange = (documentIndex) => {
+        this.setState({documentIndex});
+    };
+
     createCard(item) {
         return (
-            <Card>
+            <Card key={item.id} style={{margin:"15px auto", maxWidth:"500px"}}>
                 <CardTitle
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
                     subtitle="Created on " />
                 <CardText>{item.body}</CardText>
                 <CardActions>
-                    <Link key={item.id} to={`/document/show/${encodeURIComponent(item.id)}`}>
+                    <Link to={`/document/show/${encodeURIComponent(item.id)}`}>
                         <Button label="Open" />
                     </Link>
                     <Button label="Share" />
                 </CardActions>
             </Card>
         );
-
-        {/*<Link key={item["id"]} className="page" to={``}>*/}
-            {/*<h1>{item["title"]}</h1>*/}
-            {/*<p>{item["body"]}</p>*/}
-        {/*</Link>*/}
     }
 
     render() {
@@ -64,10 +68,20 @@ class List extends Component {
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
             {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
 
-            <div className="pages">
-                <h2>All Documents</h2>
-                {this.props.data.value && this.props.data.value.map(this.createCard)}
-            </div>
+            <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
+                <Tab label="All Documents">
+                    {this.props.data.value && this.props.data.value.map(this.createCard)}
+                </Tab>
+
+                <Tab label="My Documents">
+                    {this.props.data.value && this.props.data.value.map(this.createCard)}
+                </Tab>
+
+                <Tab label="Joined Documents">
+                    <small style={{textAlign:"center"}}>Nothing Here :(</small>
+                </Tab>
+            </Tabs>
+
 
             {this.pagination()}
         </div>;

@@ -16,3 +16,7 @@ body > div {
 body > div > div header[data-react-toolbox="app-bar"] {
     margin:0 auto 15px;
 }
+
+section {
+    outline:0;
+}
