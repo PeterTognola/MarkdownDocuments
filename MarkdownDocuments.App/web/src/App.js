@@ -29,15 +29,15 @@ export default class App {
     static body() {
         return (
             <div>
-            <Route component={() =>
-                <AppBar title="React Toolbox">
-                    <Navigation type="horizontal">
-                        <Link to="/">Home</Link>
-                        <Link to="/document">Documents</Link>
-                    </Navigation>
-                </AppBar>
-            }/>
-            {documentRoutes}
+                <Route component={() =>
+                    <AppBar title="React Toolbox">
+                        <Navigation type="horizontal">
+                            <Link to="/">Home</Link>
+                            <Link to="/document">Documents</Link>
+                        </Navigation>
+                    </AppBar>
+                }/>
+                {documentRoutes}
             </div>
         );
     }
