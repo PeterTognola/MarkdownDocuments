@@ -29,7 +29,7 @@ export default class App {
     static body() {
         return (
             <div>
-                <AppBar title="React Toolbox">
+                <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>

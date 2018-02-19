@@ -7,7 +7,7 @@ import { success } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
-import {Tab, Tabs} from 'react-toolbox/lib/tabs';
+import { Tab, Tabs } from 'react-toolbox/lib/tabs';
 
 class List extends Component {
     state = {
