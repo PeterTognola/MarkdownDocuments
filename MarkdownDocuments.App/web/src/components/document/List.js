@@ -69,10 +69,6 @@ class List extends Component {
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
             {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
 
-            <section>
-                <Button icon='search' label='Search Documents' flat primary />
-            </section>
-
             <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
                 <Tab label="All Documents">
                     {this.props.data.value && this.props.data.value.map(this.createCard)}
