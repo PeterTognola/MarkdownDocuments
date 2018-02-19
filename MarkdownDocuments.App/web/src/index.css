@@ -17,6 +17,10 @@ body > div > div header[data-react-toolbox="app-bar"] {
     margin:0 auto 15px;
 }
 
+body > div > div section h5 {
+    font-size:18px;
+}
+
 section {
     outline:0;
 }
