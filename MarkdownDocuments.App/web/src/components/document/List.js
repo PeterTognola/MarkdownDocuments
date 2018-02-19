@@ -8,6 +8,7 @@ import { templates } from "../../utils/templates";
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
+import Input from 'react-toolbox/lib/input';
 
 class List extends Component {
     state = {
@@ -46,7 +47,7 @@ class List extends Component {
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
                     subtitle="Created on " />
-                <CardText>{item.body}</CardText>
+                <CardText style={{color: "#545454"}}>{item.body}</CardText>
                 <CardActions>
                     <Link to={`/document/show/${encodeURIComponent(item.id)}`}>
                         <Button label="Open" />
@@ -67,6 +68,10 @@ class List extends Component {
             {this.props.loading && templates.loading()}
             {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
             {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
+
+            <section>
+                <Button icon='search' label='Search Documents' flat primary />
+            </section>
 
             <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
                 <Tab label="All Documents">
