@@ -42,7 +42,7 @@ class Show extends Component {
 
         return (
             <div>
-                <div style={{margin:"0px 25px 5px 15px"}}> {/* todo temp until moved to parent */}
+                <div>
                     <Link to=".."><IconButton className={largeIcon} icon="keyboard_arrow_left" /></Link>
 
                     <div style={{float:"right"}}>
@@ -50,6 +50,8 @@ class Show extends Component {
                         <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
                     </div>
                 </div>
+
+                <hr />
 
                 {this.props.loading && templates.loading()}
                 {this.props.error && <div>{this.props.error}</div>}

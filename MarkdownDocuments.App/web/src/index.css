@@ -42,3 +42,11 @@ button.largeIconDanger > span {
     font-size:28px !important;
     color:crimson;
 }
+
+hr {
+    height:1px;
+    border:0;
+    background-color: #eee;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
