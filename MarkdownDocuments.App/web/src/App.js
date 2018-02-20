@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux';
 import Switch from "react-router-dom/es/Switch";
+import { largeIconLight } from './index.css';
 
 // Import theme
 import { AppBar } from 'react-toolbox/lib/app_bar';
@@ -33,7 +34,7 @@ export default class App {
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>
-                        <Link to="/account"><IconButton icon="account_circle" primary /></Link>
+                        <Link to="/account"><IconButton icon="account_circle" primary className={largeIconLight} /></Link>
                     </Navigation>
                 </AppBar>
 

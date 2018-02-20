@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { retrieve, reset } from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
-import { largeIcon, largeIconDanger } from '../../index.css';
+import { largeIcon, largeIconDanger, page } from '../../index.css';
 import { Button, IconButton } from "react-toolbox/lib/button";
 
 class Show extends Component {
@@ -45,7 +45,7 @@ class Show extends Component {
                 <div style={{margin:"0 15px"}}>
                     <Link to=".."><IconButton className={largeIcon} icon="keyboard_arrow_left" /></Link>
 
-                    <div style={{float:"right", padding:"0 5px"}}>
+                    <div style={{float:"right", padding:"0 15px"}}>
                         {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="mode_edit" /></Link>}
                         <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
                     </div>
@@ -58,8 +58,8 @@ class Show extends Component {
                 {this.props.deleteError && <div>{this.props.deleteError}</div>}
 
                 {item &&
-                    <div className="page">
-                        <h1 style={{margin:"0"}}>{item["title"]}</h1>
+                    <div className={page}>
+                        <h1>{item["title"]}</h1>
                         <p>{item["body"]}</p>
                     </div>
                 }
