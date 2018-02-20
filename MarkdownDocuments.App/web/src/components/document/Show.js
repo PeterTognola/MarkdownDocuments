@@ -42,10 +42,10 @@ class Show extends Component {
 
         return (
             <div>
-                <div>
+                <div style={{margin:"0 15px"}}>
                     <Link to=".."><IconButton className={largeIcon} icon="keyboard_arrow_left" /></Link>
 
-                    <div style={{float:"right"}}>
+                    <div style={{float:"right", padding:"0 5px"}}>
                         {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="mode_edit" /></Link>}
                         <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
                     </div>
