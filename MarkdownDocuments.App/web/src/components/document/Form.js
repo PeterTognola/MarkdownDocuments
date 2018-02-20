@@ -24,11 +24,12 @@ class Form extends Component {
             return this.props;
         };
 
-        return (
+        return ( // sending as GET for some reason.
             <div className="page">
                 <form onSubmit={handleSubmit} id="formEditor">
                     <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
                     <Field component={renderField} name="body" type="text" placeholder="The body..." required={true} />
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         );

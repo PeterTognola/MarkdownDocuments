@@ -29,7 +29,7 @@ export default class App {
 
     static body() {
         return (
-            <div>
+            <div> {/* todo transition element */}
                 <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
