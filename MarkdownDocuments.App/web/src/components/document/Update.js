@@ -7,6 +7,8 @@ import { success } from '../../actions/document/create';
 import { retrieve, update, reset } from '../../actions/document/update';
 import { del, loading, error } from '../../actions/document/delete';
 import {templates} from "../../utils/templates";
+import {largeIcon, largeIconDanger} from "../../index.css";
+import { Button, IconButton } from "react-toolbox/lib/button";
 
 class Update extends Component {
   static propTypes = {
@@ -45,11 +47,16 @@ class Update extends Component {
     if (item != null) item = item.value;
 
     return <div>
-        <div className="navigation">
-            <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
-            <Link to="#save" className="button"><span className="icon save"></span></Link> {/* todo HACK */}
-            {/*{item && <Link to="#delete" onClick={this.del} className="button"><span className="icon delete"></span></Link>} /!* todo delete button *!/*/}
+        <div style={{margin:"0 15px"}}>
+            {item && <Link to={`/document/show/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="cancel" /></Link>/* todo onclick, ask if user is sure. */}
+
+            <div style={{float:"right", padding:"0 15px"}}>
+                <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
+            </div>
         </div>
+
+      <hr />
+
       {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
       {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
       {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && templates.loading()}
