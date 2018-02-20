@@ -24,7 +24,7 @@ class Form extends Component {
             return this.props;
         };
 
-        return ( // sending as GET for some reason.
+        return ( // todo sending as GET for some reason.
             <div className="page">
                 <form onSubmit={handleSubmit} id="formEditor">
                     <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
