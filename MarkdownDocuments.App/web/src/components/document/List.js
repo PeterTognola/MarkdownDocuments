@@ -8,7 +8,6 @@ import { templates } from "../../utils/templates";
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
-import Input from 'react-toolbox/lib/input';
 
 class List extends Component {
     state = {
@@ -82,7 +81,6 @@ class List extends Component {
                     <small style={{textAlign:"center"}}>Nothing Here :(</small>
                 </Tab>
             </Tabs>
-
 
             {this.pagination()}
         </div>;
