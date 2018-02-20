@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {retrieve, reset} from '../../actions/document/show';
+import { retrieve, reset } from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
-import {templates} from "../../utils/templates";
-import {FontIcon} from "react-toolbox/lib/font_icon/FontIcon";
-import { largeIcon } from '../../index.css';
+import { templates } from "../../utils/templates";
+import { largeIcon, largeIconDanger } from '../../index.css';
+import { Button, IconButton } from "react-toolbox/lib/button";
 
 class Show extends Component {
     static propTypes = {
@@ -42,11 +42,13 @@ class Show extends Component {
 
         return (
             <div>
-                <div className="navigation">
-                    <Link to=".."><FontIcon className={largeIcon} value="keyboard_arrow_left" /></Link>
-                    {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><FontIcon className={largeIcon} value="mode_edit" /></Link>}
-                    <FontIcon onClick={this.del} value="delete" className={largeIcon} />
-                    {/* todo <button onClick={this.del}>Delete</button> */}
+                <div style={{margin:"0px 25px 5px 15px"}}> {/* todo temp until moved to parent */}
+                    <Link to=".."><IconButton className={largeIcon} icon="keyboard_arrow_left" /></Link>
+
+                    <div style={{float:"right"}}>
+                        {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="mode_edit" /></Link>}
+                        <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
+                    </div>
                 </div>
 
                 {this.props.loading && templates.loading()}
@@ -55,7 +57,7 @@ class Show extends Component {
 
                 {item &&
                     <div className="page">
-                        <h1>{item["title"]}</h1>
+                        <h1 style={{margin:"0"}}>{item["title"]}</h1>
                         <p>{item["body"]}</p>
                     </div>
                 }

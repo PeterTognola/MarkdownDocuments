@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'); /* todo move to index. */
 
 body {
     margin: 0;
@@ -33,7 +33,12 @@ header nav a + a {
     padding-left:25px;
 }
 
-span.largeIcon {
-    font-size:30px;
+button.largeIcon > span {
+    font-size:28px !important;
     color:#000;
+}
+
+button.largeIconDanger > span {
+    font-size:28px !important;
+    color:crimson;
 }
