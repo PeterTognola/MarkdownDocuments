@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import {retrieve, reset} from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
 import {templates} from "../../utils/templates";
+import {FontIcon} from "react-toolbox/lib/font_icon/FontIcon";
+import { largeIcon } from '../../index.css';
 
 class Show extends Component {
     static propTypes = {
@@ -41,8 +43,9 @@ class Show extends Component {
         return (
             <div>
                 <div className="navigation">
-                    <Link to=".." className="button"><span className="icon arrow arrow-left"></span></Link>
-                    {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`} className="button"><span className="icon edit"></span></Link>}
+                    <Link to=".."><FontIcon className={largeIcon} value="keyboard_arrow_left" /></Link>
+                    {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><FontIcon className={largeIcon} value="mode_edit" /></Link>}
+                    <FontIcon onClick={this.del} value="delete" className={largeIcon} />
                     {/* todo <button onClick={this.del}>Delete</button> */}
                 </div>
 

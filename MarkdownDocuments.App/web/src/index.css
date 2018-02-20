@@ -32,3 +32,8 @@ header nav a {
 header nav a + a {
     padding-left:25px;
 }
+
+span.largeIcon {
+    font-size:30px;
+    color:#000;
+}
