@@ -24,6 +24,8 @@ class Form extends Component {
             return this.props;
         };
 
+        // todo editor https://ace.c9.io/?
+
         return ( // todo sending as GET for some reason.
             <div className="page">
                 <form onSubmit={handleSubmit} id="formEditor">
