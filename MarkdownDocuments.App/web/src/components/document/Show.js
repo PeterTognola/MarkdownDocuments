@@ -41,7 +41,7 @@ class Show extends Component {
 
         let item = this.props.retrieved;
 
-        const toggleDialog = () => {
+        const toggleDialog = () => { // todo move out into templates.
             this.setState({showDeleteDialog:!this.state.showDeleteDialog});
         };
 
