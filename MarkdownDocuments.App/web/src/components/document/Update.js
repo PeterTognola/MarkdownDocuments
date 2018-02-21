@@ -6,8 +6,8 @@ import Form from './Form';
 import { success } from '../../actions/document/create';
 import { retrieve, update, reset } from '../../actions/document/update';
 import { del, loading, error } from '../../actions/document/delete';
-import {templates} from "../../utils/templates";
-import {largeIcon, largeIconDanger} from "../../index.css";
+import { templates} from "../../utils/templates";
+import { largeIcon, largeIconDanger } from "../../index.css";
 import { Button, IconButton } from "react-toolbox/lib/button";
 
 class Update extends Component {

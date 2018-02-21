@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
-body > div {
+body > div:first-of-type {
     width:calc(100% - 30px);
     max-width: 990px;
     margin:0 auto;

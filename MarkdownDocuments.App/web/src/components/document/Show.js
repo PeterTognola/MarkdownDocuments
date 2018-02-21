@@ -7,6 +7,7 @@ import { del, loading, error } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
 import { largeIcon, largeIconDanger, page } from '../../index.css';
 import { Button, IconButton } from "react-toolbox/lib/button";
+import { Dialog } from "react-toolbox/lib/dialog";
 
 class Show extends Component {
     static propTypes = {
@@ -23,6 +24,8 @@ class Show extends Component {
 
     componentDidMount() {
         this.props.retrieve(decodeURIComponent(this.props.match.params.id));
+
+        this.setState({showDeleteDialog:false});
     }
 
     componentWillUnmount() {
@@ -30,13 +33,22 @@ class Show extends Component {
     }
 
     del = () => {
-        if (window.confirm('Are you sure you want to delete this item?')) this.props.del(this.props.retrieved);
+        this.props.del(this.props.retrieved);
     };
 
     render() {
         if (this.props.deleted) return <Redirect to=".."/>;
 
         let item = this.props.retrieved;
+
+        const toggleDialog = () => {
+            this.setState({showDeleteDialog:!this.state.showDeleteDialog});
+        };
+
+        const actions = [
+            { label: "No", onClick: toggleDialog },
+            { label: "Yes", onClick: () => { toggleDialog(); this.del();} }
+        ];
 
         if (item !== null) item = this.props.retrieved.value;
 
@@ -47,7 +59,16 @@ class Show extends Component {
 
                     <div style={{float:"right", padding:"0 15px"}}>
                         {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="mode_edit" /></Link>}
-                        <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
+                        <IconButton onClick={toggleDialog} icon="delete" className={largeIconDanger} />
+
+                        <Dialog actions={actions}
+                                active={this.state && this.state.showDeleteDialog}
+                                onEscKeyDown={toggleDialog}
+                                onOverlayClick={toggleDialog}
+                                title='Delete Document'
+                                style={{left: "0"}}>
+                            <p>Are you sure you want to delete <strong>{item && item["title"]}</strong>, it can not be recovered?</p>
+                        </Dialog>
                     </div>
                 </div>
 
