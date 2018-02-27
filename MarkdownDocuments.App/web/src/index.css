@@ -6,6 +6,8 @@ body {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
+/* React Toolbox UI overrides */
+
 body div.appContainer {
     width:calc(100% - 30px);
     max-width: 990px;
@@ -17,20 +19,12 @@ body > div > div header[data-react-toolbox="app-bar"] {
     margin:0 auto 15px;
 }
 
-body > div > div section h5 {
-    font-size:18px;
-}
-
 section {
     outline:0;
 }
 
-header nav a {
-    text-decoration: none;
-}
-
-header nav a + a {
-    padding-left:25px;
+body > div > div section h5 {
+    font-size:18px;
 }
 
 button.largeIcon > span, button.largeIconLight > span {
@@ -45,6 +39,8 @@ button.largeIconDanger > span {
     color:crimson;
 }
 
+/* Page Partitions */
+
 hr {
     height:1px;
     border:0;
@@ -52,6 +48,8 @@ hr {
     margin-top: .8rem;
     margin-bottom: .8rem;
 }
+
+/* Page Layout */
 
 .page {
     padding:0 15px;
@@ -65,7 +63,27 @@ hr {
     color:#333;
 }
 
-.page p {
+.page > p {
     font-size:14px;
     color:#545454;
+}
+
+/* Custom Navigation */
+
+.navigation {}
+
+.floating {
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+div.navigationFloating extends .navigation, .floating {}
+
+header nav a {
+    text-decoration: none;
+}
+
+header nav a + a {
+    padding-left:25px;
 }

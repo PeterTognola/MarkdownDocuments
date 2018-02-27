@@ -5,9 +5,13 @@ import PropTypes from 'prop-types';
 import { retrieve, reset } from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
-import { largeIcon, largeIconDanger, page } from '../../index.css';
-import { Button, IconButton } from "react-toolbox/lib/button";
-import { Dialog } from "react-toolbox/lib/dialog";
+
+// Import Theme
+import { Button, IconButton } from 'react-toolbox/lib/button';
+import { Dialog } from 'react-toolbox/lib/dialog';
+
+// Import Style
+import styles from '../../index.css';
 
 class Show extends Component {
     static propTypes = {
@@ -55,11 +59,11 @@ class Show extends Component {
         return (
             <div>
                 <div style={{margin:"0 15px"}}>
-                    <Link to=".."><IconButton className={largeIcon} icon="keyboard_arrow_left" /></Link>
+                    <Link to=".."><IconButton className={styles.largeIcon} icon="keyboard_arrow_left" /></Link>
 
                     <div style={{float:"right", padding:"0 15px"}}>
-                        {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="mode_edit" /></Link>}
-                        <IconButton onClick={toggleDialog} icon="delete" className={largeIconDanger} />
+                        {item && <Link to={`/document/edit/${encodeURIComponent(item["id"])}`}><IconButton className={styles.largeIcon} icon="mode_edit" /></Link>}
+                        <IconButton onClick={toggleDialog} icon="delete" className={styles.largeIconDanger} />
 
                         <Dialog actions={actions}
                                 active={this.state && this.state.showDeleteDialog}
@@ -79,7 +83,7 @@ class Show extends Component {
                 {this.props.deleteError && <div>{this.props.deleteError}</div>}
 
                 {item &&
-                    <div className={page}>
+                    <div className={styles.page}>
                         <h1>{item["title"]}</h1>
                         <p>{item["body"]}</p>
                     </div>

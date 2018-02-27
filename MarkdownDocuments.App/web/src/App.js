@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux';
 import Switch from "react-router-dom/es/Switch";
-import { largeIconLight, appContainer } from './index.css';
+import styles from './index.css';
 
-// Import theme
+// Import Theme
 import { AppBar } from 'react-toolbox/lib/app_bar';
 import { Navigation } from 'react-toolbox/lib/navigation';
 import { IconButton } from 'react-toolbox/lib/button';
@@ -25,16 +25,14 @@ const store = createStore(
 );
 
 export default class App {
-    constructor() {}
-
     static body() {
         return (
-            <div className={appContainer}> {/* todo transition element */}
+            <div className={styles.appContainer}> {/* todo transition element */}
                 <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>
-                        <Link to="/account"><IconButton icon="account_circle" primary className={largeIconLight} /></Link>
+                        <Link to="/account"><IconButton icon="account_circle" primary className={styles.largeIconLight} /></Link>
                     </Navigation>
                 </AppBar>
 

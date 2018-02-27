@@ -5,9 +5,14 @@ import PropTypes from 'prop-types';
 import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
+
+// Import Theme
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
+
+// Import Style
+import styles from '../../index.css';
 
 class List extends Component {
     state = {
@@ -58,32 +63,33 @@ class List extends Component {
     }
 
     render() {
-        return <div>
-            <div className="navigation">
-                <Link to="/document/create" className="button"><span className="icon arrow arrow-left"></span></Link> {/* create icon */}
-                <Link to="/document/create" className="button"><span className="icon search"></span></Link> {/* search icon */}
+        return (
+            <div>
+                <div className={styles.navigationFloating}>
+                    <Link to="/document/create" className="button"><Button icon='add' floating accent mini /></Link>
+                </div>
+
+                {this.props.loading && templates.loading()}
+                {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
+                {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>} todo error reporting */}
+
+                <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
+                    <Tab label="All Documents">
+                        {this.props.data.value && this.props.data.value.map(this.createCard)}
+                    </Tab>
+
+                    <Tab label="My Documents">
+                        {this.props.data.value && this.props.data.value.map(this.createCard)}
+                    </Tab>
+
+                    <Tab label="Joined Documents">
+                        <small style={{textAlign:"center"}}>Nothing Here :(</small>
+                    </Tab>
+                </Tabs>
+
+                {this.pagination()}
             </div>
-
-            {this.props.loading && templates.loading()}
-            {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
-            {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>}*/}
-
-            <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
-                <Tab label="All Documents">
-                    {this.props.data.value && this.props.data.value.map(this.createCard)}
-                </Tab>
-
-                <Tab label="My Documents">
-                    {this.props.data.value && this.props.data.value.map(this.createCard)}
-                </Tab>
-
-                <Tab label="Joined Documents">
-                    <small style={{textAlign:"center"}}>Nothing Here :(</small>
-                </Tab>
-            </Tabs>
-
-            {this.pagination()}
-        </div>;
+        );
     }
 
     pagination() {
