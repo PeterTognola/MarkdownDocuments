@@ -13,6 +13,7 @@ import { Tab, Tabs } from 'react-toolbox/lib/tabs';
 
 // Import Style
 import styles from '../../index.css';
+import { Snackbar } from "react-toolbox/lib/snackbar";
 
 class List extends Component {
     state = {
@@ -65,12 +66,16 @@ class List extends Component {
     render() {
         return (
             <div>
-                <div className={styles.navigationFloating}>
-                    <Link to="/document/create" className="button"><Button icon='add' floating accent mini /></Link>
+                <Snackbar
+                    active={this.props.deletedItem}
+                    timeout="2500"
+                    label={"Document has " + (this.props.deletedItem && this.props.deletedItem['title']) + " been deleted."} />
+
+                <div className={[styles.floating, styles.navigation]}>
+                    <Link to="/document/create"><Button icon='add' floating accent mini /></Link>
                 </div>
 
                 {this.props.loading && templates.loading()}
-                {this.props.deletedItem && <div className="alert alert-success">{this.props.deletedItem['id']} deleted.</div>}
                 {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>} todo error reporting */}
 
                 <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
@@ -122,7 +127,7 @@ const mapDispatchToProps = (dispatch) => {
         reset: () => {
             dispatch(reset());
             dispatch(success(null));
-        },
+        }
     };
 };
 

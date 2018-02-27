@@ -70,7 +70,9 @@ hr {
 
 /* Custom Navigation */
 
-.navigation {}
+.navigation {
+    background-color: red;
+}
 
 .floating {
     position: absolute;
@@ -78,7 +80,7 @@ hr {
     right:0;
 }
 
-div.navigationFloating extends .navigation, .floating {}
+.navigationFloating extends .navigation, .floating {}
 
 header nav a {
     text-decoration: none;
