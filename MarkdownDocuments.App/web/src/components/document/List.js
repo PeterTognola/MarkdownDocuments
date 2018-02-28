@@ -71,7 +71,7 @@ class List extends Component {
                     timeout={2500}
                     label={"Document has '" + (this.props.deletedItem && this.props.deletedItem['title']) + "' been deleted."} />
 
-                <div className={[styles.floating, styles.navigation]}>
+                <div className={styles.floatingButton}>
                     <Link to="/document/create"><Button icon='add' floating accent mini /></Link>
                 </div>
 

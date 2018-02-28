@@ -13,6 +13,7 @@ body div.appContainer {
     max-width: 990px;
     margin:0 auto;
     padding:15px;
+    position: relative;
 }
 
 body > div > div header[data-react-toolbox="app-bar"] {
@@ -81,6 +82,12 @@ hr {
 }
 
 .navigationFloating extends .navigation, .floating {}
+
+.floatingButton {
+    position: fixed;
+    bottom:25px;
+    right:25px;
+}
 
 header nav a {
     text-decoration: none;

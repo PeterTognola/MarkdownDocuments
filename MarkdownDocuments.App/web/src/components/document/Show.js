@@ -49,7 +49,7 @@ class Show extends Component {
             this.setState({showDeleteDialog:!this.state.showDeleteDialog});
         };
 
-        const actions = [
+        const actions = [ // todo move out into templates.
             { label: "No", onClick: toggleDialog },
             { label: "Yes", onClick: () => { toggleDialog(); this.del();} }
         ];
