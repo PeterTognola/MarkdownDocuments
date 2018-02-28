@@ -67,9 +67,9 @@ class List extends Component {
         return (
             <div>
                 <Snackbar
-                    active={this.props.deletedItem}
-                    timeout="2500"
-                    label={"Document has " + (this.props.deletedItem && this.props.deletedItem['title']) + " been deleted."} />
+                    active={this.props.deletedItem !== null}
+                    timeout={2500}
+                    label={"Document has '" + (this.props.deletedItem && this.props.deletedItem['title']) + "' been deleted."} />
 
                 <div className={[styles.floating, styles.navigation]}>
                     <Link to="/document/create"><Button icon='add' floating accent mini /></Link>

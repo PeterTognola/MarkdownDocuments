@@ -10,7 +10,7 @@ const renderField = (data) => {
 
     return (
         <div className={`form-group ${hasError ? 'has-error' : ''}`}>
-            <input {...data.input} type={data.type} step={data.step}required={data.required} placeholder={data.placeholder} className={data.className} style={data.style} id={`document_${data.input.name}`} />
+            <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
         </div>
@@ -19,18 +19,16 @@ const renderField = (data) => {
 
 class Form extends Component {
     render() {
-        const { handleSubmit } = (data) => {
-            console.log(data);
-            return this.props;
-        };
+        const { handleSubmit } = this.props;
 
         // todo editor https://ace.c9.io/?
 
         return ( // todo sending as GET for some reason.
             <div className="page">
-                <form onSubmit={handleSubmit} id="formEditor">
-                    <Field component={renderField} name="title" type="text" placeholder="The title..." className="pretend-title" required={true} />
+                <form onSubmit={handleSubmit}>
+                    <Field component={renderField} name="title" type="text" placeholder="The title..." required={true} />
                     <Field component={renderField} name="body" type="text" placeholder="The body..." required={true} />
+
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
