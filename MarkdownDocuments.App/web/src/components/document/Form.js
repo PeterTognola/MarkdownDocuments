@@ -23,11 +23,12 @@ const renderField = (data) => {
                     onLoad={this.onLoad}
                     onChange={this.onChange}
                     fontSize={14}
+                    wrapEnabled={true}
                     showPrintMargin={true}
                     showGutter={false}
                     highlightActiveLine={true}
                     value={data.input.value}
-                    setOptions={{ enableBasicAutocompletion: false, enableLiveAutocompletion: false, enableSnippets: false, showLineNumbers: false, tabSize: 2, }} />;
+                    setOptions={{ enableBasicAutocompletion: false, enableLiveAutocompletion: false, enableSnippets: false, showLineNumbers: false, tabSize: 2 }} />;
     } else {
         input = <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />;
     }
@@ -44,8 +45,6 @@ const renderField = (data) => {
 class Form extends Component {
     render() {
         const { handleSubmit } = this.props;
-
-        // todo editor https://ace.c9.io/?
 
         return ( // todo sending as GET for some reason.
             <div className="page">
