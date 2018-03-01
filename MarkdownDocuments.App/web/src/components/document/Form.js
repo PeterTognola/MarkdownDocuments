@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+// Import ace.
+import AceEditor from "react-ace";
+import 'brace/mode/markdown';
+import 'brace/theme/tomorrow';
+
 const renderField = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
     if (hasError) {
@@ -8,9 +13,28 @@ const renderField = (data) => {
         data.input['aria-invalid'] = true;
     }
 
+    let input = <input type="text" />;
+
+    if (data.type === "ace") {
+        input = <AceEditor
+                    mode="markdown"
+                    theme="tomorrow"
+                    id={`document_${data.input.name}`}
+                    onLoad={this.onLoad}
+                    onChange={this.onChange}
+                    fontSize={14}
+                    showPrintMargin={true}
+                    showGutter={false}
+                    highlightActiveLine={true}
+                    value={data.input.value}
+                    setOptions={{ enableBasicAutocompletion: false, enableLiveAutocompletion: false, enableSnippets: false, showLineNumbers: false, tabSize: 2, }} />;
+    } else {
+        input = <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />;
+    }
+
     return (
         <div className={`form-group ${hasError ? 'has-error' : ''}`}>
-            <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />
+            {input}
 
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
         </div>
@@ -27,7 +51,7 @@ class Form extends Component {
             <div className="page">
                 <form onSubmit={handleSubmit}>
                     <Field component={renderField} name="title" type="text" placeholder="The title..." required={true} />
-                    <Field component={renderField} name="body" type="text" placeholder="The body..." required={true} />
+                    <Field component={renderField} name="body" type="ace" placeholder="The body..." required={true} />
 
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
