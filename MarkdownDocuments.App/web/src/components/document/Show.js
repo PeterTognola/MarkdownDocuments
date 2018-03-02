@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { retrieve, reset } from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
+import Markdown from "react-markdown";
 
 // Import Theme
 import { Button, IconButton } from 'react-toolbox/lib/button';
@@ -85,7 +86,10 @@ class Show extends Component {
                 {item &&
                     <div className={styles.page}>
                         <h1>{item["title"]}</h1>
-                        <p>{item["body"]}</p>
+
+                        <Markdown>
+                            {item["body"]}
+                        </Markdown>
                     </div>
                 }
             </div>
