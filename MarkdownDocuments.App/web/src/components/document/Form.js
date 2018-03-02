@@ -20,6 +20,7 @@ const renderField = (data) => {
                     mode="markdown"
                     theme="tomorrow"
                     id={`document_${data.input.name}`}
+                    name={data.input.name}
                     onLoad={this.onLoad}
                     onChange={this.onChange}
                     fontSize={14}
@@ -27,7 +28,6 @@ const renderField = (data) => {
                     showPrintMargin={true}
                     showGutter={false}
                     highlightActiveLine={true}
-                    value={data.input.value}
                     setOptions={{ enableBasicAutocompletion: false, enableLiveAutocompletion: false, enableSnippets: false, showLineNumbers: false, tabSize: 2 }} />;
     } else {
         input = <input {...data.input} type={data.type} step={data.step} required={data.required} placeholder={data.placeholder} id={`document_${data.input.name}`} />;
@@ -40,13 +40,13 @@ const renderField = (data) => {
             {hasError && <span className="help-block" id={`document_${data.input.name}_helpBlock`}>{data.meta.error}</span>}
         </div>
     );
-}
+};
 
 class Form extends Component {
     render() {
         const { handleSubmit } = this.props;
 
-        return ( // todo sending as GET for some reason.
+        return (
             <div className="page">
                 <form onSubmit={handleSubmit}>
                     <Field component={renderField} name="title" type="text" placeholder="The title..." required={true} />
