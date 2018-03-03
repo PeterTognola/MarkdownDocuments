@@ -1,6 +1,11 @@
-:global .aceThemeMod {
-  :global .ace-tomorrow .ace_string {
-    color: #4D4D4C !important;
-    font-weight: bold !important;
-  }
+:global .ace_heading,
+:global .ace_markup.ace_heading,
+:global .ace_string {
+  color: #4D4D4C !important;
+  font-weight: bold !important;
+}
+
+.editor {
+  /* todo requires font-family (indenting) */
+  margin:5px 0 25px;
 }

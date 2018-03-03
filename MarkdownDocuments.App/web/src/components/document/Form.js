@@ -5,11 +5,13 @@ import { Field, reduxForm } from 'redux-form';
 import AceEditor from "react-ace";
 import "brace/mode/markdown";
 import "brace/theme/tomorrow";
-import style from "../../shared/ace_theme_mod.scss";
 
 // Import react-toolbox.
 import { Button } from "react-toolbox/lib/button";
 import { Input } from "react-toolbox/lib/input";
+
+// Import Ace style mod.
+import aceStyles from "../../shared/ace_theme_mod.scss";
 
 const renderEditor = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;
@@ -26,14 +28,14 @@ const renderEditor = (data) => {
                 mode="markdown"
                 theme="tomorrow"
                 style={{width:"100%"}}
-                className={style.aceThemeMod}
                 onLoad={this.onLoad}
-                value={data.input.value || data.placeholder}
+                value={data.input.value || data.placeholder} // todo When value is "" it is set to placeholder (at any point).
+                className={aceStyles.editor}
                 onChange={param => {data.input.onChange(param)}}
                 fontSize={14}
                 wrapEnabled={true}
                 showPrintMargin={false}
-                showGutter={false}
+                showGutter={true}
                 highlightActiveLine={true}
                 id={`document_${data.input.name}`}
                 name={data.input.name}
@@ -41,7 +43,7 @@ const renderEditor = (data) => {
                     enableBasicAutocompletion: false,
                     enableLiveAutocompletion: false,
                     enableSnippets: false,
-                    showLineNumbers: false,
+                    showLineNumbers: true,
                     tabSize: 2
                 }} />
 

@@ -8,7 +8,7 @@ import { retrieve, update, reset } from '../../actions/document/update';
 import { del, loading, error } from '../../actions/document/delete';
 import { templates} from "../../utils/templates";
 import { largeIcon, largeIconDanger } from "../../index.css";
-import { Button, IconButton } from "react-toolbox/lib/button";
+import { Button, IconButton, Snackbar } from "react-toolbox";
 
 class Update extends Component {
     static propTypes = {
@@ -46,26 +46,31 @@ class Update extends Component {
 
         if (item != null) item = item.value;
 
+        if (this.props.updated) {
+            this.props.history.push(`/document/show/${encodeURIComponent(this.props.updated["id"])}`);
+            // todo send state of updated to show component.
+            // todo message to say document updated.
+        }
+
         return (
             <div>
                 <div style={{margin:"0 15px"}}>
-                    {item && <Link to={`/document/show/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="cancel" /></Link>/* todo onclick, ask if user is sure. */}
+                    {item && <Link to={`/document/show/${encodeURIComponent(item["id"])}`}><IconButton className={largeIcon} icon="cancel" /></Link>/* todo onclick, ask if user is sure as they would lose their work. */}
 
-                    <div style={{float:"right", padding:"0 15px"}}>
-                        <IconButton onClick={this.del} icon="delete" className={largeIconDanger} />
-                    </div>
+                    {item && <div style={{float:"right", padding:"0 15px"}}><IconButton onClick={this.del} icon="delete" className={largeIconDanger} /></div>}
                 </div>
 
                 <hr />
 
-                {this.props.created && <div className="alert alert-success" role="status">{this.props.created['id']} created.</div>}
-                {this.props.updated && <div className="alert alert-success" role="status">{this.props.updated['id']} updated.</div>}
-                {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && templates.loading()}
-                {this.props.retrieveError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.retrieveError}</div>}
-                {this.props.updateError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.updateError}</div>}
-                {this.props.deleteError && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.deleteError}</div>}
+                {item && <Form id="editorForm" onSubmit={values => this.props.update(item, values)} initialValues={item} />}
 
-                {item && <Form id="editorForm" onSubmit={values => this.props.update(item, values)} initialValues={item}/>}
+                {(this.props.retrieveLoading || this.props.updateLoading || this.props.deleteLoading) && templates.loading()}
+
+                {/* the below needs moving out into the "show" or "list" state. */}
+                {this.props.created && <div role="status">{this.props.created['id']} created.</div>}
+                {this.props.retrieveError && <div role="alert">{this.props.retrieveError}</div>}
+                {this.props.updateError && <div role="alert">{this.props.updateError}</div>}
+                {this.props.deleteError && <div role="alert">{this.props.deleteError}</div>}
             </div>
         );
     }

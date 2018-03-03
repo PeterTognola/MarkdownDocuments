@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
 import { templates } from "../../utils/templates";
+import Markdown from "react-markdown";
 
 // Import Theme
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
@@ -52,7 +53,11 @@ class List extends Component {
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
                     subtitle="Created on " />
-                <CardText style={{color: "#545454"}}>{item.body}</CardText>
+                <CardText style={{color: "#545454"}}>
+                    <Markdown>
+                        {item.body.length > 320 ? item.body.substring(0, 320) + "..." : item.body}
+                    </Markdown>
+                </CardText>
                 <CardActions>
                     <Link to={`/document/show/${encodeURIComponent(item.id)}`}>
                         <Button label="Open" />
