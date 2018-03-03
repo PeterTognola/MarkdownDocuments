@@ -96,3 +96,7 @@ header nav a {
 header nav a + a {
     padding-left:25px;
 }
+
+.activeLink {
+    border-bottom: 2px solid #333;
+}

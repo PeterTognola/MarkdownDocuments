@@ -30,7 +30,7 @@ export default class App {
             <div className={styles.appContainer}> {/* todo transition element */}
                 <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
-                        <Link to="/">Home</Link>
+                        <Link to="/" activeClassName={styles.activeLink}>Home</Link>
                         <Link to="/document">Documents</Link>
                         <Link to="/account"><IconButton icon="account_circle" primary className={styles.largeIconLight} /></Link>
                     </Navigation>
