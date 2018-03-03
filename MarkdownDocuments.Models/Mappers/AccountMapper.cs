@@ -19,7 +19,13 @@ namespace MarkdownDocuments.Models.Mappers
 
         public AccountModel MapToModel(AccountViewModel view)
         {
-            throw new NotImplementedException();
+            return new AccountModel
+            {
+                Id = view.Id,
+                FirstName = view.FirstName,
+                LastName = view.LastName,
+                Email = view.Email
+            };
         }
     }
 }

@@ -37,6 +37,7 @@ namespace MarkdownDocuments.WebApi
             
             // Mapper Instantiation
             services.AddTransient<IMapper<DocumentModel, DocumentViewModel>, DocumentMapper>();
+            services.AddTransient<IMapper<AccountModel, AccountViewModel>, AccountMapper>();
             
             // UrlHelper Instantiation
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -58,7 +59,7 @@ namespace MarkdownDocuments.WebApi
                             .AllowAnyOrigin();
                     });
             });
-
+            
             // Add identiy to services.
             services.AddIdentity<AccountModel, AccountModel.AccountRoleModel>()
                 .AddEntityFrameworkStores<DbContext>()

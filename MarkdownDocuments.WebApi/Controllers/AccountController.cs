@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using MarkdownDocuments.DAL;
+using MarkdownDocuments.Models.Models;
 using MarkdownDocuments.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -14,10 +15,10 @@ namespace MarkdownDocuments.WebApi.Controllers
     [Route("api/[controller]")]
     public class AccountController : Controller
     {
-        private readonly UserManager<MarkdownUser> _userManager;
-        private readonly SignInManager<MarkdownUser> _signInManager;
+        private readonly UserManager<AccountModel> _userManager;
+        private readonly SignInManager<AccountModel> _signInManager;
 
-        public AccountController(UserManager<MarkdownUser> userManager, SignInManager<MarkdownUser> signInManager)
+        public AccountController(UserManager<AccountModel> userManager, SignInManager<AccountModel> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
