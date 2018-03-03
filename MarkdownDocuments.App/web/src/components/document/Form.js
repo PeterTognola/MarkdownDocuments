@@ -5,6 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 import AceEditor from "react-ace";
 import "brace/mode/markdown";
 import "brace/theme/tomorrow";
+import style from "../../shared/ace_theme_mod.scss";
 
 // Import react-toolbox.
 import { Button } from "react-toolbox/lib/button";
@@ -25,6 +26,7 @@ const renderEditor = (data) => {
                 mode="markdown"
                 theme="tomorrow"
                 style={{width:"100%"}}
+                className={style.aceThemeMod}
                 onLoad={this.onLoad}
                 value={data.input.value || data.placeholder}
                 onChange={param => {data.input.onChange(param)}}
