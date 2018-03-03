@@ -8,3 +8,7 @@ C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netcoreapp2.0\M
 C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netcoreapp2.0\MarkdownDocuments.DAL.AssemblyInfo.cs
 C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netcoreapp2.0\MarkdownDocuments.DAL.dll
 C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\obj\Debug\netcoreapp2.0\MarkdownDocuments.DAL.pdb
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Development\MarkdownDocuments\MarkdownDocuments.DAL\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Identity.Stores.xml

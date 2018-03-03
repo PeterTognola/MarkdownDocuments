@@ -5,6 +5,7 @@ using MarkdownDocuments.Models.Models;
 using MarkdownDocuments.Models.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -57,6 +58,11 @@ namespace MarkdownDocuments.WebApi
                             .AllowAnyOrigin();
                     });
             });
+
+            // Add identiy to services.
+            services.AddIdentity<MarkdownUser, IdentityRole>()
+                .AddEntityFrameworkStores<DbContext>()
+                .AddDefaultTokenProviders();
             
             services.AddMvc();
         }
@@ -73,6 +79,8 @@ namespace MarkdownDocuments.WebApi
                 // Shows UseCors with named policy.
                 app.UseCors("AllowAllHeaders");
             }
+            
+            app.UseAuthentication();
 
             app.UseMvc();
         }

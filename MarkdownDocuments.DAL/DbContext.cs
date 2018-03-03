@@ -1,9 +1,11 @@
 ﻿using MarkdownDocuments.Models.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarkdownDocuments.DAL
 {
-    public class DbContext : Microsoft.EntityFrameworkCore.DbContext
+    public class DbContext : IdentityDbContext<MarkdownUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -16,5 +18,12 @@ namespace MarkdownDocuments.DAL
         }
 
         public DbSet<DocumentModel> Documents { get; set; }
+    }
+    
+    public class MarkdownUser : IdentityUser
+    {
+        public string FirstName { get; set; }
+        
+        public string LastName { get; set; }
     }
 }
