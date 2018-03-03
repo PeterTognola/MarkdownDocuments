@@ -46,16 +46,16 @@ class List extends Component {
         this.setState({documentIndex});
     };
 
-    createCard(item) {
+    static createCard(item) {
         return (
             <Card key={item.id} style={{margin:"15px auto", maxWidth:"500px"}}>
                 <CardTitle
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
-                    subtitle="Created on " />
+                    subtitle={`Created on ${item.creationDate}`} />
                 <CardText style={{color: "#545454"}}>
                     <Markdown>
-                        {item.body.length > 320 ? item.body.substring(0, 320) + "..." : item.body}
+                        {item.body && item.body.length > 320 ? item.body.substring(0, 320) + "..." : item.body}
                     </Markdown>
                 </CardText>
                 <CardActions>
@@ -85,11 +85,11 @@ class List extends Component {
 
                 <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
                     <Tab label="All Documents">
-                        {this.props.data.value && this.props.data.value.map(this.createCard)}
+                        {this.props.data.value && this.props.data.value.map(List.createCard)}
                     </Tab>
 
                     <Tab label="My Documents">
-                        {this.props.data.value && this.props.data.value.map(this.createCard)}
+                        {this.props.data.value && this.props.data.value.map(List.createCard)}
                     </Tab>
 
                     <Tab label="Joined Documents">

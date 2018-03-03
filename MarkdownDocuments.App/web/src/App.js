@@ -2,7 +2,7 @@ import React from 'react';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { reducer as form } from 'redux-form';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux';
 import Switch from "react-router-dom/es/Switch";
@@ -15,19 +15,36 @@ import { IconButton } from 'react-toolbox/lib/button';
 
 // Import Reducers
 import documentReducers from './reducers/document/';
+import accountReducers from './reducers/account/';
 
 // Import Routes
 import documentRoutes from './routes/document';
+import accountRoutes from './routes/account';
 
 const store = createStore(
-    combineReducers({routing, form, documentReducers}),
+    combineReducers({routing, form, documentReducers, accountReducers}),
     applyMiddleware(thunk)
 );
 
 export default class App {
+    static getRoutes() {
+        if (localStorage.getItem("credentials") === null)
+            return [accountRoutes, <Redirect to="/account/create" />];
+
+        return [documentRoutes, accountRoutes];
+    }
+
+    static getStore() {
+        return store;
+    }
+
+    static getHistory() {
+        return syncHistoryWithStore(createBrowserHistory(), store);
+    }
+
     static body() {
         return (
-            <div className={styles.appContainer}> {/* todo transition element */}
+            <div className={styles.appContainer}>
                 <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
                         <Link to="/" activeClassName={styles.activeLink}>Home</Link>
@@ -37,17 +54,9 @@ export default class App {
                 </AppBar>
 
                 <Switch>
-                    {documentRoutes}
+                    {this.getRoutes()}
                 </Switch>
             </div>
         );
-    }
-
-    static getStore() {
-        return store;
-    }
-
-    static getHistory() {
-        return syncHistoryWithStore(createBrowserHistory(), store);
     }
 }
