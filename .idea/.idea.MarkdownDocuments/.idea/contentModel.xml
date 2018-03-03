@@ -9,6 +9,8 @@
         <e p="Migrations" t="Include">
           <e p="20180203224936_InitialDocumentMigration.cs" t="Include" />
           <e p="20180203224936_InitialDocumentMigration.Designer.cs" t="Include" />
+          <e p="20180303153048_AddedIdentityMigration.cs" t="Include" />
+          <e p="20180303153048_AddedIdentityMigration.Designer.cs" t="Include" />
           <e p="DbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -43,6 +45,7 @@
         </e>
         <e p="QueryParameters.cs" t="Include" />
         <e p="ViewModels" t="Include">
+          <e p="AccountViewModel.cs" t="Include" />
           <e p="DocumentViewModel.cs" t="Include" />
         </e>
       </e>
@@ -52,6 +55,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
           <e p="DocumentController.cs" t="Include" />
         </e>
         <e p="MarkdownDocuments.WebApi.csproj" t="IncludeRecursive" />
