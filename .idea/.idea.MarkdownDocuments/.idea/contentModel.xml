@@ -3,8 +3,8 @@
   <component name="ContentModelStore">
     <e p="C:\Development\MarkdownDocuments" t="IncludeFlat">
       <e p="MarkdownDocuments.Business" t="IncludeRecursive">
+        <e p="AccountBusiness.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="MarkdownDocuments.Business.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -39,6 +39,9 @@
       </e>
       <e p="MarkdownDocuments.Models" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BusinessModels" t="Include">
+          <e p="AccountBusinessModel.cs" t="Include" />
+        </e>
         <e p="LinkView.cs" t="Include" />
         <e p="Mappers" t="Include">
           <e p="AccountMapper.cs" t="Include" />

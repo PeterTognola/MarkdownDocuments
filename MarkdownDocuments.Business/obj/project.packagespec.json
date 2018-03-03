@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj": {
+            "projectPath": "C:\\Development\\MarkdownDocuments\\MarkdownDocuments.Models\\MarkdownDocuments.Models.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

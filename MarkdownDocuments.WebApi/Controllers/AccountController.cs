@@ -12,8 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MarkdownDocuments.WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    public class AccountController : Controller
+    [Route("api/[controller]/[action]")]
+    public class AccountController : Controller // todo follow repo pattern.
     {
         private readonly UserManager<AccountModel> _userManager;
         private readonly SignInManager<AccountModel> _signInManager;
@@ -25,7 +25,7 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] AccountViewModel model) // todo injection attack??
+        public async Task<IActionResult> Login([FromBody] AccountLoginViewModel model) // todo injection attack??
         {
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, set lockoutOnFailure: true
@@ -35,27 +35,26 @@ namespace MarkdownDocuments.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register([FromBody] AccountViewModel model) // todo injection attack??
+        public async Task<IActionResult> Register([FromBody] AccountCreateViewModel model) // todo injection attack??
         {
             if (model.Password != model.ConfirmPassword || model.Password.Length < 1 || model.ConfirmPassword.Length < 1)
-                return new ValidationViewModel
-                {
-                    Success = false,
-                    Messages = new[] {"Passwords must match!"}
-                };
+            {
+                return StatusCode((int) HttpStatusCode.InternalServerError);
+            }
 
-            var user = new PrivyyUser {UserName = model.Email, Email = model.Email};
+            var user = new AccountModel
+            {
+                UserName = model.Email,
+                Email = model.Email
+            };
+            
             var result = await _userManager.CreateAsync(user, model.Password); // todo password rules.
 
-            if (!result.Succeeded) return new ValidationViewModel { Success = false, Messages = result.Errors.Select(x => x.Description) };
-
-            // var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            // var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-            // await _emailSender.SendEmailConfirmationAsync(Input.Email, callbackUrl); todo send user email to verify.
+            if (!result.Succeeded) return StatusCode((int) HttpStatusCode.InternalServerError);
 
             await _signInManager.SignInAsync(user, false);
 
-            return new ValidationViewModel { Success = true };
+            return NoContent();
         }
         
         [HttpGet]

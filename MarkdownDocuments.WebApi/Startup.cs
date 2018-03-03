@@ -47,6 +47,11 @@ namespace MarkdownDocuments.WebApi
                 return new UrlHelper(actionContext);
             });
             
+            // Add identiy to services.
+            services.AddIdentity<AccountModel, AccountModel.AccountRoleModel>()
+                .AddEntityFrameworkStores<DbContext>()
+                .AddDefaultTokenProviders();
+            
             // Add CORS for development (todo remove for production).
             services.AddCors(options =>
             {
@@ -60,16 +65,13 @@ namespace MarkdownDocuments.WebApi
                     });
             });
             
-            // Add identiy to services.
-            services.AddIdentity<AccountModel, AccountModel.AccountRoleModel>()
-                .AddEntityFrameworkStores<DbContext>()
-                .AddDefaultTokenProviders();
-            
             services.AddMvc();
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            app.UseAuthentication();
+            
             if (env.IsDevelopment())
             {
                 loggerFactory.AddConsole(Configuration.GetSection("Logging"));
@@ -80,8 +82,6 @@ namespace MarkdownDocuments.WebApi
                 // Shows UseCors with named policy.
                 app.UseCors("AllowAllHeaders");
             }
-            
-            app.UseAuthentication();
 
             app.UseMvc();
         }

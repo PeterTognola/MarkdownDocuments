@@ -12,4 +12,20 @@ namespace MarkdownDocuments.Models.ViewModels
         
         public string LastName { get; set; }
     }
+
+    public class AccountCreateViewModel
+    {
+        public string Email { get; set; }
+        
+        public string Password { get; set; }
+        
+        public string ConfirmPassword { get; set; }
+    }
+
+    public class AccountLoginViewModel
+    {
+        public string Email { get; set; }
+        
+        public string Password { get; set; }
+    }
 }
