@@ -11,7 +11,7 @@ using System;
 namespace MarkdownDocuments.DAL.Migrations
 {
     [DbContext(typeof(DbContext))]
-    [Migration("20180203224936_InitialDocumentMigration")]
+    [Migration("20180303162039_InitialDocumentMigration")]
     partial class InitialDocumentMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

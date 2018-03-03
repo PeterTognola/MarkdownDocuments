@@ -60,7 +60,7 @@ namespace MarkdownDocuments.WebApi
             });
 
             // Add identiy to services.
-            services.AddIdentity<MarkdownUser, IdentityRole>()
+            services.AddIdentity<AccountModel, AccountModel.AccountRoleModel>()
                 .AddEntityFrameworkStores<DbContext>()
                 .AddDefaultTokenProviders();
             

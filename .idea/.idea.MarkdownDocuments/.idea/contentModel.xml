@@ -6,13 +6,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DbContext.cs" t="Include" />
         <e p="MarkdownDocuments.DAL.csproj" t="IncludeRecursive" />
-        <e p="Migrations" t="Include">
-          <e p="20180203224936_InitialDocumentMigration.cs" t="Include" />
-          <e p="20180203224936_InitialDocumentMigration.Designer.cs" t="Include" />
-          <e p="20180303153048_AddedIdentityMigration.cs" t="Include" />
-          <e p="20180303153048_AddedIdentityMigration.Designer.cs" t="Include" />
-          <e p="DbContextModelSnapshot.cs" t="Include" />
-        </e>
+        <e p="Migrations" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -29,11 +23,13 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="LinkView.cs" t="Include" />
         <e p="Mappers" t="Include">
+          <e p="AccountMapper.cs" t="Include" />
           <e p="DocumentMapper.cs" t="Include" />
           <e p="IMapper.cs" t="Include" />
         </e>
         <e p="MarkdownDocuments.Models.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="AccountModel.cs" t="Include" />
           <e p="DocumentModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

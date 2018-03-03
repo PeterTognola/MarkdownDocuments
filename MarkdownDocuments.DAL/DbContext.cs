@@ -1,11 +1,11 @@
-﻿using MarkdownDocuments.Models.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using System;
+using MarkdownDocuments.Models.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MarkdownDocuments.DAL
 {
-    public class DbContext : IdentityDbContext<AccountModel>
+    public class DbContext : IdentityDbContext<AccountModel, AccountModel.AccountRoleModel, Guid>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
