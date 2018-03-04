@@ -81,7 +81,7 @@ class List extends Component {
                 </div>
 
                 {this.props.loading && templates.loading()}
-                {/*{this.props.error && <div className="alert alert-danger">{this.props.error}</div>} todo error reporting */}
+                {this.props.error && templates.error(this.props.error)}
 
                 <Tabs index={this.state.documentIndex} onChange={this.handleDocumentTabChange} fixed>
                     <Tab label="All Documents">
