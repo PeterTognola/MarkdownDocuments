@@ -21,8 +21,7 @@ export function login(values) {
             .then(response => {
                 dispatch(loading(false));
                 localStorage.setItem("credentials", "true");
-                console.log(localStorage.getItem("credentials"));
-                return response.json();
+                return response; // todo .json()
             })
             .then(data => dispatch(success(data)))
             .catch(e => {

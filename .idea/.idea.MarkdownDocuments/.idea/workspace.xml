@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+            <state relative-caret-position="348">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <marker date="1520194421245" expanded="true" signature="6:336" ph="..." />
                 <marker date="1520194421245" expanded="true" signature="384:2636" ph="{...}" />
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="251">
+              <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
               <folding>
                 <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
                 <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
@@ -532,7 +532,7 @@
       <workItem from="1518546959618" duration="2527000" />
       <workItem from="1518632346871" duration="2003000" />
       <workItem from="1518865622782" duration="18626000" />
-      <workItem from="1520092806683" duration="12828000" />
+      <workItem from="1520092806683" duration="13949000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -545,7 +545,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73820000" />
+    <option name="totallyTimeSpent" value="74941000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,19 +642,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
-            <startOffsets>
-              <startOffset value="1250" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="1251" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="22" />
@@ -1018,10 +1005,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <marker date="1520194421245" expanded="true" signature="6:336" ph="..." />
+            <marker date="1520194421245" expanded="true" signature="384:2636" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="504:2634" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="760:864" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="938:1099" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="987:1087" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="1241:1660" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="1264:1422" ph="/* This doesn't count login failures towards account lockout ... */" />
+            <marker date="1520194421245" expanded="true" signature="1798:2497" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="1930:2035" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="2089:2180" ph="{...}" />
+            <marker date="1520194421245" expanded="true" signature="2559:2628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+        <state relative-caret-position="251">
+          <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
           <folding>
             <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
             <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
@@ -1048,27 +1056,6 @@
             <marker date="1518365968369" expanded="true" signature="6145:6473" ph="{...}" />
             <marker date="1518365968369" expanded="true" signature="6251:6436" ph="{...}" />
             <marker date="1518365968369" expanded="true" signature="6618:7357" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <marker date="1520194421245" expanded="true" signature="6:336" ph="..." />
-            <marker date="1520194421245" expanded="true" signature="384:2636" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="504:2634" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="760:864" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="938:1099" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="987:1087" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="1241:1660" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="1264:1422" ph="/* This doesn't count login failures towards account lockout ... */" />
-            <marker date="1520194421245" expanded="true" signature="1798:2497" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="1930:2035" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="2089:2180" ph="{...}" />
-            <marker date="1520194421245" expanded="true" signature="2559:2628" ph="{...}" />
           </folding>
         </state>
       </provider>

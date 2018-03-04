@@ -12,17 +12,16 @@ export class templates extends React.Component {
     static error(error) {
         if (error === null || error === "") error = "There was an unknown error.";
 
-        let active = true;
-
-        const closeDialog = () => { active = false };
+        const closeDialog = () => {};
 
         return (
             <Dialog
+                ref="errorDialog"
                 actions={ [{ label: "OK", onClick: closeDialog}] }
-                active={active}
+                active={true}
                 onEscKeyDown={closeDialog}
                 onOverlayClick={closeDialog}
-                title="There was an error!">
+                title="An Error Occurred...">
                 <p>{error}</p>
             </Dialog>
         );

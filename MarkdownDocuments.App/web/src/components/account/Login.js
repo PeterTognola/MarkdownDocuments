@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Form from "../../forms/account/Login";
 import { login, loading, error } from "../../actions/account/login";
+import { templates } from "../../shared/helpers/templates";
 
 class Login extends Component {
     static propTypes = {
@@ -21,12 +22,13 @@ class Login extends Component {
         if (this.props.loggedIn) {
             // todo temp hack until we can reload the getRoutes state.
             window.location.href = window.location.origin;
+            console.log(this.props.loggedIn);
         }
 
         return (
             <div>
-                {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
-                {this.props.error && <div className="alert alert-danger" role="alert">{this.props.error}</div>}
+                {this.props.loading && templates.loading()}
+                {this.props.error && templates.error(this.props.error)}
 
                 <Form onSubmit={this.props.login} values={this.props.item}/>
             </div>
@@ -36,9 +38,9 @@ class Login extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        loggedIn: state.accountReducers.create.created,
-        error: state.accountReducers.create.error,
-        loading: state.accountReducers.create.loading
+        loggedIn: state.accountReducers.login.loggedIn,
+        error: state.accountReducers.login.error,
+        loading: state.accountReducers.login.loading
     };
 };
 
