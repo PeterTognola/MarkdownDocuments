@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import Form from "./Form";
 import { create, loading, error } from "../../actions/document/create";
+import { templates } from "../../shared/helpers/templates"
 
 // Import Theme
 import { Button, IconButton } from "react-toolbox/lib/button";
@@ -37,8 +38,8 @@ class Create extends Component {
 
                 <hr />
 
-                {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
-                {this.props.error && <div className="alert alert-danger" role="alert">{this.props.error}</div>}
+                {this.props.loading && templates.loading()}
+                {this.props.error && templates.error(this.props.error)}
 
                 <Form onSubmit={this.props.create} values={this.props.item}/>
             </div>

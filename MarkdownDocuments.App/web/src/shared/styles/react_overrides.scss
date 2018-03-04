@@ -29,3 +29,8 @@ button.largeIconDanger > span {
   font-size:28px !important;
   color:crimson;
 }
+
+:global .theme--title--card {
+  /* Depending on how the css class names rules are, the above won't work. */
+  font-size: 1.25rem;
+}

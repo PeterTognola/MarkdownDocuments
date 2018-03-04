@@ -38,7 +38,6 @@ class Update extends Component {
 
         if (this.props.updated) {
             this.props.history.push(`/document/show/${encodeURIComponent(this.props.updated["id"])}`);
-            // todo send state of updated to show component.
             // todo message to say document updated.
         }
 
@@ -49,9 +48,9 @@ class Update extends Component {
                 {(this.props.retrieveLoading || this.props.updateLoading) && templates.loading()}
 
                 {this.props.created && <div role="status">{this.props.created['id']} created.</div>}
-                {this.props.retrieveError && <div role="alert">{this.props.retrieveError}</div>}
-                {this.props.updateError && <div role="alert">{this.props.updateError}</div>}
-                {this.props.deleteError && <div role="alert">{this.props.deleteError}</div>}
+                {this.props.retrieveError && templates.error(this.props.retrieveError)}
+                {this.props.updateError && templates.error(this.props.updateError)}
+                {this.props.deleteError && templates.error(this.props.updateError)}
             </div>
         );
     }

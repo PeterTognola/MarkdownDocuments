@@ -12,6 +12,7 @@ import { AppBar } from 'react-toolbox/lib/app_bar';
 import { Navigation } from 'react-toolbox/lib/navigation';
 import { IconButton } from 'react-toolbox/lib/button';
 import styles from './shared/styles/react_overrides.scss';
+import "./shared/styles/app.scss"
 
 // Import Reducers
 import documentReducers from './reducers/document/';
