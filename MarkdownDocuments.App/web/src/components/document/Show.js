@@ -4,15 +4,14 @@ import {Link, Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { retrieve, reset } from '../../actions/document/show';
 import { del, loading, error } from '../../actions/document/delete';
-import { templates } from "../../utils/templates";
+import { templates } from "../../shared/helpers/templates";
 import Markdown from "react-markdown";
 
 // Import Theme
 import { Button, IconButton } from 'react-toolbox/lib/button';
 import { Dialog } from 'react-toolbox/lib/dialog';
-
-// Import Style
-import styles from '../../index.css';
+import styles from '../../shared/styles/react_overrides.scss';
+import documentStyles from '../../shared/styles/document.scss'
 
 class Show extends Component {
     static propTypes = {
@@ -84,7 +83,7 @@ class Show extends Component {
                 {this.props.deleteError && <div>{this.props.deleteError}</div>}
 
                 {item &&
-                    <div className={styles.page}>
+                    <div className={documentStyles.page}>
                         <h1>{item["title"]}</h1>
 
                         <Markdown>

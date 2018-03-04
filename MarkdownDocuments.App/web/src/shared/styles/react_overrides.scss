@@ -1,0 +1,31 @@
+body div.appContainer {
+  width:calc(100% - 30px);
+  max-width: 990px;
+  margin:0 auto;
+  padding:15px;
+  position: relative;
+}
+
+body > div > div header[data-react-toolbox="app-bar"] {
+  margin:0 auto 15px;
+}
+
+section {
+  outline:0;
+}
+
+body > div > div section h5 {
+  font-size:18px;
+}
+
+button.largeIcon > span, button.largeIconLight > span {
+  font-size:28px !important;
+  color:#000;
+}
+
+button.largeIconLight > span { color:#fff; }
+
+button.largeIconDanger > span {
+  font-size:28px !important;
+  color:crimson;
+}

@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import Form from '../../forms/account/Create';
-import { create, loading, error } from '../../actions/account/create';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
+import Form from "../../forms/account/Create";
+import { create, loading, error } from "../../actions/account/create";
+import { templates } from "../../shared/helpers/templates"
 
 class Create extends Component {
     static propTypes = {
@@ -23,7 +24,7 @@ class Create extends Component {
 
         return (
             <div>
-                {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
+                {this.props.loading && templates.loading()}
                 {this.props.error && <div className="alert alert-danger" role="alert">{this.props.error}</div>}
 
                 <Form onSubmit={this.props.create} values={this.props.item}/>

@@ -6,12 +6,12 @@ import { Link, Redirect } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore, routerReducer as routing } from 'react-router-redux';
 import Switch from "react-router-dom/es/Switch";
-import styles from './index.css';
 
 // Import Theme
 import { AppBar } from 'react-toolbox/lib/app_bar';
 import { Navigation } from 'react-toolbox/lib/navigation';
 import { IconButton } from 'react-toolbox/lib/button';
+import styles from './shared/styles/react_overrides.scss';
 
 // Import Reducers
 import documentReducers from './reducers/document/';

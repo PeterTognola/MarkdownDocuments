@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
-import { templates } from "../../utils/templates";
+import { templates } from "../../shared/helpers/templates";
 import Markdown from "react-markdown";
 
 // Import Theme
@@ -13,7 +13,7 @@ import { Button } from 'react-toolbox/lib/button';
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
 
 // Import Style
-import styles from '../../index.css';
+import styles from '../../shared/styles/navigation.scss';
 import { Snackbar } from "react-toolbox/lib/snackbar";
 
 class List extends Component {

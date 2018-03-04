@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Form from '../../forms/account/Update';
 import { success } from '../../actions/account/create';
 import { retrieve, update, reset } from '../../actions/account/update';
 import { loading, error } from '../../actions/document/delete';
-import { templates} from "../../utils/templates";
+import { templates } from "../../shared/helpers/templates";
 
 class Update extends Component {
     static propTypes = {

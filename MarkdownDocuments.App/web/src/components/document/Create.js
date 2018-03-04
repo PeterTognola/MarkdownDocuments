@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import Form from './Form';
-import { create, loading, error } from '../../actions/document/create';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
+import Form from "./Form";
+import { create, loading, error } from "../../actions/document/create";
 
 // Import Theme
-import { Button, IconButton } from 'react-toolbox/lib/button';
+import { Button, IconButton } from "react-toolbox/lib/button";
 
 // Import Style
-import styles from '../../index.css';
+import styles from "../../shared/styles/react_overrides.scss";
 
 
 class Create extends Component {

@@ -1,5 +1,5 @@
 import { SubmissionError } from 'redux-form';
-import { API_HOST, API_PATH } from '../config/_entrypoint';
+import { API_HOST, API_PATH } from '../../config/_entrypoint';
 
 const jsonLdMimeType = 'application/ld+json';
 

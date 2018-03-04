@@ -1,4 +1,4 @@
-import fetch from '../../utils/fetch';
+import fetch from '../../shared/helpers/fetch';
 
 export function error(error) {
   return {type: 'DOCUMENT_DELETE_ERROR', error};

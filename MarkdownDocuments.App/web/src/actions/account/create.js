@@ -1,5 +1,5 @@
 import { SubmissionError } from "redux-form";
-import fetch from "../../utils/fetch";
+import fetch from "../../shared/helpers/fetch";
 
 export function error(error) {
     return {type: 'ACCOUNT_CREATE_ERROR', error};

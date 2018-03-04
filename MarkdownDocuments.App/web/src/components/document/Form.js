@@ -5,13 +5,11 @@ import { Field, reduxForm } from 'redux-form';
 import AceEditor from "react-ace";
 import "brace/mode/markdown";
 import "brace/theme/tomorrow";
+import aceStyles from "../../shared/styles/ace_theme_mod.scss";
 
 // Import react-toolbox.
 import { Button } from "react-toolbox/lib/button";
 import { Input } from "react-toolbox/lib/input";
-
-// Import Ace style mod.
-import aceStyles from "../../shared/ace_theme_mod.scss";
 
 const renderEditor = (data) => {
     const hasError = data.meta.touched && !!data.meta.error;

@@ -1,0 +1,25 @@
+.navigation {
+  font-size:13px;
+}
+
+.floating {
+  position: absolute;
+  bottom:0;
+  right:0;
+}
+
+.navigationFloating extends .navigation, .floating {}
+
+.floatingButton {
+  position: fixed;
+  bottom:25px;
+  right:25px;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+header nav a + a {
+  padding-left:25px;
+}

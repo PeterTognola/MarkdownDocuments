@@ -1,5 +1,5 @@
 import { SubmissionError } from "redux-form";
-import fetch from "../../utils/fetch";
+import fetch from "../../shared/helpers/fetch";
 import { success as createSuccess } from "./create";
 
 export function retrieveError(retrieveError) {
