@@ -24,6 +24,15 @@ namespace MarkdownDocuments.WebApi.Controllers
             _signInManager = signInManager;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> CurrentUser()
+        {
+            return Ok(new
+            {
+                value = await _userManager.GetUserAsync(_signInManager.Context.User)
+            });
+        }
+        
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] AccountLoginViewModel model) // todo injection attack??
         {

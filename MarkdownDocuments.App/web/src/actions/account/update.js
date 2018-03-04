@@ -14,11 +14,11 @@ export function retrieveSuccess(retrieved) {
     return {type: "ACCOUNT_UPDATE_RETRIEVE_SUCCESS", retrieved};
 }
 
-export function retrieve(id) {
+export function retrieve() {
     return (dispatch) => {
         dispatch(retrieveLoading(true));
 
-        return fetch("/account/" + id)
+        return fetch("/account/currentUser")
             .then(response => response.json())
             .then(data => {
                 dispatch(retrieveLoading(false));
@@ -43,13 +43,13 @@ export function updateSuccess(updated) {
     return {type: "ACCOUNT_UPDATE_UPDATE_SUCCESS", updated};
 }
 
-export function update(item, values) {
+export function update(values) {
     return (dispatch) => {
         dispatch(updateError(null));
         dispatch(createSuccess(null));
         dispatch(updateLoading(true));
 
-        return fetch("/account/" + item['id'], {
+        return fetch("/account/", {
                 method: "PUT",
                 headers: new Headers({"Content-Type": "application/json"}),
                 body: JSON.stringify(values)
