@@ -26,20 +26,19 @@ class Create extends Component {
     }
 
     render() {
-        if (this.props.created) return <Redirect to={`edit/${encodeURIComponent(this.props.created['id'])}`}/>;
+        if (this.props.created)
+            return <Redirect to={`edit/${encodeURIComponent(this.props.created['id'])}`}/>;
 
         return (
             <div>
                 <div style={{margin:"0 15px"}}>
                     <Link to="."><IconButton className={styles.largeIcon} icon="keyboard_arrow_left" /></Link>
-
-                    <div style={{float:"right", padding:"0 15px"}}></div>
                 </div>
 
                 <hr />
 
                 {this.props.loading && <div className="alert alert-info" role="status">Loading...</div>}
-                {this.props.error && <div className="alert alert-danger" role="alert"><span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.props.error}</div>}
+                {this.props.error && <div className="alert alert-danger" role="alert">{this.props.error}</div>}
 
                 <Form onSubmit={this.props.create} values={this.props.item}/>
             </div>

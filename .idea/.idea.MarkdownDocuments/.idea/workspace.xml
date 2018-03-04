@@ -36,8 +36,8 @@
       <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="285">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <marker date="1520098535345" expanded="true" signature="6:336" ph="..." />
                 <marker date="1520098535345" expanded="true" signature="384:2393" ph="{...}" />
@@ -162,7 +162,7 @@
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/AccountMapper.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+              <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
               <folding>
                 <marker date="1520094239595" expanded="true" signature="6:95" ph="..." />
                 <marker date="1520094239595" expanded="true" signature="139:833" ph="{...}" />
@@ -530,7 +530,7 @@
       <workItem from="1518546959618" duration="2527000" />
       <workItem from="1518632346871" duration="2003000" />
       <workItem from="1518865622782" duration="18626000" />
-      <workItem from="1520092806683" duration="10681000" />
+      <workItem from="1520092806683" duration="10932000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -543,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71673000" />
+    <option name="totallyTimeSpent" value="71924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1050,7 +1050,7 @@
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/Mappers/AccountMapper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding>
             <marker date="1520094239595" expanded="true" signature="6:95" ph="..." />
             <marker date="1520094239595" expanded="true" signature="139:833" ph="{...}" />
@@ -1065,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        <state relative-caret-position="285">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <marker date="1520098535345" expanded="true" signature="6:336" ph="..." />
             <marker date="1520098535345" expanded="true" signature="384:2393" ph="{...}" />

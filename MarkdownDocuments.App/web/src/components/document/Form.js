@@ -20,8 +20,6 @@ const renderEditor = (data) => {
         data.input['aria-invalid'] = true;
     }
 
-    console.log(data);
-
     return (
         <div className={`form-group ${hasError ? 'has-error' : ''}`}>
             <AceEditor
