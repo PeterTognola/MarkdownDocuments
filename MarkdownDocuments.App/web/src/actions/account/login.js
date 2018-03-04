@@ -2,25 +2,26 @@ import { SubmissionError } from "redux-form";
 import fetch from "../../utils/fetch";
 
 export function error(error) {
-    return {type: 'ACCOUNT_CREATE_ERROR', error};
+    return {type: 'ACCOUNT_LOGIN_ERROR', error};
 }
 
 export function loading(loading) {
-    return {type: 'ACCOUNT_CREATE_LOADING', loading};
+    return {type: 'ACCOUNT_LOGIN_LOADING', loading};
 }
 
-export function success(created) {
-    return {type: 'ACCOUNT_CREATE_SUCCESS', created};
+export function success(loggedIn) {
+    return {type: 'ACCOUNT_LOGIN_SUCCESS', loggedIn};
 }
 
-export function create(values) {
+export function login(values) {
     return (dispatch) => {
         dispatch(loading(true));
 
-        return fetch('/account/register', {method: 'POST', body: JSON.stringify(values)})
+        return fetch('/account/login', {method: 'POST', body: JSON.stringify(values)})
             .then(response => {
                 dispatch(loading(false));
                 localStorage.setItem("credentials", "true");
+                console.log(localStorage.getItem("credentials"));
                 return response.json();
             })
             .then(data => dispatch(success(data)))

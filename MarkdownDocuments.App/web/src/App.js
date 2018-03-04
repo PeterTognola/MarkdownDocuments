@@ -28,8 +28,9 @@ const store = createStore(
 
 export default class App {
     static getRoutes() {
-        if (localStorage.getItem("credentials") === null)
-            return [accountRoutes, <Redirect to="/account/create" />];
+        if (localStorage.getItem("credentials") === null) {
+            return [accountRoutes, <Redirect to="/account/login" />];
+        }
 
         return [documentRoutes, accountRoutes];
     }
@@ -47,7 +48,7 @@ export default class App {
             <div className={styles.appContainer}>
                 <AppBar title="Markdown Documents">
                     <Navigation type="horizontal">
-                        <Link to="/" activeClassName={styles.activeLink}>Home</Link>
+                        <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>
                         <Link to="/account"><IconButton icon="account_circle" primary className={styles.largeIconLight} /></Link>
                     </Navigation>
