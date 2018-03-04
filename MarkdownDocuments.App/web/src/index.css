@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'); /* todo move to index. */
 
+html {
+    /* For the REM sizing. */
+    font-size:14px;
+}
+
 body {
     margin: 0;
     padding: 0;

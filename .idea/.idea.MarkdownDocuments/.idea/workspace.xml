@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <marker date="1520098535345" expanded="true" signature="6:336" ph="..." />
                 <marker date="1520098535345" expanded="true" signature="384:2393" ph="{...}" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DocumentController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="86">
+              <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
               <folding>
                 <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
                 <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
@@ -530,7 +530,7 @@
       <workItem from="1518546959618" duration="2527000" />
       <workItem from="1518632346871" duration="2003000" />
       <workItem from="1518865622782" duration="18626000" />
-      <workItem from="1520092806683" duration="10932000" />
+      <workItem from="1520092806683" duration="11703000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for WebApp and solution">
       <created>1517692926999</created>
@@ -543,7 +543,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71924000" />
+    <option name="totallyTimeSpent" value="72695000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -602,19 +602,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs</url>
-          <line>106</line>
-          <properties documentPath="$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
-            <startOffsets>
-              <startOffset value="3712" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="3729" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs</url>
           <line>125</line>
@@ -953,40 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
-            <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="467:7363" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="848:1004" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="1157:2215" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="1183:2046" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="1324:1551" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="1942:2030" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="2100:2205" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="2349:2723" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="2635:2711" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="2863:3531" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="3072:3363" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="3417:3521" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="3689:4184" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="4319:4638" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="4795:6510" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="4978:5159" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="5263:5409" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="5514:5700" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="5773:6097" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="5879:6064" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="6145:6473" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="6251:6436" ph="{...}" />
-            <marker date="1518365968369" expanded="true" signature="6618:7357" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.Models/ViewModels/DocumentViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1066,7 +1019,7 @@
     <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/AccountController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <marker date="1520098535345" expanded="true" signature="6:336" ph="..." />
             <marker date="1520098535345" expanded="true" signature="384:2393" ph="{...}" />
@@ -1078,6 +1031,40 @@
             <marker date="1520098535345" expanded="true" signature="1687:1792" ph="{...}" />
             <marker date="1520098535345" expanded="true" signature="1846:1937" ph="{...}" />
             <marker date="1520098535345" expanded="true" signature="2316:2385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkdownDocuments.WebApi/Controllers/DocumentController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <folding>
+            <marker date="1518365968369" expanded="false" signature="6:336" ph="..." />
+            <marker date="1518365968369" expanded="true" signature="384:7365" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="467:7363" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="848:1004" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="1157:2215" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="1183:2046" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="1324:1551" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="1942:2030" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="2100:2205" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="2349:2723" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="2635:2711" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="2863:3531" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="3072:3363" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="3417:3521" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="3689:4184" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="4319:4638" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="4795:6510" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="4978:5159" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="5263:5409" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="5514:5700" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="5773:6097" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="5879:6064" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="6145:6473" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="6251:6436" ph="{...}" />
+            <marker date="1518365968369" expanded="true" signature="6618:7357" ph="{...}" />
           </folding>
         </state>
       </provider>
