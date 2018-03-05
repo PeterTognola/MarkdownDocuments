@@ -34,3 +34,12 @@ button.largeIconDanger > span {
   /* Depending on how the css class names rules are, the above won't work. */
   font-size: 1.25rem;
 }
+
+.documentSummaryCard {
+  width:100%;
+  margin: 15px auto;
+}
+
+.documentSummaryCard h5 {
+  font-size:1.225rem !important;
+}

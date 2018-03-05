@@ -11,10 +11,12 @@ import Markdown from "react-markdown";
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
 import { Button } from 'react-toolbox/lib/button';
 import { Tab, Tabs } from 'react-toolbox/lib/tabs';
+import { Snackbar } from "react-toolbox/lib/snackbar";
 
 // Import Style
 import styles from '../../shared/styles/navigation.scss';
-import { Snackbar } from "react-toolbox/lib/snackbar";
+import reactStyles from '../../shared/styles/react_overrides.scss';
+
 
 class List extends Component {
     state = {
@@ -48,7 +50,7 @@ class List extends Component {
 
     static createCard(item) {
         return (
-            <Card key={item.id} style={{margin:"15px auto", maxWidth:"500px"}}>
+            <Card key={item.id} className={reactStyles.documentSummaryCard}>
                 <CardTitle
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
