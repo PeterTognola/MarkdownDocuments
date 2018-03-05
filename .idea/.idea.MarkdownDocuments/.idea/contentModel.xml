@@ -75,6 +75,9 @@
           <e p="AccountController.cs" t="Include" />
           <e p="DocumentController.cs" t="Include" />
         </e>
+        <e p="helpers" t="Include">
+          <e p="CrudLinks.cs" t="Include" />
+        </e>
         <e p="MarkdownDocuments.WebApi.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
