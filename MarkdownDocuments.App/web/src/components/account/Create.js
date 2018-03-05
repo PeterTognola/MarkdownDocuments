@@ -35,7 +35,6 @@ class Create extends Component {
                         <Form onSubmit={this.props.create} values={this.props.item}/>
                     </CardText>
                 </Card>
-
             </div>
         );
     }

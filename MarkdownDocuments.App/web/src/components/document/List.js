@@ -6,6 +6,7 @@ import { list, reset } from '../../actions/document/list';
 import { success } from '../../actions/document/delete';
 import { templates } from "../../shared/helpers/templates";
 import Markdown from "react-markdown";
+import Moment from 'react-moment';
 
 // Import Theme
 import { Card, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
@@ -54,7 +55,7 @@ class List extends Component {
                 <CardTitle
                     avatar="https://placeimg.com/80/80/animals"
                     title={item.title}
-                    subtitle={`Created on ${item.creationDate}`} />
+                    subtitle={<Moment data={item.creationDate} format="DD/MM/YYYY \a\t HH:mm" />} />
                 <CardText style={{color: "#545454"}}>
                     <Markdown>
                         {item.body && item.body.length > 320 ? item.body.substring(0, 320) + "..." : item.body}
