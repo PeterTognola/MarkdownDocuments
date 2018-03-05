@@ -12,6 +12,7 @@ import { Button, IconButton } from 'react-toolbox/lib/button';
 import { Dialog } from 'react-toolbox/lib/dialog';
 import styles from '../../shared/styles/react_overrides.scss';
 import documentStyles from '../../shared/styles/document.scss'
+import { header as Header } from "../../shared/components/header";
 
 class Show extends Component {
     static propTypes = {
@@ -58,7 +59,7 @@ class Show extends Component {
 
         return (
             <div>
-                <div style={{margin:"0 15px"}}>
+                <Header>
                     <Link to=".."><IconButton className={styles.largeIcon} icon="keyboard_arrow_left" /></Link>
 
                     <div style={{float:"right", padding:"0 15px"}}>
@@ -74,9 +75,7 @@ class Show extends Component {
                             <p>Are you sure you want to delete <strong>{item && item["title"]}</strong>, it can not be recovered?</p>
                         </Dialog>
                     </div>
-                </div>
-
-                <hr />
+                </Header>
 
                 {this.props.loading && templates.loading()}
                 {this.props.error && <div>{this.props.error}</div>}

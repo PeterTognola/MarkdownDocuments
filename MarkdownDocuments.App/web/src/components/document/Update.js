@@ -7,6 +7,7 @@ import { success } from '../../actions/document/create';
 import { retrieve, update, reset } from '../../actions/document/update';
 import { del, loading, error } from '../../actions/document/delete';
 import { templates} from "../../shared/helpers/templates";
+import { header as Header } from "../../shared/components/header";
 
 // Import Theme.
 import styles from "../../shared/styles/react_overrides.scss";
@@ -56,13 +57,12 @@ class Update extends Component {
 
         return (
             <div>
-                <div style={{margin:"0 15px"}}>
+                <Header>
                     {item && <Link to={`/document/show/${encodeURIComponent(item["id"])}`}><IconButton className={styles.largeIcon} icon="cancel" /></Link>/* todo onclick, ask if user is sure as they would lose their work. */}
 
                     {item && <div style={{float:"right", padding:"0 15px"}}><IconButton onClick={this.del} icon="delete" className={styles.largeIconDanger} /></div>}
-                </div>
+                </Header>
 
-                <hr />
 
                 {item && <Form id="editorForm" onSubmit={values => this.props.update(item, values)} initialValues={item} />}
 

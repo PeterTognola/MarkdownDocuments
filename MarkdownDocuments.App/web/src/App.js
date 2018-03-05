@@ -47,7 +47,7 @@ export default class App {
     static body() {
         return (
             <div className={styles.appContainer}>
-                <AppBar title="Markdown Documents">
+                <AppBar title="Markdown Documents" flat>
                     <Navigation type="horizontal">
                         <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>

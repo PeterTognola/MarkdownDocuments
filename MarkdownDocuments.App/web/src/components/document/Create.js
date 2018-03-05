@@ -4,10 +4,12 @@ import { Link, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import Form from "./Form";
 import { create, loading, error } from "../../actions/document/create";
-import { templates } from "../../shared/helpers/templates"
+
 
 // Import Theme
 import { Button, IconButton } from "react-toolbox/lib/button";
+import { templates } from "../../shared/helpers/templates";
+import { header as Header } from "../../shared/components/header";
 
 // Import Style
 import styles from "../../shared/styles/react_overrides.scss";
@@ -32,11 +34,9 @@ class Create extends Component {
 
         return (
             <div>
-                <div style={{margin:"0 15px"}}>
+                <Header>
                     <Link to="."><IconButton className={styles.largeIcon} icon="keyboard_arrow_left" /></Link>
-                </div>
-
-                <hr />
+                </Header>
 
                 {this.props.loading && templates.loading()}
                 {this.props.error && templates.error(this.props.error)}
