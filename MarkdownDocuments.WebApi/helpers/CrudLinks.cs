@@ -88,14 +88,14 @@ namespace MarkdownDocuments.WebApi.helpers
             return links;
         }
 
-        public dynamic GeneratePaginationHeader(QueryParameters query, int totalCount)
+        public dynamic GeneratePaginationHeader(QueryParameters query, int totalPageCount)
         {
             return new
             {
-                totalCount,
+                totalCount = totalPageCount,
                 pageSize = query.PageCount,
                 currentPage = query.Page,
-                totalPages = query.GetTotalPages(totalCount)
+                totalPages = query.GetTotalPages(totalPageCount)
             };
         }
     }

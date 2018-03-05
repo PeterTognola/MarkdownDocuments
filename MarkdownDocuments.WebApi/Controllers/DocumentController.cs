@@ -35,8 +35,10 @@ namespace MarkdownDocuments.WebApi.Controllers
             try
             {
                 var totalCount = _documentRepository.Count();
+
+                var paginationHeader = _crudLinks.GeneratePaginationHeader(query, totalCount);
                 
-                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(_crudLinks.GeneratePaginationHeader(query, totalCount)));
+                Response.Headers["X-Pagination"] = JsonConvert.SerializeObject(paginationHeader);
 
                 return Ok(new
                 {
@@ -44,7 +46,7 @@ namespace MarkdownDocuments.WebApi.Controllers
                     links = _crudLinks.GetPaginationLinks(query, totalCount)
                 });
             }
-            catch (Exception) // todo log exception
+            catch (Exception e) // todo log exception
             {
                 return StatusCode((int) HttpStatusCode.InternalServerError);
             }

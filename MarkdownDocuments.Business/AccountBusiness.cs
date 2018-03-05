@@ -1,8 +1,4 @@
-﻿using System;
-using MarkdownDocuments.Models.BusinessModels;
-using MarkdownDocuments.Models.ViewModels;
-
-namespace MarkdownDocuments.Business
+﻿namespace MarkdownDocuments.Business
 {
     public class AccountBusiness
     {
