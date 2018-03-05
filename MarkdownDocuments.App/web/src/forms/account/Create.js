@@ -27,6 +27,9 @@ class Form extends Component {
 
         return (
             <form onSubmit={handleSubmit}>
+                <h2 style={{margin:0}}>
+                    Account Register
+                </h2>
                 <Field component={renderField} name="email" type="email" placeholder="Email" required={true} />
                 <Field component={renderField} name="password" type="password" placeholder="Password" required={true} />
                 <Field component={renderField} name="confirmPassword" type="password" placeholder="Repeat Password" required={true} />

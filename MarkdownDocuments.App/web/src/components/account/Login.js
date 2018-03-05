@@ -3,7 +3,10 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Form from "../../forms/account/Login";
 import { login, loading, error } from "../../actions/account/login";
+
+// Import Theme.
 import { templates } from "../../shared/helpers/templates";
+import { Card, CardText } from 'react-toolbox/lib/card';
 
 class Login extends Component {
     static propTypes = {
@@ -30,7 +33,11 @@ class Login extends Component {
                 {this.props.loading && templates.loading()}
                 {this.props.error && templates.error(this.props.error)}
 
-                <Form onSubmit={this.props.login} values={this.props.item}/>
+                <Card key="login" style={{maxWidth:"500px", margin:"25px auto"}}>
+                    <CardText style={{padding:"25px"}}>
+                        <Form onSubmit={this.props.login} values={this.props.item}/>
+                    </CardText>
+                </Card>
             </div>
         );
     }

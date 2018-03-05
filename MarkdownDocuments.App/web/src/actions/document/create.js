@@ -21,6 +21,9 @@ export function create(values) {
             .then(response => {
                 dispatch(loading(false));
 
+                //
+                // We do not expect a result.
+                // If the creation fails, it will throw a http 500.
                 return response.json();
             })
             .then(data => dispatch(success(data)))

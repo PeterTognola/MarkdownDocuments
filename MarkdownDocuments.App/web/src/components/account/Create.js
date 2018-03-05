@@ -4,7 +4,10 @@ import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import Form from "../../forms/account/Create";
 import { create, loading, error } from "../../actions/account/create";
-import { templates } from "../../shared/helpers/templates"
+
+// Import Theme.
+import { templates } from "../../shared/helpers/templates";
+import { Card, CardText } from 'react-toolbox/lib/card';
 
 class Create extends Component {
     static propTypes = {
@@ -27,7 +30,12 @@ class Create extends Component {
                 {this.props.loading && templates.loading()}
                 {this.props.error && <div className="alert alert-danger" role="alert">{this.props.error}</div>}
 
-                <Form onSubmit={this.props.create} values={this.props.item}/>
+                <Card key="login" style={{maxWidth:"500px", margin:"25px auto"}}>
+                    <CardText style={{padding:"25px"}}>
+                        <Form onSubmit={this.props.create} values={this.props.item}/>
+                    </CardText>
+                </Card>
+
             </div>
         );
     }

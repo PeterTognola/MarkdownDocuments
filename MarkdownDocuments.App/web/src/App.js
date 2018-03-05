@@ -21,6 +21,7 @@ import accountReducers from "./reducers/account/";
 // Import Routes
 import documentRoutes from "./routes/document";
 import accountRoutes from "./routes/account";
+import redirectRoutes from "./routes/redirect";
 
 const store = createStore(
     combineReducers({routing, form, documentReducers, accountReducers}),
@@ -30,10 +31,10 @@ const store = createStore(
 export default class App {
     static getRoutes() {
         if (localStorage.getItem("credentials") === null) {
-            return [accountRoutes, <Redirect to="/account/login" />];
+            return [accountRoutes, <Redirect to="/account/login" />, redirectRoutes];
         }
 
-        return [documentRoutes, accountRoutes];
+        return [documentRoutes, accountRoutes, redirectRoutes];
     }
 
     static getStore() {
@@ -49,7 +50,6 @@ export default class App {
             <div className={styles.appContainer}>
                 <AppBar title="Markdown Documents" flat>
                     <Navigation type="horizontal">
-                        <Link to="/">Home</Link>
                         <Link to="/document">Documents</Link>
                         <Link to="/account"><IconButton icon="account_circle" primary className={styles.largeIconLight} /></Link>
                     </Navigation>
