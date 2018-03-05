@@ -20,7 +20,7 @@ export function login(values) {
         return fetch('/account/login', {method: 'POST', body: JSON.stringify(values)})
             .then(response => {
                 dispatch(loading(false));
-                localStorage.setItem("credentials", "true");
+                localStorage.setItem("credentials", JSON.stringify(response));
                 return response; // todo .json()
             })
             .then(data => dispatch(success(data)))

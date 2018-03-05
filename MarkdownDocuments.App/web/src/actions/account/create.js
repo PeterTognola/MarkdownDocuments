@@ -20,7 +20,7 @@ export function create(values) {
         return fetch('/account/register', {method: 'POST', body: JSON.stringify(values)})
             .then(response => {
                 dispatch(loading(false));
-                localStorage.setItem("credentials", "true");
+                localStorage.setItem("credentials", JSON.stringify(response));
                 return response.json();
             })
             .then(data => dispatch(success(data)))
