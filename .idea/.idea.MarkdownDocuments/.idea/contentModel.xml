@@ -5,6 +5,7 @@
       <e p="MarkdownDocuments.Business" t="IncludeRecursive">
         <e p="AccountBusiness.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DocumentBusiness.cs" t="Include" />
         <e p="MarkdownDocuments.Business.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

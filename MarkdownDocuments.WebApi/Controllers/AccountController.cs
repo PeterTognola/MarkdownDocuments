@@ -27,9 +27,11 @@ namespace MarkdownDocuments.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> CurrentUser()
         {
+            var user = await _userManager.GetUserAsync(_signInManager.Context.User);
+            
             return Ok(new
             {
-                value = await _userManager.GetUserAsync(_signInManager.Context.User)
+                value = user
             });
         }
         
